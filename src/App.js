@@ -1,12 +1,15 @@
 import RiderSignup from "./RiderSignup";
+import LandingPage from "./pages/LandingPage/LandingPage";
+import Navbar from "./components/Navbar/Navbar";
 
 
 
 function App() {
   return (
-    <div >
-     Dispatch Buddy
-     <RiderSignup />
+    <div>
+      <Navbar />
+      <LandingPage />
+      <RiderSignup />
     </div>
   );
 }

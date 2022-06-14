@@ -1,0 +1,261 @@
+:root {
+    --color-accent: #E02B45;
+    --color-white: #ffffff;
+
+}
+
+
+/* first section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+.hero__button {
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 280px;
+    
+}
+.hero__content .hero__img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1rem;
+}
+.button {
+ width: 50%;
+ padding: 0.5rem 0;
+ margin-top: 1rem;
+ background: none;
+ border: 1px solid black;
+ border-radius: 7px;
+}
+.customer__button {
+    background: var(--color-accent);
+    border: none;
+    color: var(--color-white);  
+
+}
+/* first section end */
+
+/* second section */
+.top__notch {
+ text-align: center;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+.top__notch p {
+    
+  width: 300px;
+}
+.top__notch h3 {
+    color: var(--color-accent);
+    font-size: 30px;
+}
+.service__grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.service__div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+    height: 200px;
+    border: 1px solid #D9D9D9;
+}
+.service__div img {
+    width: 2rem;
+    height: 2rem;
+}
+.service__div p {
+    text-align: center;
+    width: 250px;
+}
+.hero__text {
+    display: none;
+}
+.hero__slogan {
+    display: none;
+}
+/* second section */
+
+/* third section */
+.pickNpay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.pickNpay__img img{
+ width: 90%;
+ height: 250px;
+ margin-top: 3rem;
+}
+.pickNpay__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pickNpay__text p {
+    width: 250px;
+}
+.pickNpay__text h3 {
+    width: 250px;
+}
+
+/* fourth section */
+.client__testimonies {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.client__testimonies img {
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 50px;
+
+}
+.client__testimonies__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border: 1px solid #D9D9D9;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+}
+.client__testimonies__div p {
+    width: 250px;
+}
+
+/* footer part */
+.footer__nav {
+    margin-top: 5rem;
+    color: #fff;
+    background: #303030;
+    display:flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.footer__nav .center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    margin-left: 0;
+}
+.footer__nav .right {
+    padding-top: 2rem;
+
+}
+
+.footer__nav .right i {
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+   
+    .hero__content img{
+        display: none;
+    }
+    .hero {
+        background: url(./images/shutterstock.png) no-repeat;
+        object-fit: cover;
+        margin-top: 0;
+        height: 400px;
+    }
+    .hero__text {
+        display: block;
+        color: var(--color-white);
+    }
+    .hero__slogan {
+        display: block;
+        color: var(--color-white);
+    }
+    .service__grid {
+        display: grid;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        
+        align-items: center;
+    }
+    .pickNpay {
+      display: flex;
+      flex-direction: row;
+    }
+   .pickNpay__text{
+       text-align: left;
+
+   }
+    .pickNpay__text h3{
+        font-size: 30px;
+        width: 400px;
+        color: var(--color-accent);
+    }
+    .pickNpay__text p {
+        width: 400px;
+    }
+    .client__testimonies {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .top__notch h3{
+        font-size: 30px;
+        
+        color: var(--color-accent);
+    }
+    .footer__nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer__nav .center {
+        display: grid;
+        grid-template-rows: repeat(2, 2fr);
+        width: 500px;
+    }
+    .footer__nav .center > div{
+     display: flex;
+
+     flex-wrap: wrap;
+    }
+    .footer__nav .center > div > p, h4 {
+        margin-right: 1rem;
+    }
+    .footer__nav .right > div {
+        margin-left: 4rem;
+    }
+    .rider__button {
+       border: 1px solid white;
+       color: var(--color-white); 
+    }
+}
+
