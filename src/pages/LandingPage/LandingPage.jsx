@@ -9,10 +9,13 @@ import shutterStock from "./images/shutterstock.png";
 import shutterStock2 from "./images/shutterstock2.png";
 import customerStockImage from "./images/customerStockImage.jpeg";
 import "./landingPage.css";
+import Navbar from "../../components/Navbar/Navbar";
+
 
 const LandingPage = () => {
   return (
     <>
+      <Navbar />
       <section className="hero">
         <div className="hero__content">
           <h1 className="hero__text">
