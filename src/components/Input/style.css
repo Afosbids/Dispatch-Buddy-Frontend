@@ -1,0 +1,82 @@
+.form-input {
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid rgba(2, 80, 2, 0.2);
+  padding: 10px;
+  font-size: 16px;
+}
+
+.lg {
+  width: 488px;
+}
+
+.md,
+.sm {
+  width: 244px;
+}
+
+.xs {
+  width: 64px;
+}
+
+.xs-search {
+  width: 48px;
+}
+
+.lg:active,
+.lg:hover,
+.lg:focus,
+.md:active,
+.md:hover,
+.md:focus,
+.xs:active,
+.xs:hover,
+.xs:focus {
+  border: 1px solid rgba(4, 149, 4, 1);
+}
+
+.l-round {
+  border-radius: 11px 0 0 11px;
+}
+
+.r-round {
+  border-radius: 0 11px 11px 0;
+  border-left: 0px;
+}
+
+.full-round {
+  border-radius: 11px;
+}
+
+.le-round {
+  border-radius: 19px 0 0 19px;
+}
+
+.re-round {
+  border-radius: 0 19px 19px 0;
+}
+
+.wrapper-phone-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.phone-prefix {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--neutral-80);
+}
+
+.phone-vline {
+  position: absolute;
+  left: 60px;
+  top: 8px;
+  color: var(--neutral-80);
+}

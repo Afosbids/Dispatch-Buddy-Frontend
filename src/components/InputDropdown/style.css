@@ -1,0 +1,27 @@
+.InputDropdown-body {
+  margin: 1.5rem auto;
+  color: #666;
+}
+
+.InputDropdown-input {
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid #666;
+  padding: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.InputDropdown-input i {
+  position: absolute;
+  right: 10px;
+}
+
+.InputDropdown-input input {
+  width: 100%;
+  border: none;
+  background-color: transparent;
+}
+.InputDropdown-input input:focus {
+  outline: none;
+}

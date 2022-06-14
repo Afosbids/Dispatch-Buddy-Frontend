@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 1200px;
+    display: flex;
+    gap: 80px;
+}
+
+
+.rider_left img{
+    height: 1200px;
+    width: 797px;
+}
+
+.rider_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.rider_signup_form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    max-width: 396px;
+    justify-content: center;
+    align-items: center;
+}
+
+.rider_signup_form input{
+    max-width: 396px;
+    margin-top: 10px;
+}
+
