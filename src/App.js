@@ -1,9 +1,10 @@
-
-
+import LandingPage from "./pages/LandingPage/LandingPage";
+import Navbar from "./components/Navbar/Navbar";
 function App() {
   return (
-    <div >
-     Dispatch Buddy
+    <div>
+      <Navbar />
+      <LandingPage />
     </div>
   );
 }
