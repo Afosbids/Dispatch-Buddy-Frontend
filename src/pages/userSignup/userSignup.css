@@ -8,9 +8,9 @@
  width: 65%;
  height: 100%;
  padding: 3rem;
- color: white;
+ color: #FFFFFF;
  background-image: url('./images/signupImg.png');
- background-position: center center;
+ background-position: center;
  font-size: 2rem;
  font-weight: 600;
  display: flex;
@@ -28,7 +28,7 @@
 }
 
 .logo-text {
-    color: orange;
+    color: #E02B45;
     margin-left: 1rem;
 }
 
