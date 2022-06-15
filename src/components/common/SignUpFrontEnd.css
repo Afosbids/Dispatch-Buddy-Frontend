@@ -1,8 +1,7 @@
 .input-field {
-    padding: 15px;
+    padding: 15px 30px;
     margin: 10px 0px;
-    width: 20rem;
-    height: 1rem;
+    width: 90%;
     border-radius: 10px;
    border: 1px solid lightgrey;
 }
@@ -14,4 +13,7 @@
 }
 .password-icon {
     background: url(../../pages/userSignup/images/Vector.png) no-repeat;
+}
+.email-icon, .password-icon {
+    background-position: 5px;
 }

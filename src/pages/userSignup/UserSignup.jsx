@@ -1,6 +1,7 @@
 import React from 'react'
 import SignUpForm from '../../components/common/SignUpFrontEnd';
-import signupimg from './images/signupImg.png'
+
+import logo from './images/logo.svg'
 // import mailIcon from "./images/Icon.png"
 import "./userSignup.css"
 
@@ -8,10 +9,15 @@ const UserSignup = () => {
   return (
     <div className="user-signup">
         <section className="image-section">
-        <img src={signupimg} alt=""  className="signup-img"/>
+
+        <p>Delivery service just got <br/>easier, elegant & superb <br/>with Dispatch Buddy </p>
         </section>
         <section className="form-section">
-          <h2 className="logo-text">Dispatch Buddy</h2>
+          <div className="logo-group">
+          <img src={logo} alt="" className="logo"/>
+          <h2 className="logo-text">Dispatch <br/>Buddy</h2>
+          </div>
+          
         <form>
         <h2>Sign Up as Customer</h2>
         <label>Name</label>

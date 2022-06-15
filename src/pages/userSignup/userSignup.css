@@ -1,13 +1,20 @@
 .user-signup {
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 100vh;
 }
 
 .image-section {
- width: 100%;
+ width: 65%;
  height: 100%;
+ padding: 3rem;
+ color: white;
+ background-image: url('./images/signupImg.png');
+ background-position: center center;
+ font-size: 2rem;
+ font-weight: 600;
+ display: flex;
+ align-items: flex-end;
 }
 .signup-img {
     object-fit: cover;
@@ -15,12 +22,14 @@
     height: 100%;
 }
 
-.logo-text {
-    display: block;
+.logo-group {
+    display: flex;
+    margin-bottom: 2rem;
 }
 
-h2 {
-    margin-bottom: 40px;
+.logo-text {
+    color: orange;
+    margin-left: 1rem;
 }
 
 label {
@@ -32,19 +41,12 @@ label {
 
 
 .form-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 95%;
-    height: 60%;
-    background: #ffffff;
-    margin-top: 80px;
+    padding: 3rem;
 }
 
 .signup-btn {
     margin-top: 15px;
-    width: 22rem;
+    width: 90%;
     height: 3.2rem;
     border-radius: 10px;
     background-color: #E02B45;
@@ -54,6 +56,8 @@ label {
     font-size: 16px;
     line-height: 19px;
     font-weight: 600;
+    border: none;
+    cursor: pointer;
 }
 
 .form-section p {
@@ -71,4 +75,8 @@ label {
 .form-section p span{
     color:#E02B45;
     font-weight: 600;
+}
+
+form > h2{
+    margin: 2rem 0;
 }
