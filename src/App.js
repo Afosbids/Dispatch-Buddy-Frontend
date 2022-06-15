@@ -1,6 +1,5 @@
 import RiderSignup from "./RiderSignup";
 import LandingPage from "./pages/LandingPage/LandingPage";
-import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
