@@ -6,8 +6,7 @@ function App() {
 
   return (
     <div>
-      <Navbar />
-      <LandingPage />
+      <UserSignup />
     </div>
   );
 }
