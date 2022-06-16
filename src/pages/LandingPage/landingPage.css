@@ -13,6 +13,7 @@
     align-items: center;
     margin-top: 2rem;
     margin-bottom: 3rem;
+    width: 100%;
 }
 .hero__button {
     display: flex;
@@ -21,17 +22,21 @@
     justify-content: center;
     align-items: center;
 }
+.hero__img {
+  width: 100%;
+  
+}
 
 .hero__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
     height: 280px;
     
 }
-.hero__content .hero__img {
+.hero__content {
     width: 100%;
     height: 200px;
     margin-bottom: 1rem;
@@ -182,16 +187,49 @@
 }
 
 @media screen and (min-width: 1024px) {
-   
-    .hero__content img{
-        display: none;
-    }
-    .hero {
-        background: url(./images/shutterstock.png) no-repeat;
+   .hero {
+       width: 100%;
+       position: relative;
+       margin-top: 0;
+   }
+   .hero__img {
+       width: 100%;
+       height:27.2rem;
+
+   }
+    .hero__content {
+        /* background:rgba(0, 0, 0, 0.6)url(./images/shutterstock.png) no-repeat; */
         object-fit: cover;
+        position: absolute;
         margin-top: 0;
-        height: 400px;
+        height:23.2rem;
+        z-index: 2;
+       
     }
+    .hero__button {
+        display: flex;
+        flex-direction: row;
+    }
+    .customer__button {
+        margin-right: 2rem;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        background: rgba(0, 0, 0, 0.7);
+        height:27.2rem;
+        width: 100%;
+
+    }
+    /* .hero::after {
+        content: "";
+        position: absolute;
+        top: 13%;
+        width: 100%;
+        height: 400px;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+    } */
     .hero__text {
         display: block;
         color: var(--color-white);
@@ -204,9 +242,19 @@
         display: grid;
         margin-left: 2rem;
         margin-right: 2rem;
+        width: 80%;
+        margin-left: 7.5rem;
         grid-template-columns: repeat(3, 1fr);
         
         align-items: center;
+    }
+    .service__div img {
+        width: 4rem;
+        height: 4rem;
+    }
+    .service__div {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
     .pickNpay {
       display: flex;
@@ -227,6 +275,9 @@
     .client__testimonies {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+    }
+    .client__testimonies div {
+        margin-left: 1.5rem;
     }
     .top__notch h3{
         font-size: 30px;
@@ -256,6 +307,10 @@
     .rider__button {
        border: 1px solid white;
        color: var(--color-white); 
+    }
+    .client__testimonies img {
+        width: 4rem;
+        height: 4rem;
     }
 }
 

@@ -14,12 +14,13 @@ const LandingPage = () => {
   return (
     <>
       <section className="hero">
+        <div className="overlay"></div>
+        <img src={shutterStock} className="hero__img" alt="" />
         <div className="hero__content">
           <h1 className="hero__text">
             Fast, Reliable &amp; Quality Dispatch Service
           </h1>
           <p className="hero__slogan">Send. Track. Recive </p>
-          <img src={shutterStock} className="hero__img" alt="" />
           <div className="hero__button">
             <button className="button customer__button">
               Register as a Customer
