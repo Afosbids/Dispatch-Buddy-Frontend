@@ -3,7 +3,7 @@ import "./forgotPassword.css";
 
 const ForgotPassword = () => {
   return (
-    <div className="main-container">
+    <div className="main-forgot-password--container">
       <div className="forgot-password-container">
         <h1>Forgot Password</h1>
         <p className="enter-email">
@@ -21,11 +21,11 @@ const ForgotPassword = () => {
             <input
               type="button"
               value="Reset Password"
-              className="input-button-type"
+              className="reset-password-button"
             />
           </form>
         </div>
-        <button className="back-to-login">Back to Login</button>
+        <button className="back-to-login-forgot-password">Back to Login</button>
       </div>
     </div>
   );
