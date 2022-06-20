@@ -8,11 +8,12 @@ import time from "./images/time.png";
 import shutterStock from "./images/shutterstock.png";
 import shutterStock2 from "./images/shutterstock2.png";
 import customerStockImage from "./images/customerStockImage.jpeg";
+import star from "./images/star.png"
 import "./landingPage.css";
 
 const LandingPage = () => {
   return (
-    <>
+    <div className="landing-page-div">
       <section className="hero">
         <div className="overlay"></div>
         <img src={shutterStock} className="hero__img" alt="" />
@@ -43,6 +44,7 @@ const LandingPage = () => {
       <section className="service__grid">
         <div className="service__div">
           <img src={secureData} alt="" />
+          <h4>Reliable and secure</h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue at
             eu, magna suscipit purus. Felis mauris eu ultrices vestibulum id
@@ -51,6 +53,7 @@ const LandingPage = () => {
         </div>
         <div className="service__div">
           <img src={time} alt="" />
+          <h4>On-time delivery</h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue at
             eu, magna suscipit purus. Felis mauris eu ultrices vestibulum id
@@ -59,6 +62,7 @@ const LandingPage = () => {
         </div>
         <div className="service__div">
           <img src={shipping} alt="" />
+          <h4>Track your shipment</h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue at
             eu, magna suscipit purus. Felis mauris eu ultrices vestibulum id
@@ -67,6 +71,7 @@ const LandingPage = () => {
         </div>
         <div className="service__div">
           <img src={customerCare} alt="" />
+          <h4>Great customer service</h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue at
             eu, magna suscipit purus. Felis mauris eu ultrices vestibulum id
@@ -75,6 +80,7 @@ const LandingPage = () => {
         </div>
         <div className="service__div">
           <img src={world} alt="" />
+          <h4>Nationwide Delivery</h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue at
             eu, magna suscipit purus. Felis mauris eu ultrices vestibulum id
@@ -83,6 +89,7 @@ const LandingPage = () => {
         </div>
         <div className="service__div">
           <img src={building} alt="" />
+          <h4>Order Fulfilment</h4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Augue at
             eu, magna suscipit purus. Felis mauris eu ultrices vestibulum id
@@ -105,7 +112,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <h3 style={{ textAlign: "center", marginTop: 70, marginBottom: 50 }}>
+      <h3 className="about-us" style={{ textAlign: "center", marginTop: 70, marginBottom: 50 }}>
         What Our Clients Say About Us
       </h3>
       <section className="client__testimonies">
@@ -117,6 +124,16 @@ const LandingPage = () => {
             nec, nunc viverra massa blandit nec enim volutpat. Cursus pretium
             velit eget justo, turpis.
           </p>
+          <div className="name-star-div" style={{paddingTop: 10}}>
+            <h4 className="">Jenifer Harrison</h4>
+             <div className="star" style={{paddingTop: 0, width: 120}}>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+             </div>
+          </div>
         </div>
         <div className="client__testimonies__div">
           <img src={customerStockImage} alt="" />
@@ -126,6 +143,16 @@ const LandingPage = () => {
             nec, nunc viverra massa blandit nec enim volutpat. Cursus pretium
             velit eget justo, turpis.
           </p>
+          <div className="name-star-div" style={{paddingTop: 10}}>
+            <h4 className="">Jenifer Harrison</h4>
+             <div className="star" style={{paddingTop: 0, width: 120}}>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+             </div>
+          </div>
         </div>
         <div className="client__testimonies__div">
           <img src={customerStockImage} alt="" />
@@ -135,6 +162,16 @@ const LandingPage = () => {
             nec, nunc viverra massa blandit nec enim volutpat. Cursus pretium
             velit eget justo, turpis.
           </p>
+          <div className="name-star-div" style={{paddingTop: 10}}>
+            <h4 className="">Jenifer Harrison</h4>
+             <div className="star" style={{paddingTop: 0, width: 120}}>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+             </div>
+          </div>
         </div>
         <div className="client__testimonies__div">
           <img src={customerStockImage} alt="" />
@@ -144,6 +181,16 @@ const LandingPage = () => {
             nec, nunc viverra massa blandit nec enim volutpat. Cursus pretium
             velit eget justo, turpis.
           </p>
+          <div className="name-star-div" style={{paddingTop: 10}}>
+            <h4 className="">Jenifer Harrison</h4>
+             <div className="star" style={{paddingTop: 0, width: 120}}>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+             </div>
+          </div>
         </div>
         <div className="client__testimonies__div">
           <img src={customerStockImage} alt="" />
@@ -153,6 +200,16 @@ const LandingPage = () => {
             nec, nunc viverra massa blandit nec enim volutpat. Cursus pretium
             velit eget justo, turpis.
           </p>
+          <div className="name-star-div" style={{paddingTop: 10}}>
+            <h4 className="">Jenifer Harrison</h4>
+             <div className="star" style={{paddingTop: 0, width: 120}}>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+             </div>
+          </div>
         </div>
         <div className="client__testimonies__div">
           <img src={customerStockImage} alt="" />
@@ -162,6 +219,16 @@ const LandingPage = () => {
             nec, nunc viverra massa blandit nec enim volutpat. Cursus pretium
             velit eget justo, turpis.
           </p>
+          <div className="name-star-div" style={{paddingTop: 10}}>
+            <h4 className="">Jenifer Harrison</h4>
+             <div className="star" style={{paddingTop: 0, width: 120}}>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+              <img src={star} alt="" style={{display: "inline-block"}}/>
+             </div>
+          </div>
         </div>
       </section>
       <footer>
@@ -195,7 +262,7 @@ const LandingPage = () => {
           </div>
         </nav>
       </footer>
-    </>
+    </div>
   );
 };
 
