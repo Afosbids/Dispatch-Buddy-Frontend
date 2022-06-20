@@ -8,7 +8,7 @@ import time from "./images/time.png";
 import shutterStock from "./images/shutterstock.png";
 import shutterStock2 from "./images/shutterstock2.png";
 import customerStockImage from "./images/customerStockImage.jpeg";
-import star from "./images/star.png"
+import star from "./images/star.png";
 import "./landingPage.css";
 
 const LandingPage = () => {
@@ -112,7 +112,10 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <h3 className="about-us" style={{ textAlign: "center", marginTop: 70, marginBottom: 50 }}>
+      <h3
+        className="about-us"
+        style={{ textAlign: "center", marginTop: 70, marginBottom: 50 }}
+      >
         What Our Clients Say About Us
       </h3>
       <section className="client__testimonies">
@@ -124,15 +127,15 @@ const LandingPage = () => {
             nec, nunc viverra massa blandit nec enim volutpat. Cursus pretium
             velit eget justo, turpis.
           </p>
-          <div className="name-star-div" style={{paddingTop: 10}}>
+          <div className="name-star-div" style={{ paddingTop: 10 }}>
             <h4 className="">Jenifer Harrison</h4>
-             <div className="star" style={{paddingTop: 0, width: 120}}>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-             </div>
+            <div className="star" style={{ paddingTop: 0, width: 120 }}>
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+            </div>
           </div>
         </div>
         <div className="client__testimonies__div">
@@ -143,15 +146,15 @@ const LandingPage = () => {
             nec, nunc viverra massa blandit nec enim volutpat. Cursus pretium
             velit eget justo, turpis.
           </p>
-          <div className="name-star-div" style={{paddingTop: 10}}>
+          <div className="name-star-div" style={{ paddingTop: 10 }}>
             <h4 className="">Jenifer Harrison</h4>
-             <div className="star" style={{paddingTop: 0, width: 120}}>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-             </div>
+            <div className="star" style={{ paddingTop: 0, width: 120 }}>
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+            </div>
           </div>
         </div>
         <div className="client__testimonies__div">
@@ -162,15 +165,15 @@ const LandingPage = () => {
             nec, nunc viverra massa blandit nec enim volutpat. Cursus pretium
             velit eget justo, turpis.
           </p>
-          <div className="name-star-div" style={{paddingTop: 10}}>
+          <div className="name-star-div" style={{ paddingTop: 10 }}>
             <h4 className="">Jenifer Harrison</h4>
-             <div className="star" style={{paddingTop: 0, width: 120}}>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-             </div>
+            <div className="star" style={{ paddingTop: 0, width: 120 }}>
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+            </div>
           </div>
         </div>
         <div className="client__testimonies__div">
@@ -181,15 +184,15 @@ const LandingPage = () => {
             nec, nunc viverra massa blandit nec enim volutpat. Cursus pretium
             velit eget justo, turpis.
           </p>
-          <div className="name-star-div" style={{paddingTop: 10}}>
+          <div className="name-star-div" style={{ paddingTop: 10 }}>
             <h4 className="">Jenifer Harrison</h4>
-             <div className="star" style={{paddingTop: 0, width: 120}}>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-             </div>
+            <div className="star" style={{ paddingTop: 0, width: 120 }}>
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+            </div>
           </div>
         </div>
         <div className="client__testimonies__div">
@@ -200,15 +203,15 @@ const LandingPage = () => {
             nec, nunc viverra massa blandit nec enim volutpat. Cursus pretium
             velit eget justo, turpis.
           </p>
-          <div className="name-star-div" style={{paddingTop: 10}}>
+          <div className="name-star-div" style={{ paddingTop: 10 }}>
             <h4 className="">Jenifer Harrison</h4>
-             <div className="star" style={{paddingTop: 0, width: 120}}>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-             </div>
+            <div className="star" style={{ paddingTop: 0, width: 120 }}>
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+            </div>
           </div>
         </div>
         <div className="client__testimonies__div">
@@ -219,49 +222,18 @@ const LandingPage = () => {
             nec, nunc viverra massa blandit nec enim volutpat. Cursus pretium
             velit eget justo, turpis.
           </p>
-          <div className="name-star-div" style={{paddingTop: 10}}>
+          <div className="name-star-div" style={{ paddingTop: 10 }}>
             <h4 className="">Jenifer Harrison</h4>
-             <div className="star" style={{paddingTop: 0, width: 120}}>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-              <img src={star} alt="" style={{display: "inline-block"}}/>
-             </div>
+            <div className="star" style={{ paddingTop: 0, width: 120 }}>
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+              <img src={star} alt="" style={{ display: "inline-block" }} />
+            </div>
           </div>
         </div>
       </section>
-      <footer>
-        <nav className="footer__nav">
-          <div className="left">
-            <img src="" alt="" />
-            <h4>Dispatch buddy</h4>
-            <p>© 2022 All rights reserved</p>
-          </div>
-          <div className="center">
-            <div>
-              <h4>Home</h4>
-              <h4>About Us</h4>
-              <h4>FAQ</h4>
-              <h4>Contact Us</h4>
-            </div>
-            <div>
-              <p>Privacy Policy</p>
-              <p>Terms of Condition</p>
-              <p>Legal</p>
-              <p>Help</p>
-            </div>
-          </div>
-          <div className="right">
-            <div>
-              <i className="fa-brands fa-facebook-f"></i>
-              <i class="fa-brands fa-twitter"></i>
-              <i class="fa-brands fa-instagram"></i>
-              <i class="fa-brands fa-google"></i>
-            </div>
-          </div>
-        </nav>
-      </footer>
     </div>
   );
 };
