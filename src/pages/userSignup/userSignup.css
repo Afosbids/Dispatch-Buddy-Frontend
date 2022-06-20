@@ -5,16 +5,17 @@
 }
 
 .image-section {
- width: 65%;
- height: 100%;
- padding: 3rem;
- color: #FFFFFF;
- background-image: url('./images/signupImg.png');
- background-position: center;
- font-size: 2rem;
- font-weight: 600;
- display: flex;
- align-items: flex-end;
+    width:100%;
+    height: 100%;
+    padding: 3rem;
+    color: #FFFFFF;
+    background-image: url('./images/signupImg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-end;
 }
 .signup-img {
     object-fit: cover;
@@ -30,6 +31,7 @@
 .logo-text {
     color: #E02B45;
     margin-left: 1rem;
+    font-size: 1rem;
 }
 
 label {
@@ -42,11 +44,12 @@ label {
 
 .form-section {
     padding: 3rem;
+    margin-left: 60px;
 }
 
 .signup-btn {
     margin-top: 15px;
-    width: 90%;
+    width: 65%;
     height: 3.2rem;
     border-radius: 10px;
     background-color: #E02B45;
@@ -60,10 +63,15 @@ label {
     cursor: pointer;
 }
 
+p > span {
+    cursor: pointer;
+}
+
 .form-section p {
     margin-top: 25px;
     width: 252px;
-    height: 24px;
+    height: 5px;
+    margin-right:300px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
