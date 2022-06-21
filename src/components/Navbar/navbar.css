@@ -7,7 +7,7 @@
 .navbar {
     display: flex;
     position: fixed;
-    z-index: 12;
+    z-index: 13;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1rem;
