@@ -6,6 +6,8 @@
 
 .navbar {
     display: flex;
+    position: fixed;
+    z-index: 12;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1rem;
