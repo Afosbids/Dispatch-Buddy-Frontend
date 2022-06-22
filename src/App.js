@@ -3,8 +3,10 @@ import UserSignup from './pages/userSignup/UserSignup'
 import LandingPage from "./pages/LandingPage/LandingPage";
 import UserSignin from "./pages/UserSignin/UserSignin";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
-
+import Navbar from "./components/Navbar/Navbar";
+import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
+import PasswordResetVerification from "./pages/PasswordResetVerification/PasswordResetVerification";
+import Footer from "./components/footer/Footer";
 
 function App() {
 
@@ -18,6 +20,13 @@ function App() {
       </Routes>
     </BrowserRouter>
     
+    <div>
+      <Navbar />
+      {/* <LandingPage /> */}
+      <ForgotPassword />
+      {/* <PasswordResetVerification /> */}
+      <Footer />
+    </div>
   );
 }
 
