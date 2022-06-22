@@ -1,18 +1,13 @@
 import React from 'react'
 import SignUpForm from '../../components/common/SignUpFrontEnd';
 import logo from './images/logo.svg'
-import IMG from './images/signupImg.png'
-// import mailIcon from "./images/Icon.png"
 import "./usersignin.css"
+import LeftImage from '../../components/LeftImage'
 
 const UserSignin = () => {
   return (
     <div className="user-signin">
-      <section className="left-signin">
-        <img src={IMG} alt="" />
-        <p>Delivery service just got <br/>easier, elegant & superb <br/>with Dispatch Buddy </p>
-      </section>
-
+      <LeftImage />
       <section className="right-signin">
           <div className="logo-group">
             <img src={logo} alt="" className="logo"/>

@@ -1,62 +1,26 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .rider-signup{
     display: flex;
     height: 100vh;
     flex-direction: row;
-    justify-content: center;
-    gap: 90px;
+    justify-content: flex-start;
+    gap: 100px;
+    margin-left: 160px;
 }
 
-.left-signup{
-    width: 797px;
-    height: 140vh;
-    left: 0;
-    margin-left: -160px;
-    position:relative;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background: linear-gradient(360deg, rgba(0, 0, 0, 0.6) 33.19%, rgba(0, 0, 0, 0) 55.38%);
-}
-
-.left-signup img{
-    height: 140vh;
-    width: 100%;
-    opacity: 0.7;
-}
-
-.left-signup p{
-    position: absolute;
-    bottom: 50px;
-    left: 30px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48.41px;
-    color: #FFFFFF;
+.logo-group2{
+    display: flex;
+    margin-top: -50px;
 }
 
 .right-signup{
-    width: auto;
+    width: 300px;
     padding-top: 60px;
 }
-/* 
-.right-signup p {
-    margin-top: 25px;
-    width: 252px;
-    height: 24px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #012A4A;
-} */
+
+.city{
+    width: 18%;
+    border-radius: 5px;
+}
 
 .right-signup p span{
     color:#E02B45;
@@ -64,6 +28,90 @@
     font-family: 'Inter';
 }
 
-form > h2{
-    margin: 2rem 0;
+.right-header{
+    margin: 15px 0px;
+    color: #012A4A;
+
+}
+
+.rider-overlay{
+    position: absolute;
+    top: 8;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+  form input {
+      width: 100%;
+      padding: 9px 10px;
+      border-top: 2px solid grey;
+      border-bottom: 1px solid grey;
+      border-radius: 5px;
+      margin-bottom: 2px;
+      opacity: 0.5;
+  }
+
+  .file2{
+      border: 2px solid grey;
+      padding: 5px 100px;
+      border-radius: 5px;
+      padding: 6px 10px;
+      display: flex;
+      opacity: 0.5;
+      
+  }
+
+  .file2 input{
+    display: none;
+  }
+
+  .file2 svg:hover{
+    cursor: pointer;
+  }
+
+
+
+.email-icon {
+    background: url(../../pages/userSignup/images/Icon.png) no-repeat;
+}
+.password-icon {
+    background: url(../../pages/userSignup/images/Vector.png) no-repeat;
+}
+
+.upload-icon{
+    background: url(../../pages/userSignup/images/Vector2.png) no-repeat;
+}
+
+.email-icon, .password-icon, .upload-icon {
+    background-position: 10px;
+    padding-left: 40px;
+}
+
+.rider-signup-btn {
+    margin-top: 5px;
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 5px;
+    background-color: #E02B45;
+    color: #FFFFFF;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.form p span{
+    color:#E02B45;
+    font-weight: 600;
+}
+
+.form p{
+    margin-top: 20px;
+    color: #012A4A;
+    font-size: 15px;
+    padding-left: 5px;
 }
