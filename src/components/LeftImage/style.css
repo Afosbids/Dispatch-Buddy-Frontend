@@ -1,0 +1,35 @@
+.left-image{
+    width: 797px;
+    height: 100vh;
+    left: 0;
+    margin-left: -160px;
+    position:relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.6) 33.19%, rgba(0, 0, 0, 0) 55.38%);
+}
+
+.image-overlay{
+    position: absolute;
+    top: 8;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.left-image img{
+    height: 100vh;
+    width: 100%;
+}
+
+.left-image p{
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48.41px;
+    color: #FFFFFF;
+}

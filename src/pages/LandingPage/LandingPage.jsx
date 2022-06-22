@@ -10,9 +10,13 @@ import shutterStock2 from "./images/shutterstock2.png";
 import customerStockImage from "./images/customerStockImage.jpeg";
 import star from "./images/star.png";
 import "./landingPage.css";
+import Navbar from "../../components/Navbar/Navbar";
+
 
 const LandingPage = () => {
   return (
+    <>
+      <Navbar />
     <div className="landing-page-div">
       <section className="hero">
         <div className="overlay"></div>
