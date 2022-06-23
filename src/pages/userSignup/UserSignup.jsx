@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import SignUpForm from '../../components/common/SignUpFrontEnd';
 
 import logo from './images/logo.svg'
@@ -31,7 +32,7 @@ const UserSignup = () => {
         <label>Confirm Password</label>
         <SignUpForm icon="password-icon" placeholder="Confirm your password"/>
         <button className='signup-btn' type="button">Sign Up</button>
-        <p>Already have an account?<span> Sign In</span></p>
+        <p>Already have an account?<Link to="/user-signin"><span> Sign In</span></Link></p>
         </form>
         
         </section>
