@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.user-signin{
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    gap: 90px;
+}
+
+.right-signin{
+    width: auto;
+    padding-top: 90px;
+}
+
+.right-signin p {
+    margin-top: 25px;
+    width: 252px;
+    height: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #012A4A;
+}
+
+.right-signin p span{
+    color:#E02B45;
+    font-weight: 500;
+    font-family: 'Inter';
+}
+
+form > h2{
+    margin: 2rem 0;
+}

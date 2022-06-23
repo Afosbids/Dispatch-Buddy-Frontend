@@ -2,9 +2,10 @@
     padding: 15px 30px;
     margin: 10px 0px;
     width: 90%;
-    border-radius: 5px;
-   border: 1px solid lightgrey;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
 }
+
 .SignUpForm {
     width: 25rem;
 }
@@ -14,6 +15,11 @@
 .password-icon {
     background: url(../../pages/userSignup/images/Vector.png) no-repeat;
 }
-.email-icon, .password-icon {
+
+.upload-icon{
+    background: url(../../pages/userSignup/images/Vector2.png) no-repeat;
+}
+
+.email-icon, .password-icon, .upload-icon {
     background-position: 5px;
 }
