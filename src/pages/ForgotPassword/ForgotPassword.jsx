@@ -19,7 +19,7 @@ const ForgotPassword = () => {
     forgotPassword()
     console.log(email)
     setEmail("")
-    // window.location.replace("/password-link")
+     window.location.replace("/password-link")
   }
 
   
