@@ -1,7 +1,6 @@
-import UserSignup from './pages/userSignup/UserSignup'
+import UserSignup from './pages/userSignup/userSignup'
 
-import LandingPage from "./pages/LandingPage/LandingPage";
-import Navbar from "./components/Navbar/Navbar";
+
 function App() {
 
   return (
