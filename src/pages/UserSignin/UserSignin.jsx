@@ -14,7 +14,7 @@ const UserSignin = () => {
             <h2 className="logo-text">Dispatch <br/>Buddy</h2>
           </div>
 
-        <form>
+        <form className='signin-form'>
         <h2>Login</h2>
         <label>Email</label>
         <SignUpForm icon="email-icon" placeholder="Enter your email"/>

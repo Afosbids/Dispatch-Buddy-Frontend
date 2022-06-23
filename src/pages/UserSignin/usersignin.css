@@ -9,7 +9,7 @@
     height: 100vh;
     flex-direction: row;
     justify-content: center;
-    gap: 90px;
+    gap: 140px;
 }
 
 .right-signin{
@@ -35,6 +35,6 @@
     font-family: 'Inter';
 }
 
-form > h2{
+.signin-form > h2{
     margin: 2rem 0;
 }

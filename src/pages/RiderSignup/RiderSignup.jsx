@@ -1,10 +1,35 @@
-import React from "react";
+import {React, useState} from "react";
 import logo from "./images/logo.svg";
 import "./ridersignup.css";
 import LeftImage from "../../components/LeftImage";
 import DropdownMenu from "../../components/DropdownMenu";
 
 const RiderSignup = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phonenumber: '',
+    email: '',
+    city: '',
+    bikedocument: '',
+    validid: '',
+    passportphoto: '',
+    password: '',
+    confirmPassword: '',
+  })
+
+  const {name, phonenumber, email, city, bikedocument, validid, passportphoto, password, confirmPassword} = formData
+
+  const onChange = (e) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+  }))
+  }
+
+  const onSubmit = (e) => {
+    e.preventDefault()
+  }
+
   return (
     <div className="rider-signup">
       <LeftImage />
@@ -17,18 +42,23 @@ const RiderSignup = () => {
           </h2>
         </div>
         <h2 className="right-header">Sign Up as a Rider</h2>
-        <form className="form">
-          <label for="fname">Name</label>
+
+        <form className="form" onSubmit={onSubmit}>
+          <label for="name">Name</label>
           <input
+            onChange={onChange}
+            value={name}
             className="email-icon"
             type="text"
-            id="fname"
-            name="fname"
+            id="name"
+            name="name"
             placeholder="Enter your name"
           />
           <br />
-          <label for="lname">Phonenumber</label>
+          <label for="phonenumber">Phonenumber</label>
           <input
+            onChange={onChange}
+            value={phonenumber}
             className="email-icon"
             type="number"
             id="phonenumber"
@@ -36,20 +66,32 @@ const RiderSignup = () => {
             placeholder="Enter your phone number"
           />
           <br />
-          <label for="lname">Email</label>
+          <label for="email">Email</label>
           <input
+            onChange={onChange}
+            value={email}
             className="email-icon"
             type="email"
             id="email"
-            name="phonenumber"
+            name="email"
             placeholder="Enter your email"
           />
           <br />
           <label for="city">City</label> <br />
-          <DropdownMenu className="city" />
+          <DropdownMenu  
+          onChange={onChange}
+          value={city}
+          id="city" 
+          className="city" />
+
+
           <label>Bike Documents</label>
           <div className="file2">
-            <input id="file-2" type="file" />
+            <input
+            onChange={onChange}
+            value={bikedocument}
+            id="bikedocument" 
+            type="file" />
             <label className="inputTag" for="file-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,9 +108,15 @@ const RiderSignup = () => {
               <span>Upload</span>
             </label>
           </div>
+
+
           <label>Valid ID Card</label>
           <div className="file2">
-            <input id="file-2" type="file" />
+            <input 
+            onChange={onChange}
+            value={validid}
+            id="validid" 
+            type="file" />
             <label className="inputTag" for="file-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,9 +133,15 @@ const RiderSignup = () => {
               <span>Upload</span>
             </label>
           </div>
+
+
           <label>Passport Photo</label>
           <div className="file2">
-            <input id="file-2" type="file" />
+            <input 
+            onChange={onChange}
+            value={passportphoto}
+            id="passportphoto" 
+            type="file" />
             <label className="inputTag" for="file-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -104,8 +158,12 @@ const RiderSignup = () => {
               <span>Upload</span>
             </label>
           </div>
+
+
           <label for="password">Password</label>
           <input
+            onChange={onChange}
+            value={password}
             className="password-icon"
             type="password"
             id="password"
@@ -115,14 +173,19 @@ const RiderSignup = () => {
           <br />
           <label for="password">Confirm Password</label>
           <input
+            onChange={onChange}
+            value={confirmPassword}
             className="password-icon"
             type="password"
-            id="password"
+            id="confirmPassword" 
             name="password"
             placeholder="Enter your password"
           />
           <br />
-          <button className="rider-signup-btn" type="submit" value="Submit">
+          <button
+            className="rider-signup-btn" 
+            type="submit" 
+            value="Submit">
             Signup
           </button>
           <p>
@@ -134,10 +197,13 @@ const RiderSignup = () => {
   );
 };
 
+
 const styleLink = document.createElement("link");
-styleLink.rel = "stylesheet";
-styleLink.href =
-  "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
-document.head.appendChild(styleLink);
+  styleLink.rel = "stylesheet";
+  styleLink.href =
+    "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
+  document.head.appendChild(styleLink);
 
 export default RiderSignup;
+
+
