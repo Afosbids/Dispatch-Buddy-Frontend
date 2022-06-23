@@ -1,15 +1,16 @@
 import React, {useState} from "react";
 import axios from "axios"
 import "./forgotPassword.css";
+import { Link } from "react-router-dom";
 
-// const url = "https://dispatch-buddy.herokuapp.com/auth/user/forgot-password";
+const url = "https://dispatch-buddy.herokuapp.com/auth/user/forgot-password";
 
 const ForgotPassword = () => {
 
   const [email, setEmail] = useState("")
 
   const forgotPassword = async() => {
-     const response = await axios.post("/auth/user/forgot-password", {email: email})
+     const response = await axios.post(url, {email: email})
      console.log(response)
   }
 
@@ -47,7 +48,7 @@ const ForgotPassword = () => {
             />
           </form>
         </div>
-        <button className="back-to-login-forgot-password">Back to Login</button>
+        <Link to="/user-signin"><button className="back-to-login-forgot-password">Back to Login</button></Link>
       </div>
     </div>
   );
