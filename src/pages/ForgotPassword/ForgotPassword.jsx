@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import axios from "axios"
 import "./forgotPassword.css";
 
-const url = "https://dispatch-buddy.herokuapp.com/auth/user/forgot-password";
+// const url = "https://dispatch-buddy.herokuapp.com/auth/user/forgot-password";
 
 const ForgotPassword = () => {
 
