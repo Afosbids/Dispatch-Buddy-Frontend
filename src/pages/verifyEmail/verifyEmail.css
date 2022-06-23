@@ -1,0 +1,50 @@
+.verify-email-div {
+    margin-top: 5rem;
+    background: rgb(240, 237, 237);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10rem;
+    height: 25rem;
+    padding: 16rem 6rem;
+    flex-direction: column;
+    margin-bottom: 25rem;
+
+}
+.verify-email-div > img {
+    width: 80px;
+    height: 80px;
+}
+
+.verify-emal-container {
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.verify-email-button, .return-to-LoginPage {
+    margin-top: 2rem;
+    width: 50%;
+}
+
+.verify-email-button {
+    background: #E02B45;
+    border: none;
+    padding: 1rem;
+    color: white;
+    font-size: 1.2rem;
+}
+.return-to-LoginPage {
+    border: 0;
+    width: 10rem;
+    padding: 1rem;
+
+}
+
+.verify-email-div > p {
+  width: 53%;
+}
+.verify-email-div > h1 {
+    margin-bottom: 2rem;
+  }

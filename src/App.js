@@ -8,6 +8,7 @@ import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import PasswordResetVerification from "./pages/PasswordResetVerification/PasswordResetVerification";
 import Footer from "./components/footer/Footer";
 import ReEnterPassword from "./pages/reEnterPassword/ReEnterPassword";
+import VerifyEmail from "./pages/verifyEmail/VerifyEmail";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/user-signin" element={<UserSignin />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/password-link" element={<PasswordResetVerification />} />
+        <Route path="/verify-email" element={<VerifyEmail />} />
         <Route path="/auth/user/reset-password/:token/:email" element={<ReEnterPassword />} />
       </Routes>
       <Footer />
