@@ -3,6 +3,7 @@ import SignUpForm from '../../components/common/SignUpFrontEnd';
 import logo from './images/logo.svg'
 import "./userSignup.css";
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 
 
@@ -57,7 +58,9 @@ const [values, setValues] = useState({
         <label>Confirm Password</label>
         <SignUpForm icon="password-icon" placeholder="Confirm your password" type="password" name="confirm-password" value={values.confirmPassword} onChange={handleChange}/>
         <button className='signup-btn' type="button" onClick={handleFormSubmit}>Sign Up</button>
-        <p>Already have an account?<span> Sign In</span></p>
+        <p>Already have an account?
+          <span><Link to='/userSign' variant="body2"> Sign In</Link></span>
+        </p>
         </form>
         
         </div>

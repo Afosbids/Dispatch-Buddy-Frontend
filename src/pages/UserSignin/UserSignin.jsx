@@ -14,12 +14,13 @@ const UserSignin = () => {
             <h2 className="logo-text">Dispatch <br/>Buddy</h2>
           </div>
 
-        <form>
+        <form className="form-group">
         <h2>Login</h2>
         <label>Email</label>
         <SignUpForm icon="email-icon" placeholder="Enter your email"/>
         <label>Password</label>
         <SignUpForm icon="password-icon" placeholder="Enter your password"/>
+        <a href="/password">Forgot password?</a>
         <button className='signup-btn' type="button">Login</button>
         <p>Don't have an account?<span> Create account</span></p>
         </form>

@@ -34,24 +34,24 @@ input {
 
 .logo-group {
     display: flex;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .logo-text {
     color: #E02B45;
      margin: 0.5rem; 
-    /* font-size: 1rem; */
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 800;
+    font-weight: 850;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 20px;
+    
 }
 
 label {
     color: #012A4A;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 22px;
 }
 
@@ -70,7 +70,7 @@ label {
 
 .signup-btn {
     margin-top: 5px;
-    width: 79%;
+    width: 70%;
     height: 2.5rem;
     border-radius: 5px;
     background-color: #E02B45;

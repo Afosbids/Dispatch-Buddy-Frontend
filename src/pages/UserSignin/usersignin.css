@@ -17,6 +17,7 @@
     padding-top: 90px;
 }
 
+
 .right-signin p {
     margin-top: 25px;
     width: 252px;
@@ -38,3 +39,11 @@
 form > h2{
     margin: 2rem 0;
 }
+
+a {
+    margin-bottom: 4rem;
+}
+
+/* .form-group a {
+    margin-bottom: 4rem;
+} */
