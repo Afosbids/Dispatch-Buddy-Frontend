@@ -239,6 +239,7 @@ const LandingPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
