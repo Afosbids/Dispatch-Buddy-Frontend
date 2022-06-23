@@ -1,6 +1,6 @@
 import React from "react";
 import emailTick from "./images/email-tick.png";
-import axios from "axios"
+// import axios from "axios"
 import "./PasswordResetVerification.css";
 
 const PasswordResetVerification = () => {

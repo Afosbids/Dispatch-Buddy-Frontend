@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {useLocation} from "react-router-dom"
-import axios from "axios"
+// import axios from "axios"
 import "./reEnterPassword.css"
 
 const initialState = {
@@ -8,7 +8,7 @@ const initialState = {
     password: ""
 }
 
-const url = "https://dispatch-buddy.herokuapp.com/auth/user/reset-password"
+// const url = "https://dispatch-buddy.herokuapp.com/auth/user/reset-password"
 
 
 const ReEnterPassword = () => {
