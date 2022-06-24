@@ -15,12 +15,15 @@ const url = "https://dispatch-buddy.herokuapp.com/auth/user/reset-password"
 const ReEnterPassword = () => {
    const [form, setForm] = useState(initialState)
    const {search} = useLocation()
-
-    console.log(search)
+  const destructuredToken = search.split("=")[1]
+//   const token = destructuredToken.join("")
+console.log(search)
+    console.log(typeof destructuredToken)
    const handleSubmit = async(e) => {
-    const data = await axios.post(url, {token: search, email: form.email, password: form.password})
-    console.log(data)
     e.preventDefault()
+    const data = await axios.post(url, {token: destructuredToken, email: form.email, password: form.password})
+    console.log(data)
+   
     console.log(form)
    }
    const handleChange = (e) => {
