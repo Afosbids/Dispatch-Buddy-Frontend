@@ -23,7 +23,7 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/password-link" element={<PasswordResetVerification />} />
         {/* <Route path="/verify-email/user/verify/:token/:email" element={<VerifyEmail />} /> */}
-        <Route path="/user/verify-email" element={<VerifyEmail />} />
+        <Route path="/user/verify" element={<VerifyEmail />} />
         <Route path="/auth/user/reset-password/:token/:email" element={<ReEnterPassword />} />
       </Routes>
       <Footer />
@@ -31,4 +31,5 @@ function App() {
   );
 }
 
+// {origin}/user/verify?token=${verificationToken}&email=${email}
 export default App;
