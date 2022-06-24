@@ -3,32 +3,59 @@ import logo from "./images/logo.svg";
 import "./ridersignup.css";
 import LeftImage from "../../components/LeftImage";
 import DropdownMenu from "../../components/DropdownMenu";
+// import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
 
 const RiderSignup = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    phonenumber: '',
-    email: '',
-    city: '',
-    bikedocument: '',
-    validid: '',
-    passportphoto: '',
-    password: '',
-    confirmPassword: '',
-  })
+    name: "",
+    email: "",
+    password: "",
+    password2: "",
+  });
 
-  const {name, phonenumber, email, city, bikedocument, validid, passportphoto, password, confirmPassword} = formData
+  const { name, email, password, password2 } = formData;
 
-  const onChange = (e) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      [e.target.name]: e.target.value,
-  }))
-  }
+  const onChange = (e) =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const onSubmit = (e) => {
-    e.preventDefault()
-  }
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    if (password !== password2) {
+      console.log("Passwords do not match");
+    } else {
+      console.log(formData);
+      const newUser = {
+        name,
+        email,
+        password,
+      };
+      try {
+        const config = {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        };
+        const body = JSON.stringify(newUser);
+        const res = await axios.post("/api/users", body, config);
+        console.log(res.data);
+      } catch (err) {
+        console.error(err.response.data);
+      }
+    }
+  };
+
+    
+
+  //   // toggle to another view
+
+  //   if (res.status === 201) {
+  //     navigate('/');
+  //   } else {
+  //     toast.success('Email already registered');
+  //   }
+  // };
 
   return (
     <div className="rider-signup">
@@ -47,7 +74,6 @@ const RiderSignup = () => {
           <label for="name">Name</label>
           <input
             onChange={onChange}
-            value={name}
             className="email-icon"
             type="text"
             id="name"
@@ -58,7 +84,6 @@ const RiderSignup = () => {
           <label for="phonenumber">Phonenumber</label>
           <input
             onChange={onChange}
-            value={phonenumber}
             className="email-icon"
             type="number"
             id="phonenumber"
@@ -69,7 +94,6 @@ const RiderSignup = () => {
           <label for="email">Email</label>
           <input
             onChange={onChange}
-            value={email}
             className="email-icon"
             type="email"
             id="email"
@@ -79,20 +103,20 @@ const RiderSignup = () => {
           <br />
           <label for="city">City</label> <br />
           <DropdownMenu  
-          onChange={onChange}
-          value={city}
+          onClick={onChange}
           id="city" 
           className="city" />
 
 
           <label>Bike Documents</label>
-          <div className="file2">
-            <input
-            onChange={onChange}
+          {/* <div className="file2"> */}
+            {/* <input
+            onChange={onFileChange}
             value={bikedocument}
             id="bikedocument" 
-            type="file" />
-            <label className="inputTag" for="file-2">
+            name="file"
+            type="file" /> */}
+            {/* <label className="inputTag" for="file-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -106,18 +130,19 @@ const RiderSignup = () => {
                 />
               </svg>
               <span>Upload</span>
-            </label>
-          </div>
+            </label> 
+          // </div> 
 
 
           <label>Valid ID Card</label>
-          <div className="file2">
-            <input 
-            onChange={onChange}
+          {/* <div className="file2"> */}
+            {/* <input 
+            onChange={onFileChange}
             value={validid}
             id="validid" 
-            type="file" />
-            <label className="inputTag" for="file-2">
+            name="file"
+            type="file" /> */}
+            {/* <label className="inputTag" for="file-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -131,18 +156,19 @@ const RiderSignup = () => {
                 />
               </svg>
               <span>Upload</span>
-            </label>
-          </div>
+            </label> */}
+          {/* </div> */}
 
 
           <label>Passport Photo</label>
-          <div className="file2">
-            <input 
-            onChange={onChange}
+          {/* <div className="file2"> */}
+            {/* <input 
+            onChange={onFileChange}
             value={passportphoto}
             id="passportphoto" 
-            type="file" />
-            <label className="inputTag" for="file-2">
+            name="file"
+            type="file" /> */}
+            {/* <label className="inputTag" for="file-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -156,8 +182,8 @@ const RiderSignup = () => {
                 />
               </svg>
               <span>Upload</span>
-            </label>
-          </div>
+            </label> */}
+          {/* </div> */}
 
 
           <label for="password">Password</label>
@@ -174,11 +200,10 @@ const RiderSignup = () => {
           <label for="password">Confirm Password</label>
           <input
             onChange={onChange}
-            value={confirmPassword}
             className="password-icon"
             type="password"
             id="confirmPassword" 
-            name="password"
+            name="confirmpassword"
             placeholder="Enter your password"
           />
           <br />
@@ -204,6 +229,6 @@ const styleLink = document.createElement("link");
     "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
   document.head.appendChild(styleLink);
 
-export default RiderSignup;
+  export default RiderSignup;
 
 
