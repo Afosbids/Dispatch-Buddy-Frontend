@@ -59,7 +59,7 @@ const [values, setValues] = useState({
         <SignUpForm icon="password-icon" placeholder="Confirm your password" type="password" name="confirm-password" value={values.confirmPassword} onChange={handleChange}/>
         <button className='signup-btn' type="button" onClick={handleFormSubmit}>Sign Up</button>
         <p>Already have an account?
-          <span><Link to='/userSign' variant="body2"> Sign In</Link></span>
+          <span><Link to='/user-Signin' variant="body2"> Sign In</Link></span>
         </p>
         </form>
         
