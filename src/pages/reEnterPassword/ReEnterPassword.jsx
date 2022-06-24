@@ -1,22 +1,25 @@
 import React, {useState} from 'react'
 import {useLocation} from "react-router-dom"
-// import axios from "axios"
+import axios from "axios"
 import "./reEnterPassword.css"
 
 const initialState = {
+    token: "",
     email: "",
     password: ""
 }
 
-// const url = "https://dispatch-buddy.herokuapp.com/auth/user/reset-password"
+const url = "https://dispatch-buddy.herokuapp.com/auth/user/reset-password"
 
 
 const ReEnterPassword = () => {
    const [form, setForm] = useState(initialState)
-   const location = useLocation()
+   const {search} = useLocation()
 
-    console.log(location)
-   const handleSubmit = (e) => {
+    console.log(search)
+   const handleSubmit = async(e) => {
+    const data = await axios.post(url, {token: search, email: form.email, password: form.password})
+    console.log(data)
     e.preventDefault()
     console.log(form)
    }
