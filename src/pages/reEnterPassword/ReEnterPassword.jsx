@@ -24,12 +24,15 @@ const ReEnterPassword = () => {
     setForm({...form, [e.target.name]: e.target.value})
    }
   return (
-    <div>
+    <div className="reset-password-main-div">
+        
         <div className="reset-password-container">
+            
         <form className="re-enterPassword" onSubmit={handleSubmit}>
-            <div className="first form-group" style={{marginTop: 200}}>
+        <h1>Reset Yout Password</h1>
+            <div className="first form-group">
                 <label htmlFor="">Enter Email</label>
-                <input type="text" name="email" id=""  onChange={handleChange}/>
+                <input type="text" name="email" id="" onChange={handleChange}/>
                 
             </div>
             <div className=" second form-group">
@@ -37,7 +40,7 @@ const ReEnterPassword = () => {
                 <input type="text" name="password" id="" onChange={handleChange}/>
                 
             </div>
-            <input style={{width: 294}} className="reset-password-button" type="submit" value="Reset Password" />
+            <button type="submit" className="reset-password-button">Reset Password</button>
         </form>
         </div>
        
