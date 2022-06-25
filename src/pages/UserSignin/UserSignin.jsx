@@ -20,8 +20,7 @@ const handleChange = (e) => {
 const handleFormSubmit = async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.post('https://dispatch-buddy.herokuapp.com/api-docs/', values);
-    console.log(res)
+    await axios.post('https://dispatch-buddy.herokuapp.com/api-docs/', values);
   } catch (error) {
     console.log(error)
   }
