@@ -1,5 +1,5 @@
 import React from "react";
-import logoWhite from "./images/logo-white.png";
+// import logoWhite from "./images/logo-white.png";
 import logoAndText from "./images/logoAndText.png";
 import "./footer.css";
 
