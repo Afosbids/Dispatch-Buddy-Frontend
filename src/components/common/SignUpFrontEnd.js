@@ -2,6 +2,7 @@
 import "./SignUpFrontEnd.css";
 
 const SignUpForm = (props) => {
+
     return (
         <div className="SignUpForm">
             {/* <label>Name</label> */}

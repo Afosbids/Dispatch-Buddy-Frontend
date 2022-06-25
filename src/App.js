@@ -5,12 +5,12 @@ import UserSignin from "./pages/UserSignin/UserSignin";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from "./components/Navbar/Navbar";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
-import PasswordResetVerification from "./pages/PasswordResetVerification/PasswordResetVerification";
 import Footer from "./components/footer/Footer";
 
 function App() {
 
   return (
+    <>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -27,6 +27,7 @@ function App() {
       {/* <PasswordResetVerification /> */}
       <Footer />
     </div>
+    </>
   );
 }
 
