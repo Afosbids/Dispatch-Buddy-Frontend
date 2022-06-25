@@ -1,61 +1,108 @@
-import {React, useState} from "react";
+import {React} from "react";
 import logo from "./images/logo.svg";
 import "./ridersignup.css";
 import LeftImage from "../../components/LeftImage";
-import DropdownMenu from "../../components/DropdownMenu";
+// import DropdownMenu from "../../components/DropdownMenu";
 // import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import Axios from "axios"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import {useFormik} from 'formik';
+import { basicSchema } from "../../schemas";
 
+
+const onSubmit = (values, actions) => {
+      Axios.post("https://dispatch-buddy.herokuapp.com/api-docs/#/auth/createuser", {
+          email: values.email,
+          password: values.password,
+          name: values.name,
+          phoneNum: values.phonenumber, 
+          city : values.city,
+          usertype: values.usertype,
+          bikedocument: values.bikedocument,
+          passportphoto: values.passportphoto,
+          valididcard: values.valididcard
+        }).then((response) => {
+                  actions.resetForm();
+                  console.log(response);
+                  if(response.status === 200){
+                    toast('You Have Successfully Registered!', {
+                      position: "top-right",
+                      autoClose: 5000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      pauseOnHover: true,
+                      draggable: true,
+                      progress: undefined,
+                      });
+                      <ToastContainer />
+                  }
+                });
+}
 
 const RiderSignup = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-    password2: "",
-  });
-
-  const { name, email, password, password2 } = formData;
-
-  const onChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    if (password !== password2) {
-      console.log("Passwords do not match");
-    } else {
-      console.log(formData);
-      const newUser = {
-        name,
-        email,
-        password,
-      };
-      try {
-        const config = {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        };
-        const body = JSON.stringify(newUser);
-        const res = await axios.post("/api/users", body, config);
-        console.log(res.data);
-      } catch (err) {
-        console.error(err.response.data);
-      }
-    }
-  };
-
-    
-
-  //   // toggle to another view
-
-  //   if (res.status === 201) {
-  //     navigate('/');
-  //   } else {
-  //     toast.success('Email already registered');
+  // const [email, setEmail] = useState("")
+  // const [password, setPassword] = useState("")
+  // const [name, setName] = useState("")
+  // const [phoneNum, setPhoneNum] = useState("")
+  // const [city, setCity] = useState("")
+  // const [user_type, setUserType] = useState("rider")
+  // const [bikeDocument, setbikeDocument] = useState("")
+  // const [valid_IdCard, setvalid_IdCard] = useState("")
+  // const [passport_photo, setpassport_photo] = useState("")
+  //   const onSubmit = (e) => {
+  //       e.preventDefault()
+  //     Axios.post("https://dispatch-buddy.herokuapp.com/api-docs/#/auth/createuser", {
+  //         email: email,
+  //         password: password,
+  //         name: name,
+  //         phoneNum: phoneNum, 
+  //         city : city,
+  //         user_type: user_type,
+  //         bikeDocument: bikeDocument,
+  //         passport_photo: passport_photo,
+  //         valid_IdCard: valid_IdCard
+  //       }).then((response) => {
+  //         console.log(response);
+  //         if(response.status === 200){
+  //           toast('You Have Successfully Registered!', {
+  //             position: "top-right",
+  //             autoClose: 5000,
+  //             hideProgressBar: false,
+  //             closeOnClick: true,
+  //             pauseOnHover: true,
+  //             draggable: true,
+  //             progress: undefined,
+  //             });
+  //             <ToastContainer />
+  //         }
+  //       });
   //   }
-  // };
+    const {
+      values,
+      errors,
+      touched,
+      // isSubmitting,
+      handleBlur,
+      handleChange,
+      handleSubmit,
+    } = useFormik({
+      initialValues:{
+        email:'',
+        password: '',
+        name: '',
+        phonenumber: '',
+        city : '',
+        usertype: '',
+        bikedocument: '',
+        passportphoto: '',
+        valididcard: '',
+      },
+      validationSchema:basicSchema,
+      onSubmit,
+    })
+  
+  console.log(errors)
 
   return (
     <div className="rider-signup">
@@ -70,52 +117,94 @@ const RiderSignup = () => {
         </div>
         <h2 className="right-header">Sign Up as a Rider</h2>
 
-        <form className="form" onSubmit={onSubmit}>
-          <label for="name">Name</label>
+        <form className="form" onSubmit={handleSubmit} >
+          <label htmlFfor="name">Name</label>
           <input
-            onChange={onChange}
-            className="email-icon"
+            value={values.name}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={errors.name && touched.name ? "input-error" : ""}
             type="text"
             id="name"
             name="name"
             placeholder="Enter your name"
           />
+          {errors.name && touched.name && <small className="error">{errors.name}</small>}
+
           <br />
-          <label for="phonenumber">Phonenumber</label>
+          <label htmlFor="phonenumber">Phonenumber</label>
           <input
-            onChange={onChange}
-            className="email-icon"
+            value={values.phonenumber}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={errors.phonenumber && touched.phonenumber ? "input-error" : ""}
             type="number"
             id="phonenumber"
             name="phonenumber"
             placeholder="Enter your phone number"
           />
+          {errors.phonenumber && touched.phonenumber && <small className="error">{errors.phonenumber}</small>}
+
           <br />
           <label for="email">Email</label>
           <input
-            onChange={onChange}
-            className="email-icon"
+            value={values.email}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={errors.email && touched.email ? "input-error" : ""}
             type="email"
             id="email"
             name="email"
             placeholder="Enter your email"
           />
+          {errors.email && touched.email && <small className="error">{errors.email}</small>}
+
           <br />
-          <label for="city">City</label> <br />
+          {/* <label for="city">City</label> <br />
           <DropdownMenu  
           onClick={onChange}
           id="city" 
-          className="city" />
+          className="city" /> */}
+
+          <label for="email">City</label>
+          <input
+            value={values.city}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={errors.city && touched.city ? "input-error" : ""}
+            type="text"
+            id="city"
+            name="city"
+            placeholder="Enter your city"
+          />
+          {errors.city && touched.city && <small className="error">{errors.city}</small>}
+
+
+          <label for="user_type">User_type</label>
+          <input
+            value={values.usertype}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={errors.usertype && touched.usertype ? "input-error" : ""}
+            type="text"
+            id="usertype"
+            name="usertype"
+            placeholder="Enter user type"
+          />
+          {errors.usertype && touched.usertype && <small className="error">{errors.usertype}</small>}
 
 
           <label>Bike Documents</label>
           {/* <div className="file2"> */}
-            {/* <input
-            onChange={onFileChange}
-            value={bikedocument}
+            <input
+            onChange={handleChange}
+            value={values.bikedocument}
+            onBlur={handleBlur}
+            className={errors.bikedocument && touched.bikedocument ? "input-error" : ""}
             id="bikedocument" 
-            name="file"
-            type="file" /> */}
+            name="bikedocument"
+            type="file" />
+            {errors.bikedocument && touched.bikedocument && <small className="error">{errors.bikedocument}</small>}
             {/* <label className="inputTag" for="file-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -134,14 +223,18 @@ const RiderSignup = () => {
           // </div> 
 
 
-          <label>Valid ID Card</label>
+          
           {/* <div className="file2"> */}
-            {/* <input 
-            onChange={onFileChange}
-            value={validid}
-            id="validid" 
-            name="file"
-            type="file" /> */}
+            <label>Valid ID Card</label>
+            <input 
+            onChange={handleChange}
+            value={values.valididcard}
+            onBlur={handleBlur}
+            className={errors.valididcard && touched.valididcard ? "input-error" : ""}
+            id="valididcard" 
+            name="valididcard"
+            type="file" />
+            {errors.valididcard && touched.valididcard && <small className="error">{errors.valididcard}</small>}
             {/* <label className="inputTag" for="file-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -162,12 +255,16 @@ const RiderSignup = () => {
 
           <label>Passport Photo</label>
           {/* <div className="file2"> */}
-            {/* <input 
-            onChange={onFileChange}
-            value={passportphoto}
+            <input 
+            onChange={handleChange}
+            value={values.passportphoto}
+            onBlur={handleBlur}
+            className={errors.passportphoto && touched.passportphoto ? "input-error" : ""}
             id="passportphoto" 
-            name="file"
-            type="file" /> */}
+            name="passportphoto"
+            type="file" />
+            {errors.passportphoto && touched.passportphoto && <small className="error">{errors.passportphoto}</small>}
+            <br />
             {/* <label className="inputTag" for="file-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -188,25 +285,18 @@ const RiderSignup = () => {
 
           <label for="password">Password</label>
           <input
-            onChange={onChange}
-            value={password}
-            className="password-icon"
+            onChange={handleChange}
+            value={values.password}
+            onBlur={handleBlur}
+            className={errors.password && touched.password ? "input-error" : ""}
             type="password"
             id="password"
             name="password"
             placeholder="Enter your password"
           />
+          {errors.password && touched.password && <small className="error">{errors.password}</small>}
           <br />
-          <label for="password">Confirm Password</label>
-          <input
-            onChange={onChange}
-            className="password-icon"
-            type="password"
-            id="confirmPassword" 
-            name="confirmpassword"
-            placeholder="Enter your password"
-          />
-          <br />
+          
           <button
             className="rider-signup-btn" 
             type="submit" 

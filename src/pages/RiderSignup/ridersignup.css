@@ -13,7 +13,7 @@
 }
 
 .right-signup{
-    width: 300px;
+    width: 250px;
     padding-top: 60px;
 }
 
@@ -44,23 +44,23 @@
 
 .form input {
     width: 100%;
-    padding: 9px 10px;
-    border-top: 2px solid grey;
-    border-bottom: 1px solid grey;
+    padding: 5px 8px;
+    border: 2px solid grey;
+    /* border-bottom: 1px solid grey; */
     border-radius: 5px;
     margin-bottom: 2px;
     opacity: 0.5;
 }
 
-  .file2{
-      border: 2px solid grey;
-      padding: 5px 100px;
-      border-radius: 5px;
-      padding: 6px 10px;
-      display: flex;
-      opacity: 0.5;
-      
-  }
+.file2{
+    border: 2px solid grey;
+    padding: 5px 100px;
+    border-radius: 5px;
+    padding: 6px 10px;
+    display: flex;
+    opacity: 0.5;
+    
+}
 
 .file2 input{
 display: none;
@@ -114,4 +114,13 @@ margin-top: 20px;
 color: #012A4A;
 font-size: 15px;
 padding-left: 5px;
+}
+
+input.input-error{
+    border-color: red;
+}
+
+.error{
+    color: red;
+    font-size: 10px;
 }
