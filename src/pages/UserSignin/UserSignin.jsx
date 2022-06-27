@@ -14,11 +14,24 @@ const UserSignin = () => {
     password: '',
 })
 
+const isFormValid = () => {
+    const { email, password } = values;
+    if (email && password) {
+      return true;
+    }
+    return false;
+  }
+
 const handleChange = (e) => {
   setValues({ ...values, [e.target.name]: e.target.value })
 }
 const handleFormSubmit = async (e) => {
   e.preventDefault();
+  if (isFormValid()) {
+        console.log('Form is valid');
+      } else {
+        console.log('Form is invalid');
+      }
   try {
     await axios.post('https://dispatch-buddy.herokuapp.com/api-docs/', values);
   } catch (error) {
