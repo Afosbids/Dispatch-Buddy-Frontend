@@ -41,14 +41,10 @@ const ForgotPassword = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <input
-              type="submit"
-              value="Reset Password"
-              className="reset-password-button"
-            />
+            <button type="submit" className="reset-password-button" style={{marginBottom: 40, width: 350, marginLeft: 0}}>Reset Password</button>
           </form>
         </div>
-        <Link to="/user-signin"><button className="back-to-login-forgot-password">Back to Login</button></Link>
+        <Link to="/user-signin" className="Link-component"><button className="back-to-login-forgot-password" style={{marginBottom: 0,}}>Back to Login</button></Link>
       </div>
     </div>
   );
