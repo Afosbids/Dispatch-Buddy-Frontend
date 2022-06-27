@@ -5,7 +5,7 @@ import { useState } from 'react'
 import "./usersignin.css"
 import axios from 'axios';
 import LeftImage from '../../components/LeftImage'
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const UserSignin = () => {
 
@@ -40,10 +40,10 @@ const handleFormSubmit = async (e) => {
         <label>Email</label>
         <SignUpForm icon="email-icon" placeholder="Enter your email" type="email" name="email" value={values.email} onChange={handleChange}/>
         <label>Password</label>
-        <SignUpForm icon="password-icon" placeholder="Enter your password" type="password" value={values.password} onChange={handleChange}/>
-        <a href="/password">Forgot password?</a>
-        <button className='signup-btn' type="button" onClick={handleFormSubmit}>Login</button>
-        <p>Don't have an account?<span><Link to='/user-signup' variant="body2"> Create account</Link></span></p>
+        <SignUpForm icon="password-icon" placeholder="Enter your password"/>
+        <button className='signup-btn' type="button">Login</button>
+        <p>Don't have an account?<span> Create account</span></p>
+         <Link to="/forgot-password"><p style={{color: "blue"}}>Forgotten your password?</p></Link> 
         </form>
       </section>
         

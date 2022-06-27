@@ -8,16 +8,14 @@ import time from "./images/time.png";
 import shutterStock from "./images/shutterstock.png";
 import shutterStock2 from "./images/shutterstock2.png";
 import customerStockImage from "./images/customerStockImage.jpeg";
+import { Link } from "react-router-dom";
 import star from "./images/star.png";
 import Footer from "../../components/footer/Footer";
 import "./landingPage.css";
 
-
-
 const LandingPage = () => {
   return (
     <>
- 
     <div className="landing-page-div">
       <section className="hero">
         <div className="overlay"></div>
@@ -28,12 +26,15 @@ const LandingPage = () => {
           </h1>
           <p className="hero__slogan">Send. Track. Recive </p>
           <div className="hero__button">
-            <button className="button customer__button">
+            <Link to="/user-signup"><button className="btn customer__button">
               Register as a Customer
-            </button>
-            <button className="button rider__button">
+            </button></Link>
+            <Link to="/rider-signup">
+            <button className="btn rider__button">
               Register as a Rider
             </button>
+            </Link>
+            
           </div>
         </div>
       </section>

@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom';
 import SignUpForm from '../../components/common/SignUpFrontEnd';
 import logo from './images/logo.svg'
 import "./userSignup.css";
 import axios from 'axios';
-import { Link } from "react-router-dom";
+
 
 
 
@@ -56,11 +58,9 @@ const [values, setValues] = useState({
         <label>Password</label>
         <SignUpForm icon="password-icon" placeholder="Enter your password" type="password" value={values.password} onChange={handleChange}/>
         <label>Confirm Password</label>
-        <SignUpForm icon="password-icon" placeholder="Confirm your password" type="password" name="confirm-password" value={values.confirmPassword} onChange={handleChange}/>
-        <button className='signup-btn' type="button" onClick={handleFormSubmit}>Sign Up</button>
-        <p>Already have an account?
-          <span><Link to='/user-Signin' variant="body2"> Sign In</Link></span>
-        </p>
+        <SignUpForm icon="password-icon" placeholder="Confirm your password"/>
+        <button className='signup-btn' type="button">Sign Up</button>
+        <p>Already have an account?<Link to="/user-signin"><span> Sign In</span></Link></p>
         </form>
         
         </div>
