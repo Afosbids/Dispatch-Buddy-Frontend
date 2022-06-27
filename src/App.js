@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from "./components/Navbar/Navbar";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import PasswordResetVerification from "./pages/PasswordResetVerification/PasswordResetVerification";
-import Footer from "./components/footer/Footer";
 import ReEnterPassword from "./pages/reEnterPassword/ReEnterPassword";
 import VerifyEmail from "./pages/verifyEmail/VerifyEmail";
 
