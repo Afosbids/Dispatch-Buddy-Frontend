@@ -29,9 +29,9 @@ const Footer = () => {
         <div className="right">
           <div>
             <i className="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-google"></i>
+            <i className="fa-brands fa-twitter"></i>
+            <i className="fa-brands fa-instagram"></i>
+            <i className="fa-brands fa-google"></i>
           </div>
           <div>
             <p style={{ marginLeft: 35 }}>English version</p>
