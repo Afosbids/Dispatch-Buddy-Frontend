@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .user-signup {
     display: flex;
     align-items: center;
@@ -5,16 +10,16 @@
 }
 
 .image-section {
- width: 65%;
- height: 100%;
- padding: 3rem;
- color: #FFFFFF;
- background-image: url('./images/signupImg.png');
- background-position: center;
- font-size: 2rem;
- font-weight: 600;
- display: flex;
- align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+    color: #FFFFFF;
+    background-image: url('./images/signupImg.png');
+    background-repeat: no-repeat;
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-end;
 }
 .signup-img {
     object-fit: cover;
@@ -22,33 +27,51 @@
     height: 100%;
 }
 
+input {
+    height: 2.5rem;
+}
+
 .logo-group {
     display: flex;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .logo-text {
     color: #E02B45;
-    margin-left: 1rem;
+    margin: 0.5rem; 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 850;
+    font-size: 16px;
+    line-height: 20px;
+    
 }
 
 label {
     color: #012A4A;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 22px;
 }
 
 
 .form-section {
-    padding: 3rem;
+    width: 40%;
+    padding: 10px 0;
+    height: 100vh;
+}
+
+.form-group {
+    width: 100%;
+    height: 60%;
+    padding: 60px;
 }
 
 .signup-btn {
-    margin-top: 15px;
-    width: 90%;
-    height: 3.2rem;
-    border-radius: 10px;
+    margin-top: 5px;
+    width: 70%;
+    height: 2.5rem;
+    border-radius: 5px;
     background-color: #E02B45;
     color: #FFFFFF;
     align-items: center;
@@ -60,10 +83,15 @@ label {
     cursor: pointer;
 }
 
+p > span {
+    cursor: pointer;
+}
+
 .form-section p {
-    margin-top: 25px;
+    margin-top: 20px;
     width: 252px;
-    height: 24px;
+    height: 5px;
+    margin-right:300px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -78,5 +106,11 @@ label {
 }
 
 form > h2{
-    margin: 2rem 0;
+    margin-bottom: 1rem;
+    color: #012A4A;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
 }
