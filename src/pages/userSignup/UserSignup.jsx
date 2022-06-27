@@ -1,9 +1,10 @@
 import { useState } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom';
 import SignUpForm from '../../components/common/SignUpFrontEnd';
 import logo from './images/logo.svg'
 import "./userSignup.css";
 import axios from 'axios';
-import { Link } from "react-router-dom";
 
 
 

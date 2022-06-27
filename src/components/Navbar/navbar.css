@@ -8,11 +8,12 @@
     display: flex;
     position: fixed;
     z-index: 12;
+    top: 0;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1rem;
     background: var(--color-white);
-    width: 97.5%;
+    width: 100%;
     flex-wrap: wrap;
 }
 
