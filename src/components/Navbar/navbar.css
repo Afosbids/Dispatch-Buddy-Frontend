@@ -73,6 +73,15 @@
 
 /* desktop design  */
 @media screen and (min-width: 1024px) {
+    .left {
+        font-size: 1.4rem;
+        width: 20%;
+        margin-left: 10rem;
+    }
+    .left > img {
+        width: 50px;
+        height: 50px;
+    }
     .navbar {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -80,16 +89,32 @@
         align-items: center;
         padding: 1rem 1rem;
         background: var(--color-white);
+        width: 100%;
+    }
+    .nav__list {
+        margin-left: 5rem;
+        margin-top: 20px;
+        height: 50px;
+    }
+    .nav__item > p {
+        width: 100px;
     }
     .nav__list >
       ul {
           width: 19rem;
         display: flex;
+        text-align: center;
         /* margin-left: 50px; */
     }
     .nav__item {
         border-bottom: none;
         margin-left: 1rem;
+        font-size: 17px;
+        width: 100%;
+        
+    }
+     a:visited {
+        color: #012A4A;
     }
     .collapsible__content {
         display: block;
@@ -98,9 +123,11 @@
         display: none;
     }
     .login {
-        margin-left: 10rem;
+        margin-left: 16rem;
         display: block;
+        font-size: 17px;
     }
+  
     .login-nav {
         display: none;
     }

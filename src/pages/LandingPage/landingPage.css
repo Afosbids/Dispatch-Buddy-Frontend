@@ -187,7 +187,7 @@
   .hero__img {
     width: 100%;
     margin-top: 5.7rem;
-    height: 27.2rem;
+    height: 33.2rem;
   }
   .hero__content {
     /* background:rgba(0, 0, 0, 0.6)url(./images/shutterstock.png) no-repeat; */
@@ -206,10 +206,11 @@
   }
   .overlay {
     position: absolute;
-    top: 8;
-    background: rgba(0, 0, 0, 0.7);
+    top:10;
+    background: rgba(0, 0, 0, 0.5);
     height: 33.2rem;
     width: 100%;
+    margin-top: 5.7rem;
   }
   /* .hero::after {
         content: "";
@@ -242,7 +243,7 @@
     margin-left: 2rem;
     margin-right: 2rem;
     width: 80%;
-    margin-left: 7.5rem;
+    margin-left: 10rem;
     grid-template-columns: repeat(3, 1fr);
 
     align-items: center;
