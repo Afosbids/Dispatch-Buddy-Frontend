@@ -10,6 +10,7 @@ import shutterStock2 from "./images/shutterstock2.png";
 import customerStockImage from "./images/customerStockImage.jpeg";
 import { Link } from "react-router-dom";
 import star from "./images/star.png";
+import Footer from "../../components/footer/Footer"
 import "./landingPage.css";
 
 
@@ -242,6 +243,7 @@ const LandingPage = () => {
         </div>
       </section>
     </div>
+    <Footer />
     </>
   );
 };

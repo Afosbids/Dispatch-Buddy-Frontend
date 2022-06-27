@@ -1,10 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .rider-signup{
     display: flex;
     height: 100vh;
-    flex-direction: row;
-    justify-content: flex-start;
     gap: 100px;
-    margin-left: 160px;
+    background: #fff;
 }
 
 .logo-group2{
@@ -13,14 +17,10 @@
 }
 
 .right-signup{
-    width: 250px;
-    padding-top: 60px;
+    width: 300px;
+    padding-top: 150px;
 }
 
-.city{
-    width: 18%;
-    border-radius: 5px;
-}
 
 .right-signup p span{
     color:#E02B45;
@@ -29,9 +29,8 @@
 }
 
 .right-header{
-    margin: 15px 0px;
-    color: #012A4A;
-
+    margin: 8px 0px;
+    color: #012A4A; 
 }
 
 .rider-overlay{
@@ -43,47 +42,24 @@
 }
 
 .form input {
+    border: 0px;
+    opacity: 0.5;
     width: 100%;
-    padding: 5px 8px;
-    border: 2px solid grey;
-    /* border-bottom: 1px solid grey; */
-    border-radius: 5px;
-    margin-bottom: 2px;
-    opacity: 0.5;
-}
-
-.file2{
-    border: 2px solid grey;
-    padding: 5px 100px;
-    border-radius: 5px;
-    padding: 6px 10px;
-    display: flex;
-    opacity: 0.5;
-    
-}
-
-.file2 input{
-display: none;
-}
-
-.file2 svg:hover{
-cursor: pointer;
 }
 
 
-
-.email-icon {
+#name, #phonenumber, #email{
     background: url(../../pages/userSignup/images/Icon.png) no-repeat;
 }
-.password-icon {
+#password , #city{
     background: url(../../pages/userSignup/images/Vector.png) no-repeat;
 }
 
-.upload-icon{
+.document-wrapper{
     background: url(../../pages/userSignup/images/Vector2.png) no-repeat;
 }
 
-.email-icon, .password-icon, .upload-icon {
+#name, #phonenumber, #email, #password, #city, .document-wrapper {
     background-position: 10px;
     padding-left: 40px;
 }
@@ -102,18 +78,21 @@ cursor: pointer;
     font-weight: 600;
     border: none;
     cursor: pointer;
+    margin: 9px 0px 3px 0px;
 }
 
-.form p span{
-color:#E02B45;
-font-weight: 600;
-}
-
-.form p{
-margin-top: 20px;
+.right-signup-footer p{
+margin-top: 3px;
 color: #012A4A;
-font-size: 15px;
+font-size: 14px;
 padding-left: 5px;
+font-weight: 500px;
+}
+
+
+.link-to-signin{
+    color:#E02B45;
+    font-weight: 700;
 }
 
 input.input-error{
@@ -123,4 +102,22 @@ input.input-error{
 .error{
     color: red;
     font-size: 10px;
+    margin-bottom: -10px;
+}
+
+#bikedocument, #valididcard, #passportphoto{
+    /* visibility: hidden; */
+    /* display: none; */
+    opacity: 0;
+    margin-left: -70px;
+    cursor: pointer;
+}
+
+.document-wrapper, .input-wrapper{
+    /* width: 100%; */
+    border: 1px solid #012A4A;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    opacity: 0.5;
 }
