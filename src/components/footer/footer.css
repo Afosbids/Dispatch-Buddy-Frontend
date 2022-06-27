@@ -55,11 +55,25 @@
     justify-content: center;
     flex-direction: column;
   }
+
+
+
+  .left > p {
+    width: 500px;
+   padding-left: 180px;
+  }
   .left div > img {
     width: 10rem;
   }
   .footer__nav .right i {
     width: 1.3rem;
     font-size: large;
+  }
+  .right {
+    padding-bottom: 20px;
+  }
+
+  .center {
+    padding-right: 50px;
   }
 }

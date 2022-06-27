@@ -130,15 +130,17 @@
   text-align: center;
 }
 .pickNpay__img img {
-  width: 90%;
-  height: 250px;
+  width: 100%;
+  height: 330px;
   margin-top: 3rem;
+  margin-right: 20px;
 }
 .pickNpay__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 40px;
 }
 .pickNpay__text p {
   width: 250px;
@@ -244,6 +246,7 @@
     margin-right: 2rem;
     width: 80%;
     margin-left: 10rem;
+    margin-bottom: 5rem;
     grid-template-columns: repeat(3, 1fr);
 
     align-items: center;
@@ -279,7 +282,7 @@
     display: grid;
     width: 80%;
     
-    margin-left: 8rem;
+    margin-left: 11rem;
     grid-template-columns: repeat(3, 1fr);
     
  
@@ -289,6 +292,11 @@
 
     padding-top: 40px;
   }
+  .top__notch {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+  }
+  
   .top__notch > h3 {
     font-size: 3rem;
 

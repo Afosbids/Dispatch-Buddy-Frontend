@@ -14,16 +14,16 @@ const Navbar = () => {
       onClick={handleClick}
       className={`navbar collapsible ${toggle ? "collapsible--expanded" : ""}`}
     >
-      <div className="left">
+      <div className="Left">
         <img src={logo} alt="" />
-        <p style={{fontWeight: 800}}>Dispatch Buddy</p>
+        <p style={{fontWeight: 800, paddingLeft: 0}}>Dispatch Buddy</p>
       </div>
       <div className="toggler">
         <p>toggler</p>
       </div>
       <div className="nav__list collapsible__content">
         <ul>
-          <Link to="/"><li className="nav__item">Home</li></Link>
+          <Link to="/"><li className="nav__item" style={{paddingRight: 10}}>Home</li></Link>
           <li className="nav__item">About</li>
           <li className="nav__item">Services</li>
           <li className="nav__item" style={{width: 100}}><p>Contact Us</p></li>

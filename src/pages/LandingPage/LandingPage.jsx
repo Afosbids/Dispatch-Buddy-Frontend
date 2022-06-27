@@ -9,6 +9,7 @@ import shutterStock from "./images/shutterstock.png";
 import shutterStock2 from "./images/shutterstock2.png";
 import customerStockImage from "./images/customerStockImage.jpeg";
 import star from "./images/star.png";
+import Footer from "../../components/footer/Footer";
 import "./landingPage.css";
 
 
@@ -39,7 +40,7 @@ const LandingPage = () => {
       <section className="top__notch">
         <div>
           <h3>Top Notch Services</h3>
-          <p>
+          <p style={{width: 650, fontSize: 18, marginTop: 20}}>
             Quickly integrate powerful solutions that gives you more flexibility
             and control over your parcel shipping and logistics processes.
           </p>
@@ -239,6 +240,7 @@ const LandingPage = () => {
         </div>
       </section>
     </div>
+    <Footer />
     </>
   );
 };

@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
         <div className="center">
           <div>
-            <h4>Home</h4>
+            <h4 style={{paddingTop: 25}}>Home</h4>
             <h4>About Us</h4>
             <h4>FAQ</h4>
             <h4>Contact Us</h4>
@@ -26,7 +26,7 @@ const Footer = () => {
             <p>Help</p>
           </div>
         </div>
-        <div className="right">
+        <div className="right" style={{paddingRight: 170, width: 400}}>
           <div>
             <i className="fa-brands fa-facebook-f"></i>
             <i class="fa-brands fa-twitter"></i>
