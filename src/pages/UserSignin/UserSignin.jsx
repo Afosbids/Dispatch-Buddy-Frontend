@@ -3,6 +3,7 @@ import SignUpForm from '../../components/common/SignUpFrontEnd';
 import logo from './images/logo.svg'
 import "./usersignin.css"
 import LeftImage from '../../components/LeftImage'
+import { Link } from 'react-router-dom';
 
 const UserSignin = () => {
   return (
@@ -22,6 +23,7 @@ const UserSignin = () => {
         <SignUpForm icon="password-icon" placeholder="Enter your password"/>
         <button className='signup-btn' type="button">Login</button>
         <p>Don't have an account?<span> Create account</span></p>
+         <Link to="/forgot-password"><p style={{color: "blue"}}>Forgotten your password?</p></Link> 
         </form>
       </section>
         
