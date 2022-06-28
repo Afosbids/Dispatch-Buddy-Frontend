@@ -4,27 +4,30 @@
     box-sizing: border-box;
 }
 
+.logo-group{
+    display: flex;
+    margin-top: 30px;
+}
+
 .user-signin{
     display: flex;
     height: 100vh;
     flex-direction: row;
-    justify-content: center;
-    gap: 140px;
+    gap: 100px;
 }
 
+
 .right-signin{
-    width: auto;
-    padding-top: 90px;
+    padding-top: 120px;
 }
 
 
 .right-signin p {
     margin-top: 25px;
-    width: 252px;
     height: 24px;
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 16px;
     line-height: 24px;
     color: #012A4A;
@@ -32,18 +35,44 @@
 
 .right-signin p span{
     color:#E02B45;
-    font-weight: 500;
+    font-weight: 600;
     font-family: 'Inter';
+}
+
+.signin-form{
+    width: 300px;
+    margin-top: 60px;
 }
 
 .signin-form > h2{
     margin: 2rem 0;
 }
 
-a {
-    margin-bottom: 4rem;
+
+.user-signin-btn {
+    margin-top: 20px;
+    width: 105%;
+    height: 2.5rem;
+    border-radius: 3px;
+    background-color: #E02B45;
+    color: #FFFFFF;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
 }
 
-/* .form-group a {
-    margin-bottom: 4rem;
-} */
+
+label {
+    color: #012A4A;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.signin-link{
+    color: lightblue;
+}
