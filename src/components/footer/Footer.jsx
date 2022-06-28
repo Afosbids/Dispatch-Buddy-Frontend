@@ -14,7 +14,11 @@ const Footer = () => {
         </div>
         <div className="center">
           <div>
+<<<<<<< HEAD
             <h4 style={{paddingTop: 25}}>Home</h4>
+=======
+            <h4 style={{marginTop: 26}}>Home</h4>
+>>>>>>> 711578a757d8081665f001eab02938c3de7a98f9
             <h4>About Us</h4>
             <h4>FAQ</h4>
             <h4>Contact Us</h4>
