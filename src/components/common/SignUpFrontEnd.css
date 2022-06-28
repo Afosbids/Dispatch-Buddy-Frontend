@@ -1,9 +1,11 @@
 .input-field {
-    padding: 15px 30px;
+    padding: 23px 30px;
     margin: 10px 0px;
     width: 100%;
     border-radius: 5px;
     border: 1px thick lightgrey;
+    border-radius: 5px;
+    border: 2px solid grey;
 }
 
 .SignUpForm {

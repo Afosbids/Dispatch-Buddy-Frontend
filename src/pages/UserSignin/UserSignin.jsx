@@ -32,8 +32,6 @@ const UserSignin = () => {
             <img src={logo} alt="" className="logo"/>
             <h2 className="logo-text">Dispatch <br/>Buddy</h2>
           </div>
-
-        <form className="form-group">
         <h2>Login</h2>
         <label>Email</label>
         <SignUpForm 
@@ -55,9 +53,7 @@ const UserSignin = () => {
           <Link to="/user-signup" style={{color: "red"}}><span> Create account</span></Link>
         </p>
         <Link to="/forgot-password"><p style={{color: "blue"}}>Forgotten your password?</p></Link> 
-        </form>
       </section>
-        
     </div>
   )
 }

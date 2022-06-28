@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
         <div className="center">
           <div>
-            <h4>Home</h4>
+            <h4 style={{marginTop: 26}}>Home</h4>
             <h4>About Us</h4>
             <h4>FAQ</h4>
             <h4>Contact Us</h4>
