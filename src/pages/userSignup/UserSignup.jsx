@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import { useState } from 'react'
-import React from 'react'
-import { Link } from 'react-router-dom';
-import SignUpForm from '../../components/common/SignUpFrontEnd';
-import logo from './images/logo.svg'
-import "./userSignup.css";
-import axios from 'axios';
-
-
-
-=======
 import { useState } from "react";
 import React from "react";
 // import LeftImage from '../../components/LeftImage'
@@ -18,7 +6,6 @@ import SignUpForm from '../../components/common/SignUpFrontEnd';
 import logo from './images/logo.svg'
 import "./userSignup.css";
 import Axios from "axios";
->>>>>>> develop
 
 const UserSignup = (props) => {
   const [email, setEmail] = useState("");
@@ -44,40 +31,6 @@ const UserSignup = (props) => {
     });
   };
   return (
-<<<<<<< HEAD
-    <div className="user-signup">
-        <section className="image-section">
-
-        <p>Delivery service just got <br/>easier, elegant & superb <br/>with Dispatch Buddy </p>
-        </section>
-        <section className="form-section">
-          <div className="form-group">
-
-          <div className="logo-group">
-          <img src={logo} alt="" className="logo"/>
-          <h2 className="logo-text">Dispatch <br/>Buddy</h2>
-          </div>
-          
-        <div className='form-div'>
-
-        <form>
-        <h2>Sign Up as Customer</h2>
-        <label>Name</label>
-        <SignUpForm icon="email-icon" placeholder="Enter your name" type="text" name="fullname" value={values.fullname} onChange={handleChange} />
-        <label>Phone Number</label>
-        <SignUpForm icon="email-icon" placeholder="Enter your phone number" type="number" name="phonenumber" value={values.phonenumber} onChange={handleChange}/>
-        <label>Email</label>
-        <SignUpForm icon="email-icon" placeholder="Enter your email address" type="email" name="email" value={values.email} onChange={handleChange}/>
-        <label>Password</label>
-        <SignUpForm icon="password-icon" placeholder="Enter your password" type="password" value={values.password} onChange={handleChange}/>
-        <label>Confirm Password</label>
-        <SignUpForm icon="password-icon" placeholder="Confirm your password"/>
-        <button className='signup-btn' type="button">Sign Up</button>
-        <p>Already have an account?<Link to="/user-signin"><span> Sign In</span></Link></p>
-        </form>
-        
-        </div>
-=======
     <>
       <div>
         <section className="user-signup">
@@ -86,7 +39,6 @@ const UserSignup = (props) => {
             <h1>Delivery service just got<br/>
                 easier, elegant & superb<br/>
                 with Dispatch Buddy </h1>
->>>>>>> develop
           </div>
             <div className="form-section">
                 <div className="logo-group">
