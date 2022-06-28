@@ -1,8 +1,8 @@
 .input-field {
     padding: 15px 30px;
     margin: 10px 0px;
-    width: 90%;
-    border-radius: 10px;
+    width: 100%;
+    border-radius: 5px;
     border: 1px thick lightgrey;
 }
 

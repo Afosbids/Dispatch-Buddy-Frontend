@@ -21,19 +21,32 @@
     display: flex;
     align-items: flex-end;
 }
+
+.image-section > h1 {
+    position: absolute;
+    width: 474px;
+    height: 144px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: #FFFFFF;
+}
 .signup-img {
-    object-fit: cover;
+    object-fit: fill;
     width: 100%;
     height: 100%;
 }
 
 input {
-    height: 2.5rem;
+    height: 3rem;
 }
 
 .logo-group {
     display: flex;
-    margin-bottom: 3rem;
+    margin-top: 4.8rem;
+    margin-left: 2.5rem;
 }
 
 .logo-text {
@@ -59,18 +72,19 @@ label {
     width: 40%;
     padding: 10px 0;
     height: 100vh;
+    margin-bottom: 20px;
 }
 
 .form-group {
-    width: 100%;
-    height: 60%;
-    padding: 60px;
+    width: 80%;
+    /* height: 50%; */
+    padding: 40px;
 }
 
 .signup-btn {
     margin-top: 5px;
-    width: 70%;
-    height: 2.5rem;
+    width: 92%;
+    height: 50px;
     border-radius: 5px;
     background-color: #E02B45;
     color: #FFFFFF;
@@ -106,7 +120,7 @@ p > span {
 }
 
 form > h2{
-    margin-bottom: 1rem;
+    margin-top: 0rem;
     color: #012A4A;
     font-family: 'Inter';
     font-style: normal;
@@ -114,3 +128,15 @@ form > h2{
     font-size: 24px;
     line-height: 24px;
 }
+
+/* .email-icon {
+    background: url(../../pages/userSignup/images/Icon.png) no-repeat;
+}
+.password-icon {
+    background: url(../../pages/userSignup/images/Vector.png) no-repeat;
+}
+
+.email-icon, .password-icon {
+    background-position: 10px;
+    padding-left: 40px;
+} */

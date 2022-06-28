@@ -3,41 +3,27 @@ import SignUpForm from '../../components/common/SignUpFrontEnd';
 import logo from './images/logo.svg'
 import { useState } from 'react'
 import "./usersignin.css"
-import axios from 'axios';
+import Axios from 'axios';
 import LeftImage from '../../components/LeftImage'
 import { Link } from 'react-router-dom';
 
 const UserSignin = () => {
 
-  const [values, setValues] = useState({
-    email: '',
-    password: '',
-})
-
-const isFormValid = () => {
-    const { email, password } = values;
-    if (email && password) {
-      return true;
-    }
-    return false;
-  }
-
-const handleChange = (e) => {
-  setValues({ ...values, [e.target.name]: e.target.value })
-}
-const handleFormSubmit = async (e) => {
-  e.preventDefault();
-  if (isFormValid()) {
-        console.log('Form is valid');
-      } else {
-        console.log('Form is invalid');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    console.log("clicked", email, password);
+    Axios.post(
+      "https://dispatch-buddy.herokuapp.com/api-docs/",
+      {
+        email: email,
+        password: password,
       }
-  try {
-    await axios.post('https://dispatch-buddy.herokuapp.com/api-docs/', values);
-  } catch (error) {
-    console.log(error)
-  }
-};
+    ).then((response) => {
+      console.log(response);
+    });
+  };
   return (
     <div className="user-signin">
       <LeftImage />
@@ -50,12 +36,25 @@ const handleFormSubmit = async (e) => {
         <form className="form-group">
         <h2>Login</h2>
         <label>Email</label>
-        <SignUpForm icon="email-icon" placeholder="Enter your email" type="email" name="email" value={values.email} onChange={handleChange}/>
+        <SignUpForm 
+          icon="email-icon" 
+          placeholder="Enter your email" 
+          type="email"
+          value={email} 
+          onChange={({ target }) => setEmail(target.value)}
+        />
         <label>Password</label>
-        <SignUpForm icon="password-icon" placeholder="Enter your password"/>
+        <SignUpForm 
+        icon="password-icon" 
+        placeholder="Enter your password"
+        type="password"
+        onChange={({ target }) => setPassword(target.value)}
+        />
         <button className='signup-btn' type="button" onClick={handleFormSubmit}>Login</button>
-        <p>Don't have an account?<span> Create account</span></p>
-         <Link to="/forgot-password"><p style={{color: "blue"}}>Forgotten your password?</p></Link> 
+        <p>Don't have an account?
+          <Link to="/user-signup" style={{color: "red"}}><span> Create account</span></Link>
+        </p>
+        <Link to="/forgot-password"><p style={{color: "blue"}}>Forgotten your password?</p></Link> 
         </form>
       </section>
         
