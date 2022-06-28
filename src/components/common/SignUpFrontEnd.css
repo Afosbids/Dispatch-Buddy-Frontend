@@ -1,6 +1,9 @@
 .input-field {
     padding: 23px 30px;
     margin: 10px 0px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px thick lightgrey;
     width: 90%;
     border-radius: 10px;
     border: 2px solid grey;
