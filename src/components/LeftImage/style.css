@@ -2,11 +2,8 @@
     width: 797px;
     height: 100vh;
     left: 0;
-    margin-left: -160px;
     position:relative;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background: linear-gradient(360deg, rgba(0, 0, 0, 0.6) 33.19%, rgba(0, 0, 0, 0) 55.38%);
+
 }
 
 .image-overlay{
@@ -18,8 +15,15 @@
 }
 
 .left-image img{
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    height: 100%;
     width: 100%;
+    
+    
+    object-fit: fill;
+    /* max-width: 100%;
+    max-height: 100%; */
 }
 
 .left-image p{
@@ -29,7 +33,7 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
-    line-height: 48.41px;
+    font-size: 30px;
+    line-height: 30.41px;
     color: #FFFFFF;
 }

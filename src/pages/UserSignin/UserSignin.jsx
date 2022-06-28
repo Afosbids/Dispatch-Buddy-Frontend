@@ -32,7 +32,6 @@ const UserSignin = () => {
             <img src={logo} alt="" className="logo"/>
             <h2 className="logo-text">Dispatch <br/>Buddy</h2>
           </div>
-
         <form className="form-group">
         <h2>Login</h2>
         <label>Email</label>
@@ -55,6 +54,16 @@ const UserSignin = () => {
           <Link to="/user-signup" style={{color: "red"}}><span> Create account</span></Link>
         </p>
         <Link to="/forgot-password"><p style={{color: "blue"}}>Forgotten your password?</p></Link> 
+
+        <form className="signin-form">
+          <h2>Login</h2>
+          <label>Email</label>
+          <SignUpForm icon="email-icon" placeholder="Enter your email" type="email" name="email" value={values.email} onChange={handleChange}/>
+          <label>Password</label>
+          <SignUpForm icon="password-icon" placeholder="Enter your password"/>
+          <Link className='signin-link' to="/forgot-password"><p style={{color: "blue"}}>Forgot password?</p></Link> 
+          <button className='user-signin-btn' type="submit" onClick={handleFormSubmit}>Login</button>
+          <p>Don't have an account?<span> Create account</span></p>
         </form>
       </section>
         
