@@ -30,6 +30,7 @@
 @media screen and (min-width: 1024px) {
   .footer__nav {
     display: grid;
+    margin-top: 0;
     grid-template-columns: repeat(3, 1fr);
   }
   .footer__nav .center {
