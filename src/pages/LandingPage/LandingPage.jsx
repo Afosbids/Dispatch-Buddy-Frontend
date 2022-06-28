@@ -26,11 +26,11 @@ const LandingPage = () => {
           </h1>
           <p className="hero__slogan" style={{paddingTop: 120}}>Send. Track. Recive </p>
           <div className="hero__button">
-            <Link to="/user-signup"><button className="btn customer__button">
+            <Link to="/user-signup"><button style={{cursor: "pointer"}} className="btn customer__button">
               Register as a Customer
             </button></Link>
             <Link to="/rider-signup">
-            <button className="btn rider__button">
+            <button style={{cursor: "pointer"}} className="btn rider__button">
               Register as a Rider
             </button>
             </Link>

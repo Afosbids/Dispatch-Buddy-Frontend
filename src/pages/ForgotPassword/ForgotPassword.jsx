@@ -19,7 +19,7 @@ const ForgotPassword = () => {
     forgotPassword()
     console.log(email)
     setEmail("")
-    //  window.location.replace("/password-link")
+     window.location.replace("/password-link")
   }
 
   
@@ -41,10 +41,10 @@ const ForgotPassword = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <button type="submit" className="reset-password-button" style={{marginBottom: 40, width: 350, marginLeft: 0}}>Reset Password</button>
+            <button type="submit" className="reset-password-button" style={{marginBottom: 40, width: 350, marginLeft: 0, cursor: "pointer"}}>Reset Password</button>
           </form>
         </div>
-        <Link to="/user-signin" className="Link-component"><button className="back-to-login-forgot-password" style={{marginBottom: 0,}}>Back to Login</button></Link>
+        <Link to="/user-signin" className="Link-component"><button className="back-to-login-forgot-password" style={{marginBottom: 0, cursor: "pointer"}}>Back to Login</button></Link>
       </div>
     </div>
   );
