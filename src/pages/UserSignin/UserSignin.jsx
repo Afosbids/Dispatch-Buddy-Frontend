@@ -6,7 +6,6 @@ import "./usersignin.css"
 import axios from 'axios';
 import LeftImage from '../../components/LeftImage'
 import { Link } from 'react-router-dom';
-
 const UserSignin = () => {
 
   const [values, setValues] = useState({
@@ -46,21 +45,20 @@ const handleFormSubmit = async (e) => {
             <img src={logo} alt="" className="logo"/>
             <h2 className="logo-text">Dispatch <br/>Buddy</h2>
           </div>
-
         <form className="signin-form">
           <h2>Login</h2>
           <label>Email</label>
           <SignUpForm icon="email-icon" placeholder="Enter your email" type="email" name="email" value={values.email} onChange={handleChange}/>
           <label>Password</label>
           <SignUpForm icon="password-icon" placeholder="Enter your password"/>
-          <Link className='signin-link' to="/forgot-password"><p style={{color: "blue"}}>Forgot password?</p></Link> 
+          <Link className='signin-link' to="/forgot-password"><p style={{color: "blue"}}>Forgot password?</p></Link>
           <button className='user-signin-btn' type="submit" onClick={handleFormSubmit}>Login</button>
           <p>Don't have an account?<span> Create account</span></p>
         </form>
       </section>
-        
     </div>
   )
 }
+
 
 export default UserSignin

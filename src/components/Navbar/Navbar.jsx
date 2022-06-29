@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Link} from "react-router-dom"
 import logo from "../../pages/LandingPage/images/logo.png";
 import "./navbar.css";
 const Navbar = () => {
@@ -13,24 +14,24 @@ const Navbar = () => {
       onClick={handleClick}
       className={`navbar collapsible ${toggle ? "collapsible--expanded" : ""}`}
     >
-      <div className="left">
+      <div className="Left">
         <img src={logo} alt="" />
-        <p>Dispatch Buddy</p>
+        <p style={{fontWeight: 800, paddingLeft: 0}}>Dispatch Buddy</p>
       </div>
       <div className="toggler">
         <p>toggler</p>
       </div>
       <div className="nav__list collapsible__content">
         <ul>
-          <li className="nav__item">Home</li>
+          <Link to="/"><li className="nav__item" style={{paddingRight: 10}}>Home</li></Link>
           <li className="nav__item">About</li>
           <li className="nav__item">Services</li>
-          <li className="nav__item">Contact Us</li>
+          <li className="nav__item" style={{width: 100}}><p>Contact Us</p></li>
           <li className="nav__item login-nav">Login</li>
         </ul>
       </div>
       <div className="login">
-        <p>Login</p>
+      <Link to="/user-signin"><p>Login</p></Link> 
       </div>
     </nav>
   );
