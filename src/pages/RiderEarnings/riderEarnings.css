@@ -1,3 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .magenta-div {
+    position: relative;
+    z-index: -1;
     background: rgba(252, 193, 52, 0.1);
+    border: 0px 0px 10px rgba(252, 193, 52, 0.1);
+    height: 200px;
+}
+
+.wrapped-div {
+    display: flex;
+    flex-direction: column-reverse;
+    background: white;
+    height: 800px;
+    width: 600px;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    margin-left: 500px;
+    margin-top: -150px;
+    padding: 40px;
+}
+
+.container1 {
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    gap: 24px;
+    width: 490px;
+    height: 180px;
+    background:  rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.column-text > h1 {
+    font-weight: 800;
+    font-size: 35px;
+    color: #21334F;
+    margin-left: -30px;
+}
+
+
+.column-text {
+    justify-content: center;
+    margin-left: 35%;
+}
+
+.row-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ride-div {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+
+}
+
+.time-div {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.earnings-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 50px;
+    width: 600px;
+}
+
+.earnings-group-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 100px;
+    margin-left: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.earnings-right {
+    margin-left: 30px;
+}
+
+.earnings-left {
+    margin-right: 30px;
+}
+
+.earnings-input {
+    background: rgba(52, 168, 83, 0.1);
+    color: green !important;
+    border-radius: 100px;
+    text-align: center;
+    /* justify-content: center; */
+    width: 90px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+::placeholder {
+    color: #34A853;
 }
