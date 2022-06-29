@@ -42,6 +42,7 @@ const RiderEarnings = () => {
                     </div>   
                 </div>
             </div>
+            <br/>
             <div className="earnings-group">
                 <div className="earnings-group-inner">
                     <p><strong>Today</strong>, 10:15AM</p>
@@ -57,7 +58,7 @@ const RiderEarnings = () => {
                     <p>MY EARNINGS</p>
                     <h1>N236,000</h1>
                 </div>
-                
+                <br/>
                 <div className="row-text">
                     <div className="ride-div">
                         <img src={smallcar} alt=""/>
