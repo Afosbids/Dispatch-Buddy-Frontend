@@ -23,6 +23,7 @@
     align-items: center;
     margin-left: 500px;
     margin-top: -150px;
+    padding: 40px;
 }
 
 .container1 {
@@ -36,12 +37,14 @@
     border: 1px solid rgba(0, 0, 0, 0.16);
     margin-left: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .column-text > h1 {
     font-weight: 800;
     font-size: 35px;
     color: #21334F;
+    margin-left: -30px;
 }
 
 
@@ -61,6 +64,7 @@
     flex-direction: row;
     padding: 5px;
     margin-top: 20px;
+    margin-bottom: 5px;
 
 }
 
@@ -69,6 +73,7 @@
     flex-direction: row;
     padding: 5px;
     margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 .earnings-group {
@@ -90,11 +95,25 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.earnings-right {
+    margin-left: 30px;
+}
+
+.earnings-left {
+    margin-right: 30px;
+}
+
 .earnings-input {
     background: rgba(52, 168, 83, 0.1);
+    color: green !important;
     border-radius: 100px;
+    text-align: center;
     /* justify-content: center; */
-    width: 70%;
-    height: 80%;
+    width: 90px;
+    height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+::placeholder {
+    color: #34A853;
 }
