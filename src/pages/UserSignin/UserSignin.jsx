@@ -7,10 +7,12 @@ import axios from 'axios';
 import LeftImage from '../../components/LeftImage'
 import { Link } from 'react-router-dom';
 const UserSignin = () => {
+
   const [values, setValues] = useState({
     email: '',
     password: '',
 })
+
 const isFormValid = () => {
     const { email, password } = values;
     if (email && password) {
@@ -18,6 +20,7 @@ const isFormValid = () => {
     }
     return false;
   }
+
 const handleChange = (e) => {
   setValues({ ...values, [e.target.name]: e.target.value })
 }
@@ -57,5 +60,5 @@ const handleFormSubmit = async (e) => {
   )
 }
 
-export default UserSignin
 
+export default UserSignin
