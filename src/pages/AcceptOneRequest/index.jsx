@@ -2,14 +2,9 @@ import React from "react";
 import "./style.css";
 import AuthNavbar from "../../components/AuthNavbar";
 import { ReactComponent as Mastercard } from "./images/Mastercard.svg";
-import GoogleMapReact from "google-map-react";
 
-const AcceptOneRequest = ({ zoomLevel }) => {
-  const location = {
-    address: "1600 Amphitheatre Parkway, Mountain View, california.",
-    lat: 37.42216,
-    lng: -122.08427,
-  };
+const AcceptOneRequest = () => {
+
 
   return (
     <>
