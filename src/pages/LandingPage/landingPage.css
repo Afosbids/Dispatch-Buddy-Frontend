@@ -131,15 +131,17 @@
   text-align: center;
 }
 .pickNpay__img img {
-  width: 90%;
-  height: 250px;
+  width: 100%;
+  height: 330px;
   margin-top: 3rem;
+  margin-right: 20px;
 }
 .pickNpay__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 40px;
 }
 .pickNpay__text p {
   width: 250px;
@@ -188,15 +190,14 @@
   }
   .hero__img {
     width: 100%;
- 
-    padding-top: 40px;
-    height: 100%;
+    margin-top: 5.7rem;
+    height: 33.2rem;
   }
   .hero__content {
     /* background:rgba(0, 0, 0, 0.6)url(./images/shutterstock.png) no-repeat; */
     object-fit: cover;
     position: absolute;
-    margin-top: 0;
+    margin-top: 120px;
     height: 23.2rem;
     z-index: 2;
   }
@@ -209,10 +210,11 @@
   }
   .overlay {
     position: absolute;
-    top: 15;
-    background: rgba(0, 0, 0, 0.7);
+    top:10;
+    background: rgba(0, 0, 0, 0.5);
+    height: 33.2rem;
     width: 100%;
-    height: 100%;
+    margin-top: 5.7rem;
   }
   /* .hero::after {
         content: "";
@@ -245,7 +247,8 @@
     margin-left: 2rem;
     margin-right: 2rem;
     width: 80%;
-    margin-left: 7.5rem;
+    margin-left: 9.5rem;
+    margin-bottom: 5rem;
     grid-template-columns: repeat(3, 1fr);
 
     align-items: center;
@@ -255,8 +258,7 @@
     height: 3.5rem;
   }
   .service__div {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    height: 24rem;
   }
   .pickNpay {
     display: flex;
@@ -280,8 +282,8 @@
   .client__testimonies {
     display: grid;
     width: 80%;
-    
-    margin-left: 8rem;
+    padding-bottom: 70px;
+    margin-left: 10rem;
     grid-template-columns: repeat(3, 1fr);
     
  
@@ -291,6 +293,14 @@
 
     padding-top: 40px;
   }
+  .client__testimonies__div > p {
+    margin-top: 1rem;
+  }
+  .top__notch {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+  }
+  
   .top__notch > h3 {
     font-size: 3rem;
 

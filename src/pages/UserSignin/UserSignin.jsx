@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 
 
 const UserSignin = () => {
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -18,8 +19,6 @@ const UserSignin = () => {
     Axios.post(
       "https://dispatch-buddy.herokuapp.com/api-docs/",
       {
-      
-      
         email: email,
         password: password,
       }
@@ -61,4 +60,6 @@ const UserSignin = () => {
     </div>
   )
 }
+
+
 export default UserSignin
