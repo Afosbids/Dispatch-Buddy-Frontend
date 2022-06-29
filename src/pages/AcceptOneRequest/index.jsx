@@ -2,8 +2,15 @@ import React from "react";
 import "./style.css";
 import AuthNavbar from "../../components/AuthNavbar";
 import { ReactComponent as Mastercard } from "./images/Mastercard.svg";
+import GoogleMapReact from "google-map-react";
 
-const AcceptOneRequest = () => {
+const AcceptOneRequest = ({ zoomLevel }) => {
+  const location = {
+    address: "1600 Amphitheatre Parkway, Mountain View, california.",
+    lat: 37.42216,
+    lng: -122.08427,
+  };
+
   return (
     <>
       <AuthNavbar />
@@ -37,10 +44,14 @@ const AcceptOneRequest = () => {
               <p>N3,500 </p>
               <div className="sub-payment">
                 <div className="card-payment">
-                  <input type="radio" name="Card Payment" style={{accentColor:"#E02B45"}}/>
+                  <input
+                    type="radio"
+                    name="Card Payment"
+                    style={{ accentColor: "#E02B45" }}
+                  />
                   <label htmlFor="Card Payment">Card Payment</label>
                 </div>
-               
+
                 <Mastercard />
               </div>
             </div>
