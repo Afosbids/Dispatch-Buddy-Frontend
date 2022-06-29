@@ -29,6 +29,7 @@ const UserSignup = (props) => {
     ).then((response) => {
       console.log(response);
     });
+    window.location.replace("/verify-email")
   };
   return (
     <>
@@ -86,7 +87,7 @@ const UserSignup = (props) => {
                     type="text"
                     onChange={({ target }) => setAddress(target.value)}
                 />
-                <button className="signup-btn" type="submit" onClick={handleFormSubmit}>Sign Up</button>
+                <button className="signup-btn" type="submit" onClick={handleFormSubmit} >Sign Up</button>
                 
                 {/* <br /> */}
                 <p>Already have an account? 
