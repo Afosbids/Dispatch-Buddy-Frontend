@@ -10,7 +10,7 @@ import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import PasswordResetVerification from "./pages/PasswordResetVerification/PasswordResetVerification";
 import ReEnterPassword from "./pages/reEnterPassword/ReEnterPassword";
 import VerifyEmail from "./pages/verifyEmail/VerifyEmail";
-import AcceptOneRequest from "./pages/AcceptOneRequest";
+// import AcceptOneRequest from "./pages/AcceptOneRequest";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -31,7 +31,7 @@ function App() {
         <Route path="/user/verify" element={<VerifyEmail />} />
         <Route path="/user/reset-password" element={<ReEnterPassword />} />
         <Route path="/rider-earnings" element={<RiderEarnings />} />
-        <Route path="/test" element={<AcceptOneRequest />} />
+        {/* <Route path="/test" element={<AcceptOneRequest />} /> */}
       </Routes>
     </BrowserRouter>
     <ToastContainer />
