@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-// import LeftImage from '../../components/LeftImage'
+import  Navbar  from "../../components/Navbar/Navbar";
 import { Link } from "react-router-dom";
 import SignUpForm from '../../components/common/SignUpFrontEnd';
 import logo from './images/logo.svg'
@@ -34,6 +34,7 @@ const UserSignup = (props) => {
   return (
     <>
       <div>
+        <Navbar />
         <section className="user-signup">
           <div className="image-section" >
             <img className="signup-image" src="/images/signupImg.png" alt="" />
