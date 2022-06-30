@@ -1,5 +1,6 @@
 import RiderSignup from "./pages/RiderSignup/RiderSignup";
 import RiderEarnings from "./pages/RiderEarnings/riderEarnings";
+import RiderHistory from "./pages/RiderHistory/riderHistory";
 import UserSignup from './pages/userSignup/UserSignup'
 import LandingPage from "./pages/LandingPage/LandingPage";
 import UserSignin from "./pages/UserSignin/UserSignin";
@@ -31,6 +32,7 @@ function App() {
         <Route path="/user/verify" element={<VerifyEmail />} />
         <Route path="/user/reset-password" element={<ReEnterPassword />} />
         <Route path="/rider-earnings" element={<RiderEarnings />} />
+        <Route path="/rider-history" element={<RiderHistory />} />
         <Route path="/test" element={<AcceptOneRequest />} />
       </Routes>
     </BrowserRouter>
