@@ -13,11 +13,9 @@ import star from "./images/star.png";
 import Footer from "../../components/footer/Footer"
 import "./landingPage.css";
 
-
 const LandingPage = () => {
   return (
     <>
-   
     <div className="landing-page-div">
       <section className="hero">
         <div className="overlay"></div>
@@ -28,11 +26,11 @@ const LandingPage = () => {
           </h1>
           <p className="hero__slogan">Send. Track. Recive </p>
           <div className="hero__button">
-            <Link to="/user-signup"><button className="btn customer__button">
+            <Link to="/user-signup"><button style={{cursor: "pointer"}} className="btn customer__button">
               Register as a Customer
             </button></Link>
             <Link to="/rider-signup">
-            <button className="btn rider__button">
+            <button style={{cursor: "pointer"}} className="btn rider__button">
               Register as a Rider
             </button>
             </Link>
@@ -43,7 +41,7 @@ const LandingPage = () => {
       <section className="top__notch">
         <div>
           <h3>Top Notch Services</h3>
-          <p>
+          <p style={{width: 650, fontSize: 18, marginTop: 20}}>
             Quickly integrate powerful solutions that gives you more flexibility
             and control over your parcel shipping and logistics processes.
           </p>

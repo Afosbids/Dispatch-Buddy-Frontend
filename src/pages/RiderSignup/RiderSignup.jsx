@@ -71,6 +71,7 @@ const RiderSignup = () => {
   return (
     <div className="rider-signup">
       <LeftImage />
+
       <section className="right-signup">
         <div className="logo-group2">
           <img src={logo} alt="" className="logo" />
