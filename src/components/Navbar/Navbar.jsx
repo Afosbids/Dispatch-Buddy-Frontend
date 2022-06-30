@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logo from "../../pages/LandingPage/images/logo.png";
 import "./navbar.css";
+
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
@@ -35,5 +36,4 @@ const Navbar = () => {
     </nav>
   );
 };
-
 export default Navbar;
