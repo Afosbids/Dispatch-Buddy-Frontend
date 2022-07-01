@@ -7,7 +7,7 @@ import AuthNavbar from "../../components/AuthNavbar";
 const RiderEarnings = () => {
     return (
         <>
-            <AuthNavbar />
+        <AuthNavbar />
         <div className="magenta-div"></div>
         <br/>
         <br/>

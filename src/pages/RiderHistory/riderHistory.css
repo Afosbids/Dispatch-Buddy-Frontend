@@ -4,40 +4,40 @@
     box-sizing: border-box;
 }
 
-.container1 {
+.history-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background: #FFFFFF;
     width: 70%;
     height: 150px;
-    margin: 180px 30px 0px 200px;
+    margin: 100px 30px 0px 200px;
 }
 
-.container1 > h1 {
-    margin-left: 20px;
+.history-container > h1 {
+    margin-left: 30px;
     color: #21334F;
+    margin-top: 60px;
 }
 
 .input-right {
     position: relative;
-    background: rgba(0, 0, 0, 0.04);
     padding:0;
     margin-right: 40px;
+    margin-top: 60px;
 }
 
 .filter-img {
     position: absolute;
-    bottom:8px;
-    right:30px;
-    width:20px;
-    height:30px;
+    left: 80px;
+    top: 10px;
+    width: 18px;
 }
 
 .filter-input {
     background: rgba(0, 0, 0, 0.04);
-    /* margin-right: 80px; */
-    height:40px;
+    margin-right: 80px;
+    /* height:40px; */
     width:130px;
     margin:0;
     padding-left:30px;
@@ -51,6 +51,7 @@
     text-align: center;
     margin: 0px 30px 0px 200px;
     width: 70%;
+    background: #FFFFFF;
     /* border: 1px solid red; */
 }
 
@@ -69,12 +70,19 @@
     text-align: center;
 }
 
+.first-line {
+    width: 70%;
+    margin-left: 200px;
+    /* color: #E2E2E2; */
+    border: 0px thin solid #E2E2E2;
+}
+
 .row1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 15%;
-    margin: 20px 60px 0px 50px;
+    margin: 0px 60px 0px 60px;
     padding-top: 20px;
 }
 
@@ -83,7 +91,7 @@
     flex-direction: row;
     justify-content: space-between;
     height: 15%;
-    margin: 20px 60px 0px 50px;
+    margin: 20px 60px 0px 60px;
     padding-top: 20px;
 }
 
@@ -92,7 +100,7 @@
     flex-direction: row;
     justify-content: space-between;
     height: 15%;
-    margin: 20px 60px 0px 50px;
+    margin: 20px 60px 0px 60px;
     padding-top: 20px;
 }
 
@@ -101,7 +109,7 @@
     flex-direction: row;
     justify-content: space-between;
     height: 15%;
-    margin: 20px 60px 0px 50px;
+    margin: 20px 60px 0px 60px;
     padding-top: 20px;
 }
 
@@ -110,7 +118,7 @@
     flex-direction: row;
     justify-content: space-between;
     height: 15%;
-    margin: 20px 60px 0px 50px;
+    margin: 20px 60px 0px 60px;
     padding-top: 20px;
 }
 

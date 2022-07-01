@@ -33,31 +33,38 @@
     gap: 24px;
     width: 490px;
     height: 180px;
-    background:  rgba(0, 0, 0, 0.04);
+    background: rgba(0, 0, 0, 0.04);
     border: 1px solid rgba(0, 0, 0, 0.16);
     margin-left: 10px;
-    margin-top: 10px;
+    margin-top: 2px;
     margin-bottom: 10px;
 }
+
+
+.column-text {
+    align-items: center;
+    margin-left: 35%;
+    margin-bottom: -20px;
+}
+
 
 .column-text > h1 {
     font-weight: 800;
     font-size: 35px;
     color: #21334F;
-    margin-left: -30px;
+    margin-right: 180px;
+    margin-left: -10px;
 }
 
-
-.column-text {
-    justify-content: center;
-    margin-left: 35%;
+.column-text > p {
+    margin-left: -100px;
 }
 
 .row-text {
-    display: flex;
+    display: flex; 
     flex-direction: row;
-    justify-content: space-between;
-}
+    justify-content: space-between; 
+} 
 
 .ride-div {
     display: flex;
