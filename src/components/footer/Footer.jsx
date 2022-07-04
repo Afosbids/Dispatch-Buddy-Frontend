@@ -26,7 +26,7 @@ const Footer = () => {
             <p>Help</p>
           </div>
         </div>
-        <div className="right">
+        <div className="right" style={{paddingRight: 170, width: 400}}>
           <div>
             <i className="fa-brands fa-facebook-f"></i>
             <i className="fa-brands fa-twitter"></i>
