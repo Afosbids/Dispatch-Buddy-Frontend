@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background: white;
+}
+
 .magenta-div {
     position: relative;
     z-index: -1;

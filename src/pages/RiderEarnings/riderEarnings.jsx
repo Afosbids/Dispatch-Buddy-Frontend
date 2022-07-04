@@ -9,8 +9,8 @@ const RiderEarnings = () => {
         <>
         <AuthNavbar />
         <div className="magenta-div"></div>
-        <br/>
-        <br/>
+        {/* <br/>
+        <br/> */}
         <div className="wrapped-div">
             <br/>
             <div className="earnings-group">
