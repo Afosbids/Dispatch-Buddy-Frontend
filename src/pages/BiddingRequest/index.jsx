@@ -4,6 +4,7 @@ import AuthNavbar from "../../components/AuthNavbar";
 import BiddingCard from "../../components/BiddingCard";
 
 const BiddingRequest = () => {
+  
   return (
     <>
       <AuthNavbar />
