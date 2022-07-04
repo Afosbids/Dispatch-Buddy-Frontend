@@ -2,12 +2,15 @@ import React from "react";
 import "./style.css";
 import AuthNavbar from "../../components/AuthNavbar";
 import { ReactComponent as Mastercard } from "./images/Mastercard.svg";
+import Modal from "../../components/Modal";
 
 const AcceptOneRequest = () => {
 
 
   return (
     <>
+      <button>Open</button>
+      <Modal />
       <AuthNavbar />
       <div className="container">
         <div className="accept-one-left">
