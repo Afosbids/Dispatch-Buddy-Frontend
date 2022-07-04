@@ -30,6 +30,7 @@
 @media screen and (min-width: 1024px) {
   .footer__nav {
     display: grid;
+    margin-top: 0;
     grid-template-columns: repeat(3, 1fr);
   }
   .footer__nav .center {
@@ -56,11 +57,25 @@
     justify-content: center;
     flex-direction: column;
   }
+
+
+
+  .left > p {
+    width: 500px;
+   padding-left: 180px;
+  }
   .left div > img {
     width: 10rem;
   }
   .footer__nav .right i {
     width: 1.3rem;
     font-size: large;
+  }
+  .right {
+    padding-bottom: 20px;
+  }
+
+  .center {
+    padding-right: 50px;
   }
 }

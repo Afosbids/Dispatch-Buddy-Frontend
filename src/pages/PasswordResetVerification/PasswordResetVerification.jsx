@@ -20,7 +20,7 @@ const PasswordResetVerification = () => {
         <p>
           Don’t receive the email? <span> Click to Resend link</span>
         </p>
-        <button onClick={handleClick} className="back-to-login">Back to Login</button>
+        <button onClick={handleClick} className="back-to-login" style={{cursor: "pointer"}}>Back to Login</button>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-// import LeftImage from '../../components/LeftImage'
+import  Navbar  from "../../components/Navbar/Navbar";
 import { Link } from "react-router-dom";
 import SignUpForm from '../../components/common/SignUpFrontEnd';
 import logo from './images/logo.svg'
@@ -29,10 +29,12 @@ const UserSignup = (props) => {
     ).then((response) => {
       console.log(response);
     });
+    window.location.replace("/verify-email")
   };
   return (
     <>
       <div>
+        <Navbar />
         <section className="user-signup">
           <div className="image-section" >
             <img className="signup-image" src="/images/signupImg.png" alt="" />
@@ -86,7 +88,7 @@ const UserSignup = (props) => {
                     type="text"
                     onChange={({ target }) => setAddress(target.value)}
                 />
-                <button className="signup-btn" type="submit" onClick={handleFormSubmit}>Sign Up</button>
+                <button className="signup-btn" type="submit" onClick={handleFormSubmit} >Sign Up</button>
                 
                 {/* <br /> */}
                 <p>Already have an account? 
