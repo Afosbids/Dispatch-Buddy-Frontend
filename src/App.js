@@ -12,6 +12,8 @@ import ReEnterPassword from "./pages/reEnterPassword/ReEnterPassword";
 import VerifyEmail from "./pages/verifyEmail/VerifyEmail";
 import AcceptOneRequest from "./pages/AcceptOneRequest";
 import BiddingRequest from "./pages/BiddingRequest";
+import EndTrip from "./pages/EndTrip";
+import PlayGround from "./pages/PlayGround";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -21,7 +23,7 @@ function App() {
     <>
     
     <BrowserRouter>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/rider-signup" element={<RiderSignup />} />
@@ -34,7 +36,8 @@ function App() {
         <Route path="/oneincomingrequest" element={<AcceptOneRequest />} />
         <Route path="/allincomingrequest" element={<BiddingRequest />} />
         <Route path="/rider-earnings" element={<RiderEarnings />} />
-        <Route path="/test" element={<AcceptOneRequest />} />
+        <Route path="/endtrip" element={<EndTrip />} />
+        <Route path="/playground" element={<PlayGround />} />
       </Routes>
     </BrowserRouter>
     <ToastContainer />
