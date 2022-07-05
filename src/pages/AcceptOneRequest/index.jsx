@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 import AuthNavbar from "../../components/AuthNavbar";
 import { ReactComponent as Mastercard } from "./images/Mastercard.svg";
-import Modal from "../../components/Modal";
+import Modal from "../../components/IncomingRequestModal";
 
 const AcceptOneRequest = () => {
 
