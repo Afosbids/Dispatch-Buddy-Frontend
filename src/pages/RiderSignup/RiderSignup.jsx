@@ -105,7 +105,7 @@ const RiderSignup = () => {
             onChange={handleChange}
             onBlur={handleBlur}
             className={errors.phonenumber && touched.phonenumber ? "input-error" : ""}
-            type="number"
+            type="text"
             id="phonenumber"
             name="phonenumber"
             placeholder="Enter your phone number"
