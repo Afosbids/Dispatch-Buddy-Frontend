@@ -36,7 +36,7 @@ const RiderProfile = () => {
                             <br/>
                             <br/>
                             <div>
-                                <input className="icon" type="phone" placeholder="matthewakin@gmail.com" />
+                                <input className="icon" type="phone" placeholder="07089667755" />
                                 <img src={Path} alt="" className="Path-img"/>
                             </div>
                             <br/>
