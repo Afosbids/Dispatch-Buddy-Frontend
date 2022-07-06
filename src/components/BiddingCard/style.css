@@ -1,0 +1,9 @@
+.bidding-card{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;    width: 343px;
+    border-radius: 15px;
+    height: 419px;
+    margin-top: 30px;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-right: 30px;
+  }
