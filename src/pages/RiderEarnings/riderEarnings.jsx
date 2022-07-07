@@ -1,14 +1,13 @@
 import "./riderEarnings.css";
 import smallcar from "./images/smallcar.svg";
 import time from "./images/Time.svg";
+import AuthNavbar from "../../components/AuthNavbar";
 
 
 const RiderEarnings = () => {
     return (
         <>
-        <nav>
-            
-        </nav>
+        <AuthNavbar />
         <div className="magenta-div"></div>
         <br/>
         <br/>
