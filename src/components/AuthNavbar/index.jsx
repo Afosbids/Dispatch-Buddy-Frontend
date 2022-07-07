@@ -42,7 +42,7 @@ const AuthNavbar = () => {
         </span>
         <img src={MB} alt="profile" />
         <span>
-          <h4>Rider's Name</h4>
+          <h4>Babatunde</h4>
         </span>
       </div>
     </div>
