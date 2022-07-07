@@ -1,33 +1,40 @@
 .cus-dash-body{
-    background: #E5E5E5;
-    height: 100%;
+    background: #F8F8F8;
+    height: 700px;
     width:  100%;
+    overflow: hidden;
 
+}
+
+.overview-icon{
+    width: 20px;
+    height: 20px;
 }
 
 .customer-dashboard-overview{
     display: flex;
     align-items: center;
     gap: 10px;
-    padding-left: 300px;
-    padding-top: 50px;
+    padding-left: 210px;
+    padding-top: 20px;
 }
 
 .customer-dashboard-overview p{
     color: #21334F;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
 }
 
 .customer-dashboard-container{
     display: grid;
     gap: 20px;
-    height: 550px;
-    width: 60%;
-    margin: 0 auto;
-    padding-top: 40px;
+    height: 85%;
+    width: 80%;
+    margin-left: 210px;
+    padding-right: 150px;
+    padding-top: 15px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 160px;
+    grid-template-rows: 170px;
 
     grid-template-areas: 
     "A A A A   A A B B   B B B B"
@@ -46,7 +53,6 @@
 
 .total-orders{
     grid-area: A;
-    
 }
 
 
@@ -66,7 +72,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10px 5px 20px;
+    padding: 10px 15px 5px 20px;
     border-bottom: 1px solid #E5E5E5;
     color: #21334F;
 }
@@ -74,6 +80,7 @@
 .cus-dash-box-header h3{
     padding-top: 10px;
     font-size: 14px;
+    font-weight: 700;
 }
 
 .cus-dash-box-header p{
@@ -88,7 +95,7 @@
     border: none;
     color: #E02B45;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 500;
     padding: 5px 20px;
     cursor: pointer;
 }
@@ -100,6 +107,7 @@
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
+    color: #21334F;
 }
 
 .total-orders-body p{
@@ -162,7 +170,8 @@
 }
 
 .contactus-body h2{
-    padding-top: 10px;
+    padding-top: 20px;
+    font-size: 18px;
 }
 .blur-paragraph{
     margin-top: -5px;
@@ -174,6 +183,7 @@
 .contactus-icon{
     display: flex;
     align-items: center;
+    padding-top: 10px;
 }
 
 .contactus-icon p{

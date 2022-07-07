@@ -13,7 +13,7 @@ const CustomerDashboard = () => {
       <AuthNavbar />
       <div className="cus-dash-body">
         <div className="customer-dashboard-overview">
-          <Overview />
+          <Overview className="overview-icon"/>
           <p>Overview</p>
         </div>
         <div className="customer-dashboard-container">
@@ -33,9 +33,11 @@ const CustomerDashboard = () => {
             </div>
           </div>
           <div className="cus-dash-box my-orders">
-            <div className="cus-dash-box-header">
-              <h3>My Orders</h3>
-              <p>See all</p>
+            <div
+              className="cus-dash-box-header"
+            >
+              <h3 style={{marginBottom:'5px'}}>My Orders</h3>
+              <p style={{marginBottom:'-5px'}}>See all</p>
             </div>
             <div>
               <div className="my-orders-body">
@@ -52,6 +54,42 @@ const CustomerDashboard = () => {
               </div>
             </div>
             <div>
+              <div className="my-orders-body">
+                <div className="my-orders-body-left">
+                  <p>
+                    <strong>Today, </strong> 4:15PM{" "}
+                  </p>
+                  <p className="my-orders-body-sec-p">Order No - 1836897632</p>
+                </div>
+                <div className="my-orders-body-right">
+                  <p className="order-status-pending">Pending</p>
+                  <p className="my-orders-body-sec-p">#2,200.00</p>
+                </div>
+              </div>
+              <div className="my-orders-body">
+                <div className="my-orders-body-left">
+                  <p>
+                    <strong>Today, </strong> 4:15PM{" "}
+                  </p>
+                  <p className="my-orders-body-sec-p">Order No - 1836897632</p>
+                </div>
+                <div className="my-orders-body-right">
+                  <p className="order-status-pending">Pending</p>
+                  <p className="my-orders-body-sec-p">#2,200.00</p>
+                </div>
+              </div>
+              <div className="my-orders-body">
+                <div className="my-orders-body-left">
+                  <p>
+                    <strong>Today, </strong> 4:15PM{" "}
+                  </p>
+                  <p className="my-orders-body-sec-p">Order No - 1836897632</p>
+                </div>
+                <div className="my-orders-body-right">
+                  <p className="order-status-pending">Pending</p>
+                  <p className="my-orders-body-sec-p">#2,200.00</p>
+                </div>
+              </div>
               <div className="my-orders-body">
                 <div className="my-orders-body-left">
                   <p>
@@ -83,7 +121,9 @@ const CustomerDashboard = () => {
             </div>
             <div className="contactus-body">
               <h2>Get in touch</h2>
-              <p className="blur-paragraph">Any question or remarks? Send us a message</p>
+              <p className="blur-paragraph">
+                Any question or remarks? Send us a message
+              </p>
               <div className="contactus-icon">
                 <Email className="icon" />
                 <p>hello@buddydispatch.com</p>
