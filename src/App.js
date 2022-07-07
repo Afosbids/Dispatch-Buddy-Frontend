@@ -10,6 +10,7 @@ import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import PasswordResetVerification from "./pages/PasswordResetVerification/PasswordResetVerification";
 import ReEnterPassword from "./pages/reEnterPassword/ReEnterPassword";
 import VerifyEmail from "./pages/verifyEmail/VerifyEmail";
+// import AcceptOneRequest from "./pages/AcceptOneRequest";
 import AcceptOneRequest from "./pages/AcceptOneRequest";
 import BiddingRequest from "./pages/BiddingRequest";
 import EndTrip from "./pages/EndTrip";
@@ -36,6 +37,7 @@ function App() {
         <Route path="/oneincomingrequest" element={<AcceptOneRequest />} />
         <Route path="/allincomingrequest" element={<BiddingRequest />} />
         <Route path="/rider-earnings" element={<RiderEarnings />} />
+        {/* <Route path="/test" element={<AcceptOneRequest />} /> */}
         <Route path="/rider-history" element={<RiderHistory />} />
         {/* <Route path="/rider-profile" element={<RiderProfile />} /> */}
         <Route path="/test" element={<AcceptOneRequest />} />
