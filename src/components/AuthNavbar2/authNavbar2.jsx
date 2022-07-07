@@ -1,3 +1,4 @@
+import React from 'react';
 import "./authNavbar2.css";
 import logo from "../../pages/LandingPage/images/logo.png";
 import MB from "./images/Mb2.jpeg";
