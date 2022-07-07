@@ -4,9 +4,15 @@
     box-sizing: border-box;
 }
 
+.body-group {
+    position: absolute;
+    z-index: 1;
+    background: #F8F8F8;
+    box-shadow: 0 0px 5px 0px rgba(182, 181, 181, 0.75);
+}
+
 .magenta-div {
     position: relative;
-    z-index: -1;
     background: rgba(252, 193, 52, 0.1);
     border: 0px 0px 10px rgba(252, 193, 52, 0.1);
     height: 200px;
@@ -16,6 +22,8 @@
     display: flex;
     flex-direction: column-reverse;
     background: white;
+    position: relative;
+    z-index: 2;
     height: 800px;
     width: 600px;
     border: 1px solid rgba(0, 0, 0, 0.16);
