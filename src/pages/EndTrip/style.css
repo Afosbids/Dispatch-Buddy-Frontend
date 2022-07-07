@@ -1,0 +1,8 @@
+.endtrip{
+    display: flex;
+    justify-content: center;
+    padding-top: 30vh;
+    background: url(./images/GoogleMapTA.webp);
+    background-size: cover;
+    height: 100vh;
+}

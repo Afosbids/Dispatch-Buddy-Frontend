@@ -1,0 +1,22 @@
+.req-accepted-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 503px;
+    height: 407px;
+    background-color: #FFFFFF;
+}
+
+.req-accepted-container .btn{
+    height: 50px;
+    border: none;
+    background: #E02B451A;
+    width: 343px;
+    color: #E02B45;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+
+
