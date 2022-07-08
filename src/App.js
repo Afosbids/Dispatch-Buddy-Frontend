@@ -1,4 +1,5 @@
 import RiderSignup from "./pages/RiderSignup/RiderSignup";
+import AddCard from "./pages/AddCard/addCard";
 import RiderEarnings from "./pages/RiderEarnings/riderEarnings";
 import RiderHistory from "./pages/RiderHistory/riderHistory";
 import RiderProfile from  "./pages/RiderProfile/riderProfile";
@@ -47,6 +48,7 @@ function App() {
         <Route path="/rider-request" element={<RiderRequest />} />
         <Route path="/order-accepted" element={<OrderAccepted />} />
         <Route path="/payment-option" element={<PaymentOption />} />
+        <Route path="/add-card" element={<AddCard />} />
         <Route path="/test" element={<AcceptOneRequest />} />
         <Route path="/endtrip" element={<EndTrip />} />
         <Route path="/playground" element={<PlayGround />} />

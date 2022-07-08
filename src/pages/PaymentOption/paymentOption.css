@@ -76,6 +76,7 @@ hr.payment-option-line {
     border: none;
     background: #E02B45;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 .payment-option-btn2 {
@@ -84,4 +85,5 @@ hr.payment-option-line {
     margin-top: 10px;
     border: 1px solid #C4C4C4;
     background: #F5F5F5;
+    cursor: pointer;
 }
