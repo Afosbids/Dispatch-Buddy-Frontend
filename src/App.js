@@ -3,6 +3,7 @@ import RiderEarnings from "./pages/RiderEarnings/riderEarnings";
 import RiderHistory from "./pages/RiderHistory/riderHistory";
 import RiderProfile from  "./pages/RiderProfile/riderProfile";
 import RiderRequest from "./pages/RiderRequest/riderRequest";
+import OrderAccepted from "./pages/OrderAccepted/orderAccepted";
 import UserSignup from './pages/userSignup/UserSignup'
 import LandingPage from "./pages/LandingPage/LandingPage";
 import UserSignin from "./pages/UserSignin/UserSignin";
@@ -43,6 +44,7 @@ function App() {
         <Route path="/rider-history" element={<RiderHistory />} />
         <Route path="/rider-profile" element={<RiderProfile />} />
         <Route path="/rider-request" element={<RiderRequest />} />
+        <Route path="/order-accepted" element={<OrderAccepted />} />
         <Route path="/test" element={<AcceptOneRequest />} />
         <Route path="/endtrip" element={<EndTrip />} />
         <Route path="/playground" element={<PlayGround />} />
