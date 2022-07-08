@@ -11,8 +11,9 @@ import { Link } from 'react-router-dom';
 
 
 
-const onSubmit = (values, actions) => {
 
+const onSubmit = (values, actions) => {
+      
       Axios.post("https://dispatch-buddy.herokuapp.com/api-docs/#/auth/createuser", {
           email: values.email,
           password: values.password,
@@ -36,7 +37,10 @@ const onSubmit = (values, actions) => {
                       draggable: true,
                       progress: undefined,
                       });
+                      <>
                       <ToastContainer />
+                      <Link to="/user-signin" />
+                      </>
                   }
                 });
 }
