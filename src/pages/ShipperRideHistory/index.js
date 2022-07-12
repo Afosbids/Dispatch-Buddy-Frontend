@@ -1,11 +1,11 @@
-import AuthNavbar from "../../components/AuthNavbar";
 import "./style.css";
 import { ReactComponent as FilterIcon } from "./images/filtericon.svg"
+import AuthNavbar2 from "../../components/AuthNavbar2/authNavbar2";
 
 const ShipperRideHistory = () => {
   return (
     <>
-      <AuthNavbar />
+      <AuthNavbar2 />
       <div className="ShipperRideHistory">
 
         <div className="shipperridehistory">
