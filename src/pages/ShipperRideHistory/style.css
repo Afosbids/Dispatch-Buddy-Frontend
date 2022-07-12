@@ -1,0 +1,81 @@
+.shipperridehistory{
+    width: 905px;
+    height: 400px;
+    background: #FFFFFF;
+    margin: 0 auto;
+    margin-top: 5%;
+    padding: 20px 0px 20px 0px;
+}
+
+.ShipperRideHistory{
+    height: 100%;
+}
+
+.shipperridehistory-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #E2E2E2;
+    padding: 0px 80px 7px 80px;
+    color: #21334F;
+}
+
+.filter{
+    display: flex;
+    gap: 5px;
+    background: #0000000A;
+    padding: 5px 20px 5px 20px;
+}
+
+.filter-icon{
+    padding-top: 5px;
+}
+
+.shipperridehistory-title{
+    display: flex;
+    gap: 155px;
+    margin-top: 20px;
+    background: #0000000A;
+    height: 49px;
+    width: 100%;
+    padding: 15px 100px 0px 80px;
+    font-weight: 600;
+    color: #21334F;
+
+}
+
+.shipperridehistory-title p{
+    font-size: 13.5px;
+}
+
+
+
+.shipperridehistory-content{
+    display: flex;
+    justify-content: space-between;
+    height: 49px;
+    width: 100%;
+    padding: 15px 80px 40px 80px;
+    color: #21334F;
+    
+}
+
+.content-line{
+    width: 85%;
+    margin-left: 70px;
+    color: #E2E2E2;
+    opacity: 0.3;
+}
+
+.shipperridehistory-content p{
+    font-size: 14px;
+}
+
+
+.content-amount{
+    margin-left: 85px;
+}
+
+.content-status{
+    color: #34A853;
+}

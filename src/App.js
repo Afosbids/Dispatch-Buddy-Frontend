@@ -16,6 +16,7 @@ import PlayGround from "./pages/PlayGround";
 import CustomerDashboard from "./pages/CustomerDashboard";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ShipperRideHistory from "./pages/ShipperRideHistory";
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
         <Route path="/endtrip" element={<EndTrip />} />
         <Route path="/playground" element={<PlayGround />} />
         <Route path="/customerdashboard" element={<CustomerDashboard />} />
+        <Route path="/shipperridehistory" element={<ShipperRideHistory />} />
       </Routes>
     </BrowserRouter>
     <ToastContainer />
