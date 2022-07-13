@@ -5,12 +5,12 @@ import { ReactComponent as OrderComplete } from "./images/ordercompleteicon.svg"
 import { ReactComponent as Messages } from "./images/Messages.svg";
 import { ReactComponent as Email } from "./images/email.svg";
 import { ReactComponent as Call } from "./images/call.svg";
-import { ReactComponent as Location } from "./images/location.svg";
+import AuthNavbar2 from "../../components/AuthNavbar2/authNavbar2";
 
 const CustomerDashboard = () => {
   return (
     <>
-      <AuthNavbar />
+      <AuthNavbar2 />
       <div className="cus-dash-body">
         <div className="customer-dashboard-overview">
           <Overview className="overview-icon"/>
