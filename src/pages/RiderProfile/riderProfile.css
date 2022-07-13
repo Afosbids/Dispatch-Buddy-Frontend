@@ -19,6 +19,7 @@ body {
 .overall-container > h1 {
     text-align: center;
     margin-top: 70px;
+    margin-left: 30px;
     font-size: 38px;
     color: #03435F;
 }
@@ -79,6 +80,20 @@ label {
     color: #21334F;
 }
 
-::-webkit-input-placeholder {
-    margin-left: 12px;
+input[type="text"].icon::placeholder {
+    margin-left: 380px;
+    text-align: center;
+    color: #21334F;
+}
+
+input[type="phone"].icon::placeholder {
+    margin-left: 350px;
+    text-align: center;
+    color: #21334F;
+}
+
+input[type="email"].icon::placeholder {
+    margin-left: 280px;
+    text-align: center;
+    color: #21334F;
 }
