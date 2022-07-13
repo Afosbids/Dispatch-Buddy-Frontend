@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.body-container {
+    background: #E5E5E5;
+}
+
 .Rider-header {
     display: flex;
     flex-direction: row;
