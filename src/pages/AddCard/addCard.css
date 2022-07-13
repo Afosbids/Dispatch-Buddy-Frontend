@@ -4,21 +4,21 @@
     box-sizing: border-box;
 }
 
-.payment-body-container {
+.card-body-container {
     background: #E5E5E5;
     width: 100%;
 }
 
 
-.payment-wrapped-header {
+.card-wrapped-header {
     background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 600px;
-    height: 500px;
+    height: 400px;
     margin-left: 400px;
 }
 
-.payment-option-header {
+.add-card-header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -26,50 +26,53 @@
     padding: 37px 250px 0px 5px;
 }
 
-.payment-option-arrow {
+.add-card-arrow {
     display: flex;
     flex-direction: row;
     padding-left: 5px;
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
-
-.payment-option-arrow > img {
+.add-card-arrow > img {
     width: 20px;
+    margin: 10px 0px 0px 0px;
 }
 
 
-.payment-option-arrow > p {
-    margin: 12px 0px 0px 15px;
+.add-card-arrow > p {
+    margin: 10px 0px 0px 15px;
     
 }
 
 
-.payment-center-header > h3 {
+.card-center-header > h3 {
     text-align: center;
-    margin-left: 50px;
+    margin: 10px 0px 0px 50px;
+    color:  #21334F;
+    font-weight: 700;
+
 }
 
-hr.payment-option-line {
+hr.add-card-line {
     width: 80%;
     margin-left: 50px;
     border-top: 1px solid #E2E2E2;
 }
 
-.payment-option-desc {
+.add-card-desc {
     margin-top: 40px;
 }
 
-.payment-option-desc p {
+.add-card-desc p {
     word-spacing: 2px;
     color: #21334F;
 }
 
-.payment-option-desc p span {
+.add-card-desc p span {
     color: #C4C4C4;
 }
 
-.payment-option-btn1 {
+.add-card-btn {
     width: 400px;
     height: 50px;
     margin-top: 20px;
@@ -77,13 +80,5 @@ hr.payment-option-line {
     background: #E02B45;
     color: #FFFFFF;
     cursor: pointer;
-}
-
-.payment-option-btn2 {
-    width: 400px;
-    height: 50px;
-    margin-top: 10px;
-    border: 1px solid #C4C4C4;
-    background: #F5F5F5;
-    cursor: pointer;
+    font-weight: 600;
 }
