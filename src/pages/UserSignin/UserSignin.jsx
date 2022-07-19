@@ -5,28 +5,37 @@ import { useState } from 'react'
 import "./usersignin.css"
 import Axios from 'axios';
 import LeftImage from '../../components/LeftImage'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 
 
 const UserSignin = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleFormSubmit = async (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log("clicked", email, password);
-    Axios.post(
-      "https://dispatch-buddy.herokuapp.com/api-docs/",
-      {
-        email: email,
-        password: password,
+
+    Axios.post("http://localhost:3000/api/v1/auth/user/login", {
+      email: email,
+      password: password,
+    }).then((response) => {
+
+      if(response.data.user) {
+        localStorage.setItem('user', JSON.stringify(response.data))
       }
-    ).then((response) => {
-      console.log(response);
+      const userType = response.data.user.user_type;
+
+      if(userType === 'shipper') {
+        navigate("/customerdashboard");
+      };
+      if(userType === 'rider') {
+        navigate("/oneincomingrequest");
+      };
     });
-    window.location.replace("/verify-email")
   };
+
   return (
     <div className="user-signin">
       <LeftImage />
@@ -41,15 +50,14 @@ const UserSignin = () => {
           icon="email-icon" 
           placeholder="Enter your email" 
           type="email"
-          value={email} 
-          onChange={({ target }) => setEmail(target.value)}
+          setName={setEmail}
         />
         <label>Password</label>
         <SignUpForm 
         icon="password-icon" 
         placeholder="Enter your password"
         type="password"
-        onChange={({ target }) => setPassword(target.value)}
+        setName={setPassword}
         />
         <button className='signup-btn' type="button" onClick={handleFormSubmit}>Login</button>
         <p>Don't have an account?
@@ -60,6 +68,7 @@ const UserSignin = () => {
     </div>
   )
 }
+
 
 
 export default UserSignin
