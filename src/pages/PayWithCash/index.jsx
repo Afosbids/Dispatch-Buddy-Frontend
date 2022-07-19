@@ -1,4 +1,3 @@
-import AuthNavbar from "../../components/AuthNavbar";
 import "./style.css";
 import { ReactComponent as BackIcon } from "./images/backicon.svg";
 import AuthNavbar2 from "../../components/AuthNavbar2/authNavbar2";
