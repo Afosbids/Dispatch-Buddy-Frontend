@@ -1,8 +1,30 @@
+import { useState , useEffect} from "react";
 import AuthNavbar2 from "../../components/AuthNavbar2/authNavbar2";
 import arrow from "./images/arrow.svg";
 import "./riderRequest.css";
+import { Modal } from '../../components/Modal'
+import OrderAcceptedModal from '../../components/OrderAcceptedModal';
+
 
 const RiderRequest = () => {
+    const [isOpen, setIsOpen] = useState(false)
+
+
+    const closeModal=()=>{
+        setIsOpen(false)
+    }
+
+    useEffect(()=>{
+        closeModal()
+    },[])
+
+    const openModal=()=>{
+        setIsOpen(true)
+    }
+
+    const onSubmitHandler=(e)=>{
+        e.preventDefault()
+    }
     return (
         <>
             <AuthNavbar2 />
@@ -21,7 +43,7 @@ const RiderRequest = () => {
                     <hr className="rider-line"/>
                     <br/>
                     <div className="request-form-wrapper">
-                        <form className="request-form">
+                        <form className="request-form" onSubmit={onSubmitHandler}>
                             <label>Pick Up Location</label>
                             <br/>
                             <input className="request-input" type="text" placeholder="Enter Pick Up location"/>
@@ -43,13 +65,18 @@ const RiderRequest = () => {
                             <br/>
                             <br/>
                             <br/>
-                            <button type="submit" className="rider-request-btn">Order Ride</button>
+                            <button 
+                                type="submit" 
+                                className="rider-request-btn"
+                                onClick={()=>openModal()}>Order Ride</button>
                         </form>
                     </div>
                     
                 </div>
             </div>
-            
+            <Modal isOpen ={isOpen} isClosed = {closeModal}>
+                <OrderAcceptedModal />
+            </Modal>
         </>
         
     );
