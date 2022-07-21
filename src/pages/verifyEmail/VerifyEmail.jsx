@@ -1,20 +1,11 @@
 import React from 'react'
 import emailTick from "./images/email-tick.png"
-import Axios from "axios";
 import { useLocation } from 'react-router-dom'
 import "./verifyEmail.css"
 
 const VerifyEmail = () => {
   const location = useLocation();
   console.log(location.pathname.split("-")[0]);
-
-  const onClicked = async (e) => {
-    e.preventDefault();
-    Axios.post("http://localhost:3000/api/v1/auth/user/verify-email").then((response) => {
-      console.log(response);
-    })
-    window.location.replace("/user-signin");
-  };  //onClick={onClicked}
 
   return (
     <div>

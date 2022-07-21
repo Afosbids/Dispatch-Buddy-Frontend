@@ -58,3 +58,7 @@
     font-size: 16px;
     font-weight: 600;
 }
+
+.order-accepted-btn:hover {
+    cursor: pointer;
+}
