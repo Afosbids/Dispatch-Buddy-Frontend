@@ -2,6 +2,7 @@ import React from 'react';
 import "./authNavbar2.css";
 import logo from "../../pages/LandingPage/images/logo.png";
 import MB from "./images/Mb2.jpeg";
+import {Link} from "react-router-dom";
 
 const AuthNavbar2 = () => {
     return (
@@ -13,7 +14,7 @@ const AuthNavbar2 = () => {
 
         <div className="navbar-links">
             <ul>
-            <li>My Orders</li>
+            <Link to="/shipperridehistory"><li>My Orders</li></Link>
             <li>Payment</li>
             <li>Logout</li>
             </ul>

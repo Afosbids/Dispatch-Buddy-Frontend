@@ -9,7 +9,7 @@ import { useFormik } from "formik";
 import { basicSchema } from "../../schemas";
 import { Link } from "react-router-dom";
 
-const onSubmit = (values, actions) => {
+const onSubmit =  (values, actions) => {
   let formData = new FormData();
   formData.append("name", values.name);
   formData.append("email", values.email);
@@ -26,6 +26,7 @@ const onSubmit = (values, actions) => {
     formData
   ).then((response) => {
     actions.resetForm();
+    
     console.log(response);
     if (response.status === 201) {
       toast(response.data.msg, {

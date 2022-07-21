@@ -42,6 +42,11 @@
     gap: 20px;
 }
 
+.auth-nav-right h4{
+  font-size: 12px;
+  padding-bottom: 9px;
+}
+
 .auth-nav-right img {
     height: 30px;
     width: 30px;
