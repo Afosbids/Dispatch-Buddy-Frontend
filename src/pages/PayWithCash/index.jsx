@@ -7,7 +7,7 @@ import axios from 'axios';
 
 const PayWithCash = () => {
 
-  const [confirm, setConfirmation] = useState({msg: ""})
+  const [confirmation, setConfirmation] = useState({msg: ""})
   const [selected, setSeleted] = useState(false)
   
   const handleChange = () => {
@@ -32,7 +32,7 @@ const PayWithCash = () => {
           <p className="choosecard">Choose Cards</p>
         </div>
         <hr className="paywithcash-line" />
-        {confirm && <p style={{color:"green", textAlign:"center"}}>{confirm.msg}</p>}
+        {confirmation && <p style={{color:"green", textAlign:"center"}}>{confirmation.msg}</p>}
         <div className="paywithcash-content">
           <h4>Pay with Cash</h4>
           <div className="paywithcash-radio">
