@@ -1,3 +1,4 @@
+// import AuthNavbar from "../../components/AuthNavbar";
 import "./style.css";
 import { ReactComponent as Overview } from "./images/overviewicon.svg";
 import { ReactComponent as OrderComplete } from "./images/ordercompleteicon.svg";

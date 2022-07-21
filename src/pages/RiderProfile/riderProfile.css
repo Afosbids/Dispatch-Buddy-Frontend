@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 
+body {
+    background-color: #FFFFFF;
+} */
+
+
+.overall-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    box-shadow: 0 0px 5px 0px rgba(182, 181, 181, 0.75);
+}
+
+.overall-container > h1 {
+    text-align: center;
+    margin-top: 70px;
+    margin-left: 30px;
+    font-size: 38px;
+    color: #03435F;
+}
+
+.icon {
+    position: relative;
+    width: 490px;
+    height: 50px;
+    border: none;
+    background: rgba(16, 16, 16, 0.03);
+}
+
+.Path-img {
+    position: absolute;
+    float: center;
+    margin-left: -45px;
+    margin-top: 15px;
+}
+
+.profile-container {
+    border: 1px solid silver;
+    width: 600px;
+    height: 650px;
+    margin-left: 450px;
+    margin-top: 30px;
+    
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+
+.wrapper p {
+    text-align: left;
+    color: #BDBDBD;
+}
+
+.wrapper h5 {
+    color: #21334F;
+}
+
+.rider-profile-btn {
+    width: 490px;
+    height: 50px;
+    background: #E02B45;
+    color: white;
+    font-size: 16px;
+    border: none;
+    margin-right: 5px;
+}
+
+label {
+    color: #21334F;
+}
+
+input[type="text"].icon::placeholder {
+    margin-left: 380px;
+    text-align: center;
+    color: #21334F;
+}
+
+input[type="phone"].icon::placeholder {
+    margin-left: 350px;
+    text-align: center;
+    color: #21334F;
+}
+
+input[type="email"].icon::placeholder {
+    margin-left: 280px;
+    text-align: center;
+    color: #21334F;
+}
