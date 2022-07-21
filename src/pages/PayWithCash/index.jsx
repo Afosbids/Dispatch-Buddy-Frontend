@@ -25,7 +25,7 @@ const PayWithCash = () => {
       <div className="paywithcash-container">
         <div className="paywithcash-header">
           <div className="paywithcash-header-left">
-            <BackIcon />
+            <Link to="/payment-option"><BackIcon /></Link>
             <p>Back</p>
           </div>
 
