@@ -4,6 +4,7 @@ import arrow from "./images/arrow.svg";
 import "./riderRequest.css";
 import { Modal } from '../../components/Modal'
 import OrderAcceptedModal from '../../components/OrderAcceptedModal';
+import {Link} from "react-router-dom"
 
 
 const RiderRequest = () => {
@@ -32,7 +33,7 @@ const RiderRequest = () => {
                 <div className="wrapped-header">
                     <div className="Rider-header">
                         <div className="left-arrow">
-                            <img src={arrow} alt=""/>
+                            <Link to="/customerdashboard"><img src={arrow} alt=""/> </Link>
                             <p>Back</p>
                         </div>
                         <div className="center-header">

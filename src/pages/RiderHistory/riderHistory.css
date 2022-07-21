@@ -154,12 +154,12 @@ hr.first-line {
     align-items: center;
 }
 
-p {
+/* p {
     text-align: center;
     margin: 20px 60px 0px 50px;
     color: #21334F;
     font-size: 16px;
-}
+} */
 
 
 .row1 > .status-pending {

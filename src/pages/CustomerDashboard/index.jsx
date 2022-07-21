@@ -7,38 +7,63 @@ import { ReactComponent as Email } from "./images/email.svg";
 import { ReactComponent as Call } from "./images/call.svg";
 import { ReactComponent as Location } from "./images/location.svg";
 import AuthNavbar2 from "../../components/AuthNavbar2/authNavbar2";
-import Axios from 'axios';
-import { useEffect, useState } from 'react';
+import Axios from "axios";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const CustomerDashboard = () => {
-const currentLoggedInUser = localStorage.getItem('currentLoggedInUser');
-const [shipperOrder, setShipperOrder] = useState([]);
-
+  const currentLoggedInUser = JSON.parse(localStorage.getItem("user"));
+  const [shipperOrder, setShipperOrder] = useState([]);
 
   useEffect(() => {
-    Axios.get(`https://dispatch-buddy-api.herokuapp.com/api/v1/order/shipper-orders/${currentLoggedInUser}`)
-    .then((res) => {
-      console.log(res.data);
-      setShipperOrder(res.data);
-    })
-    .catch((err) => console.log(err));
-  }, [currentLoggedInUser]);
+    Axios.get(
+      `https://dispatch-buddy-api.herokuapp.com/api/v1/order/shipper-orders/${currentLoggedInUser.user.userId}`
+    )
+      .then((res) => {
+        setShipperOrder(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   console.log(shipperOrder);
+ 
+
+  const arr = Array.isArray(shipperOrder.orders)
+    ? shipperOrder.orders.map((item, index) => {
+      let text = item.createdAt;
+      let result = text.slice(11, 16)
+        return (
+          <div className="my-orders-body" key={index}>
+            <div className="my-orders-body-left">
+              <p>
+                <strong>Today, </strong> {result} PM
+              </p>
+              <p className="my-orders-body-sec-p">Order No - {item._id}</p>
+            </div>
+            <div className="my-orders-body-right">
+              <p className= {item.orderStatus == "Pending" ? "order-status-pending" : "order-status-complete"}>{item.orderStatus}</p>
+              <p className="my-orders-body-sec-p">#{item.amount}</p>
+            </div>
+          </div>
+        );
+      })
+    : [];
 
   return (
     <>
       <AuthNavbar2 />
       <div className="cus-dash-body">
         <div className="customer-dashboard-overview">
-          <Overview className="overview-icon"/>
+          <Overview className="overview-icon" />
           <p>Overview</p>
         </div>
         <div className="customer-dashboard-container">
           <div className="cus-dash-box total-orders">
             <div className="cus-dash-box-header">
               <h3>Total Orders</h3>
-              <button>Make a Request</button>
+              <Link to="/rider-request">
+                <button>Make a Request</button>
+              </Link>
             </div>
             <div className="total-orders-body">
               <div>
@@ -51,76 +76,11 @@ const [shipperOrder, setShipperOrder] = useState([]);
             </div>
           </div>
           <div className="cus-dash-box my-orders">
-            <div
-              className="cus-dash-box-header"
-            >
-              <h3 style={{marginBottom:'5px'}}>My Orders</h3>
-              <p style={{marginBottom:'-5px'}}>See all</p>
+            <div className="cus-dash-box-header">
+              <h3 style={{ marginBottom: "5px" }}>My Orders</h3>
+              <p style={{ marginBottom: "-5px" }}>See all</p>
             </div>
-            <div>
-              <div className="my-orders-body">
-                <div className="my-orders-body-left">
-                  <p>
-                    <strong>Today, </strong> 4:15PM{" "}
-                  </p>
-                  <p className="my-orders-body-sec-p">Order No - 1836897632</p>
-                </div>
-                <div className="my-orders-body-right">
-                  <p className="order-status-complete">Pending</p>
-                  <p className="my-orders-body-sec-p">#2,200.00</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className="my-orders-body">
-                <div className="my-orders-body-left">
-                  <p>
-                    <strong>Today, </strong> 4:15PM{" "}
-                  </p>
-                  <p className="my-orders-body-sec-p">Order No - 1836897632</p>
-                </div>
-                <div className="my-orders-body-right">
-                  <p className="order-status-pending">Pending</p>
-                  <p className="my-orders-body-sec-p">#2,200.00</p>
-                </div>
-              </div>
-              <div className="my-orders-body">
-                <div className="my-orders-body-left">
-                  <p>
-                    <strong>Today, </strong> 4:15PM{" "}
-                  </p>
-                  <p className="my-orders-body-sec-p">Order No - 1836897632</p>
-                </div>
-                <div className="my-orders-body-right">
-                  <p className="order-status-pending">Pending</p>
-                  <p className="my-orders-body-sec-p">#2,200.00</p>
-                </div>
-              </div>
-              <div className="my-orders-body">
-                <div className="my-orders-body-left">
-                  <p>
-                    <strong>Today, </strong> 4:15PM{" "}
-                  </p>
-                  <p className="my-orders-body-sec-p">Order No - 1836897632</p>
-                </div>
-                <div className="my-orders-body-right">
-                  <p className="order-status-pending">Pending</p>
-                  <p className="my-orders-body-sec-p">#2,200.00</p>
-                </div>
-              </div>
-              <div className="my-orders-body">
-                <div className="my-orders-body-left">
-                  <p>
-                    <strong>Today, </strong> 4:15PM{" "}
-                  </p>
-                  <p className="my-orders-body-sec-p">Order No - 1836897632</p>
-                </div>
-                <div className="my-orders-body-right">
-                  <p className="order-status-pending">Pending</p>
-                  <p className="my-orders-body-sec-p">#2,200.00</p>
-                </div>
-              </div>
-            </div>
+            <div>{arr}</div>
           </div>
           <div className="cus-dash-box messages">
             <div className="cus-dash-box-header">
@@ -143,15 +103,15 @@ const [shipperOrder, setShipperOrder] = useState([]);
                 Any question or remarks? Send us a message
               </p>
               <div className="contactus-icon">
-                <Email className="icon" />
+                <Email className="" />
                 <p>hello@buddydispatch.com</p>
               </div>
               <div className="contactus-icon">
-                <Call className="icon" />
+                <Call className="" />
                 <p>08099776655, 07099664422</p>
               </div>
               <div className="contactus-icon">
-                <Location className="icon" />
+                <Location className="" />
                 <p>25, Adetola street, Ikoyi, Lagos</p>
               </div>
             </div>
