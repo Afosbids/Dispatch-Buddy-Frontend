@@ -1,8 +1,24 @@
 import "./style.css";
 import { ReactComponent as BackIcon } from "./images/backicon.svg";
 import AuthNavbar2 from "../../components/AuthNavbar2/authNavbar2";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import axios from 'axios';
 
 const PayWithCash = () => {
+
+  const [confirm, setConfirmation] = useState({msg: ""})
+  const [selected, setSeleted] = useState(false)
+  
+  const handleChange = () => {
+    setSeleted(true)
+  }
+
+  const paymentOption= async()=>{
+      const res = await axios.post("https://dispatch-buddy-api.herokuapp.com/payment/62d3ea5114ea654b191808ff", {Cash: "Cash"})
+          setConfirmation(res.data)
+      }
+
   return (
     <>
       <AuthNavbar2 />
@@ -16,17 +32,20 @@ const PayWithCash = () => {
           <p className="choosecard">Choose Cards</p>
         </div>
         <hr className="paywithcash-line" />
-
+        {confirm && <p style={{color:"green", textAlign:"center"}}>{confirm.msg}</p>}
         <div className="paywithcash-content">
           <h4>Pay with Cash</h4>
           <div className="paywithcash-radio">
           <label htmlFor="cash" style={{display:"none"}}>Cash</label>
-          <input type="radio" name="cash" />
+          <input type="radio" name="cash" 
+            checked={selected === true}
+            onChange={()=>handleChange()}/>
+        
           <p>Cash</p>
           </div>
 
-          <button>Done</button>
-          
+          <Link to="#"><button onClick={()=> {selected && paymentOption()}}>Done</button></Link>
+
         </div>
       </div>
     </>
