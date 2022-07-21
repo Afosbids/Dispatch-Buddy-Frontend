@@ -6,8 +6,25 @@ import { ReactComponent as Email } from "./images/email.svg";
 import { ReactComponent as Call } from "./images/call.svg";
 import { ReactComponent as Location } from "./images/location.svg";
 import AuthNavbar2 from "../../components/AuthNavbar2/authNavbar2";
+import Axios from 'axios';
+import { useEffect, useState } from 'react';
 
 const CustomerDashboard = () => {
+const currentLoggedInUser = localStorage.getItem('currentLoggedInUser');
+const [shipperOrder, setShipperOrder] = useState([]);
+
+
+  useEffect(() => {
+    Axios.get(`https://dispatch-buddy-api.herokuapp.com/api/v1/order/shipper-orders/${currentLoggedInUser}`)
+    .then((res) => {
+      console.log(res.data);
+      setShipperOrder(res.data);
+    })
+    .catch((err) => console.log(err));
+  }, [currentLoggedInUser]);
+
+  console.log(shipperOrder);
+
   return (
     <>
       <AuthNavbar2 />

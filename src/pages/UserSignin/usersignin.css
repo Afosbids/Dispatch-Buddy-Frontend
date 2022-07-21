@@ -47,7 +47,7 @@
 
 .user-signin-btn {
     margin-top: 20px;
-    width: 105%;
+    width: 80%;
     height: 2.5rem;
     border-radius: 3px;
     background-color: #E02B45;
@@ -70,14 +70,14 @@ label {
 }
 
 
-/* .form-group {
+.form-group {
     width: 80%;
     height: 50%;
     padding: 40px;
-} */
-/* .form-group a {
+} 
+.form-group a {
     margin-bottom: 4rem;
-} */
+}
 
 .signin-link{
     color: lightblue;
