@@ -2,11 +2,38 @@ import React from "react";
 import "./style.css";
 import AuthNavbar from "../../components/AuthNavbar";
 import { ReactComponent as Mastercard } from "./images/Mastercard.svg";
+import { useEffect, useState } from "react";
+import Axios from "axios";
 // import IncomingRequestModal from "../../components/IncomingRequestModal";
-// import RequestAcceptedModal from "../../components/RequestAccepedModal";
+import RequestAcceptedModal from "../../components/RequestAccepedModal";
 
 const AcceptOneRequest = () => {
+    const [orders, setOrders] = useState([]);
+    const [isOpen, setIsOpen] = useState(false);
+  
+    useEffect(() => {
+      Axios.get("https://dispatch-buddy-api.herokuapp.com/api/v1/rider/requests")
+        .then((res) => {
+            const pendingOrders = res.data.orders.filter(function(item){
+              return item.orderStatus == "Pending";
+            })
+          setOrders(pendingOrders[0]);
+        })
+        .catch((err) => console.log(err));
+    }, [isOpen]);
+  
+    const acceptRequest = async (id) => {
+      const response = await Axios.patch(
+        `https://dispatch-buddy-api.herokuapp.com/api/v1/rider/accept-request`,
+        {
+          id: id,
+        }
+      );
+      console.log(response);
+      setIsOpen(true);
+    };
 
+    console.log(orders._id)
 
   return (
     <>
@@ -20,12 +47,12 @@ const AcceptOneRequest = () => {
             <h4>Request details</h4>
             <div className="pickup-loaction">
               <h3>Pickup location</h3>
-              <p>5, Akintayo Street, Victoria Island, Lagos</p>
+              <p>{orders.pickupLocation}</p>
             </div>
 
             <div className="delivery-location">
               <h3>Delivery location</h3>
-              <p>89B, Olumakinde Street, Lekki, Lagos</p>
+              <p>{orders.dropOffLocation}</p>
             </div>
 
             <div className="package-details">
@@ -36,12 +63,12 @@ const AcceptOneRequest = () => {
             <div className="drop-off-contact">
               <h3>Drop off Contact</h3>
               <p>Tomiwa Olatunde</p>
-              <p>08099446672</p>
+              <p>{orders.dropOffPhoneNumber}</p>
             </div>
 
             <div className="payment-method">
               <h3>Payment method</h3>
-              <p>N3,500 </p>
+              <p>{orders.amount}</p>
               <div className="sub-payment">
                 <div className="card-payment">
                   <input
@@ -57,7 +84,11 @@ const AcceptOneRequest = () => {
             </div>
 
             <div className="btn-container">
-              <button className="accept-request">Accept Request</button>
+              <button className="accept-request" onClick={() => acceptRequest(orders._id)}>Accept Request</button>
+              <RequestAcceptedModal
+                  open={isOpen}
+                  onClose={() => setIsOpen(false)}
+                />
               <br />
               <button className="decline-request">Decline Request</button>
             </div>

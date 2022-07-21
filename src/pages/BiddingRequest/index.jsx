@@ -17,7 +17,7 @@ const BiddingRequest = () => {
         setBiddingRequest(res.data);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [isOpen]);
 
   const acceptRequest = async (id) => {
     const response = await Axios.patch(
@@ -35,7 +35,7 @@ const BiddingRequest = () => {
         return (
           <div
             className={
-              item.orderStatus == "Pending"
+              item.orderStatus == "Accepted"
                 ? "bidding-accepted"
                 : "biddingdisabled"
             }
