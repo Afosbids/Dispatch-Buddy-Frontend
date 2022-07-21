@@ -23,15 +23,15 @@ const CustomerDashboard = () => {
         setShipperOrder(res.data);
       })
       .catch((err) => console.log(err));
+    // eslint-disable-next-line
   }, []);
 
   console.log(shipperOrder);
- 
 
   const arr = Array.isArray(shipperOrder.orders)
     ? shipperOrder.orders.map((item, index) => {
-      let text = item.createdAt;
-      let result = text.slice(11, 16)
+        let text = item.createdAt;
+        let result = text.slice(11, 16);
         return (
           <div className="my-orders-body" key={index}>
             <div className="my-orders-body-left">
@@ -41,7 +41,15 @@ const CustomerDashboard = () => {
               <p className="my-orders-body-sec-p">Order No - {item._id}</p>
             </div>
             <div className="my-orders-body-right">
-              <p className= {item.orderStatus == "Pending" ? "order-status-pending" : "order-status-complete"}>{item.orderStatus}</p>
+              <p
+                className={
+                  item.orderStatus === "Pending"
+                    ? "order-status-pending"
+                    : "order-status-complete"
+                }
+              >
+                {item.orderStatus}
+              </p>
               <p className="my-orders-body-sec-p">#{item.amount}</p>
             </div>
           </div>

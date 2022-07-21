@@ -8,38 +8,38 @@ import Axios from "axios";
 import RequestAcceptedModal from "../../components/RequestAccepedModal";
 
 const AcceptOneRequest = () => {
-    const [orders, setOrders] = useState([]);
-    const [isOpen, setIsOpen] = useState(false);
-  
-    useEffect(() => {
-      Axios.get("https://dispatch-buddy-api.herokuapp.com/api/v1/rider/requests")
-        .then((res) => {
-            const pendingOrders = res.data.orders.filter(function(item){
-              return item.orderStatus == "Pending";
-            })
-          setOrders(pendingOrders[0]);
-        })
-        .catch((err) => console.log(err));
-    }, [isOpen]);
-  
-    const acceptRequest = async (id) => {
-      const response = await Axios.patch(
-        `https://dispatch-buddy-api.herokuapp.com/api/v1/rider/accept-request`,
-        {
-          id: id,
-        }
-      );
-      console.log(response);
-      setIsOpen(true);
-    };
+  const [orders, setOrders] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
 
-    console.log(orders._id)
+  useEffect(() => {
+    Axios.get("https://dispatch-buddy-api.herokuapp.com/api/v1/rider/requests")
+      .then((res) => {
+        const pendingOrders = res.data.orders.filter(function (item) {
+          return item.orderStatus === "Pending";
+        });
+        setOrders(pendingOrders[0]);
+      })
+      .catch((err) => console.log(err));
+  }, [isOpen]);
+
+  const acceptRequest = async (id) => {
+    const response = await Axios.patch(
+      `https://dispatch-buddy-api.herokuapp.com/api/v1/rider/accept-request`,
+      {
+        id: id,
+      }
+    );
+    console.log(response);
+    setIsOpen(true);
+  };
+
+  console.log(orders._id);
 
   return (
     <>
       {/* <IncomingRequestModal /> */}
       {/* <RequestAcceptedModal /> */}
-      
+
       <AuthNavbar />
       <div className="acceptone-container">
         <div className="accept-one-left">
@@ -84,20 +84,23 @@ const AcceptOneRequest = () => {
             </div>
 
             <div className="btn-container">
-              <button className="accept-request" onClick={() => acceptRequest(orders._id)}>Accept Request</button>
+              <button
+                className="accept-request"
+                onClick={() => acceptRequest(orders._id)}
+              >
+                Accept Request
+              </button>
               <RequestAcceptedModal
-                  open={isOpen}
-                  onClose={() => setIsOpen(false)}
-                />
+                open={isOpen}
+                onClose={() => setIsOpen(false)}
+              />
               <br />
               <button className="decline-request">Decline Request</button>
             </div>
           </div>
         </div>
 
-        <div className="accept-one-right">
-          
-        </div>
+        <div className="accept-one-right"></div>
       </div>
     </>
   );

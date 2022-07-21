@@ -35,7 +35,7 @@ const BiddingRequest = () => {
         return (
           <div
             className={
-              item.orderStatus == "Accepted"
+              item.orderStatus === "Accepted"
                 ? "bidding-accepted"
                 : "biddingdisabled"
             }
