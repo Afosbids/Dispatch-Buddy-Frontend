@@ -21,18 +21,17 @@ const UserSignin = () => {
       email: email,
       password: password,
     }).then((response) => {
-
-      if(response.data.user) {
-        localStorage.setItem('user', JSON.stringify(response.data))
+      if (response.data.user) {
+        localStorage.setItem("user", JSON.stringify(response.data));
       }
       const userType = response.data.user.user_type;
 
-      if(userType === 'shipper') {
+      if (userType === "shipper") {
         navigate("/customerdashboard");
-      };
-      if(userType === 'rider') {
+      }
+      if (userType === "rider") {
         navigate("/oneincomingrequest");
-      };
+      }
     });
   };
 
