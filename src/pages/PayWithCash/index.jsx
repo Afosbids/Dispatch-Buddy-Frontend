@@ -44,7 +44,7 @@ const PayWithCash = () => {
           <p>Cash</p>
           </div>
 
-          <Link to="#"><button onClick={()=> {selected && paymentOption()}}>Done</button></Link>
+          <Link><button onClick={()=> {selected && paymentOption()}}>Done</button></Link>
 
         </div>
       </div>
