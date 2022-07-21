@@ -1,7 +1,7 @@
 import "./style.css";
 import { ReactComponent as BackIcon } from "./images/backicon.svg";
 import AuthNavbar2 from "../../components/AuthNavbar2/authNavbar2";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 
