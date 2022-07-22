@@ -41,7 +41,7 @@ function App() {
         <Route path="/verify-email" element={<VerifyEmail />} />
         <Route path="/user/reset-password" element={<ReEnterPassword />} />
         <Route path="/oneincomingrequest" element={<AcceptOneRequest />} />
-        <Route path="/allincomingrequest" element={<BiddingRequest />} />
+        <Route path="/allincomingrequest/" element={<BiddingRequest />} />
         <Route path="/rider-earnings" element={<RiderEarnings />} />
         {/* <Route path="/test" element={<AcceptOneRequest />} /> */}
         <Route path="/rider-history" element={<RiderHistory />} />
@@ -50,8 +50,7 @@ function App() {
         <Route path="/order-accepted" element={<OrderAccepted />} />
         <Route path="/payment-option" element={<PaymentOption />} />
         <Route path="/add-card" element={<AddCard />} />
-        <Route path="/test" element={<AcceptOneRequest />} />
-        <Route path="/endtrip" element={<EndTrip />} />
+        <Route path="/endtrip/:id" element={<EndTrip />} />
         <Route path="/playground" element={<PlayGround />} />
         <Route path="/customerdashboard" element={<CustomerDashboard />} />
         <Route path="/shipperridehistory" element={<ShipperRideHistory />} />

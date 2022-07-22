@@ -5,29 +5,36 @@ import BiddingCard from "../../components/BiddingCard";
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import RequestAcceptedModal from "../../components/RequestAccepedModal";
+import { useNavigate } from "react-router-dom";
+
 
 const BiddingRequest = () => {
   const [biddingRequest, setBiddingRequest] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     Axios.get("https://dispatch-buddy-api.herokuapp.com/api/v1/rider/requests")
       .then((res) => {
-        console.log(res.data);
         setBiddingRequest(res.data);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+      
   }, [isOpen]);
 
+  const user = JSON.parse(localStorage.getItem("user"));
+ 
   const acceptRequest = async (id) => {
     const response = await Axios.patch(
       `https://dispatch-buddy-api.herokuapp.com/api/v1/rider/accept-request`,
       {
         id: id,
+        riderId:user.user.userId,
       }
     );
     console.log(response);
     setIsOpen(true);
+    navigate(`/endtrip/${id}`)
   };
 
   const arr = Array.isArray(biddingRequest.orders)

@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 const CustomerDashboard = () => {
   const currentLoggedInUser = JSON.parse(localStorage.getItem("user"));
   const [shipperOrder, setShipperOrder] = useState([]);
+  const [completedOrder, setCompletedOrder] = useState([]);
 
   useEffect(() => {
     Axios.get(
@@ -21,12 +22,15 @@ const CustomerDashboard = () => {
     )
       .then((res) => {
         setShipperOrder(res.data);
+        const completeOrder = res.data.orders.filter(function (item) {
+          return item.orderStatus === "Delivered";
+        });
+        setCompletedOrder(completeOrder.length);
       })
+      
       .catch((err) => console.log(err));
-    // eslint-disable-next-line
-  }, []);
-
-  console.log(shipperOrder);
+      
+  },[]);
 
   const arr = Array.isArray(shipperOrder.orders)
     ? shipperOrder.orders.map((item, index) => {
@@ -41,15 +45,8 @@ const CustomerDashboard = () => {
               <p className="my-orders-body-sec-p">Order No - {item._id}</p>
             </div>
             <div className="my-orders-body-right">
-              <p
-                className={
-                  item.orderStatus === "Pending"
-                    ? "order-status-pending"
-                    : "order-status-complete"
-                }
-              >
-                {item.orderStatus}
-              </p>
+              <p className= {item.orderStatus === "Pending" ? "order-status-pending" : "order-status-complete"}>{item.orderStatus}</p>
+
               <p className="my-orders-body-sec-p">#{item.amount}</p>
             </div>
           </div>
@@ -75,7 +72,7 @@ const CustomerDashboard = () => {
             </div>
             <div className="total-orders-body">
               <div>
-                <h1>200</h1>
+                <h1>{completedOrder}</h1>
                 <p>Orders completed</p>
               </div>
               <div className="total-orders-body-right">

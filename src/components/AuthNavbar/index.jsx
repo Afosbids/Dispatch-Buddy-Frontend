@@ -13,6 +13,7 @@ const AuthNavbar = () => {
     window.location.replace("/user-signin");
   };
 
+
   return (
     <div className="auth-navbar">
       <div className="auth-nav-left">

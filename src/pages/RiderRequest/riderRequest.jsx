@@ -7,7 +7,7 @@ import "./riderRequest.css";
 import { Modal } from "../../components/Modal";
 import OrderAcceptedModal from "../../components/OrderAcceptedModal";
 
-const url = `http://localhost:3000/api/v1/order/request`;
+const url = `https://dispatch-buddy-api.herokuapp.com/api/v1/order/request/`;
 const RiderRequest = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [pickUp, setPickUp] = useState("");
@@ -15,11 +15,11 @@ const RiderRequest = () => {
   const [phoneNum, setPhoneNum] = useState("");
   const [offer, setOffer] = useState("");
 
-  const navigate = useNavigate()
- 
+  const navigate = useNavigate();
+
   const user = JSON.parse(localStorage.getItem("user"));
   if (!user) {
-      navigate("/user-signin");
+    navigate("/user-signin");
   }
 
   const riderRequest = () => {
@@ -49,6 +49,9 @@ const RiderRequest = () => {
   const onSubmitHandler = (e) => {
     e.preventDefault();
     riderRequest();
+    if (!pickUp || !dropOff || !phoneNum || !offer) {
+      closeModal();
+    }
   };
   return (
     <>
