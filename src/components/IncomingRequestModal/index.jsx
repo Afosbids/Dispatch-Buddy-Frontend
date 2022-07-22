@@ -1,21 +1,35 @@
-import React from 'react'
-import './style.css'
+import React from "react";
+import "./style.css";
 
-function IncomingRequestModal() {
+
+const MODAL_STYLES = {
+  position: "fixed",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  backgroundColor: "#FFF",
+  zIndex: 1000,
+};
+
+function IncomingRequestModal({distance, time, pickupLoc}) {
   return (
-    <div className="modal-background">
-        <div className="modal-container">
-            <div className="modal-title">
-                <h4>Incoming Request</h4>
-            </div>
-            <div className="modal-content">
-                <h1>4 min . 2.0 km</h1>
-                <h4>Collins Nwachukwu</h4>
-                <p style={{width:"60%"}}>5, Akintayo Street, Victoria Island, Lagos</p>
-            </div>
+    <div>
+      <div className="modal-background" >
+        <div className="modal-container" style={MODAL_STYLES}>
+          <div className="modal-title">
+            <h4>Incoming Request</h4>
+          </div>
+          <div className="modal-content">
+            <h1>{time} . {distance} .</h1>
+            <h4>Collins Nwachukwu</h4>
+            <p style={{ width: "60%" }}>
+              {pickupLoc}
+            </p>
+          </div>
         </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default IncomingRequestModal
+export default IncomingRequestModal;

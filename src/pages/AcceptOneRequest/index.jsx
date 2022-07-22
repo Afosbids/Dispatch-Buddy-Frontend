@@ -4,42 +4,70 @@ import AuthNavbar from "../../components/AuthNavbar";
 import { ReactComponent as Mastercard } from "./images/Mastercard.svg";
 import { useEffect, useState } from "react";
 import Axios from "axios";
-// import IncomingRequestModal from "../../components/IncomingRequestModal";
 import RequestAcceptedModal from "../../components/RequestAccepedModal";
+import IncomingRequestModal from "../../components/IncomingRequestModal";
+import { useNavigate } from "react-router-dom";
+import OrderCompletedModal from "../../components/OrderCompletedModal";
 
 const AcceptOneRequest = () => {
-    const [orders, setOrders] = useState([]);
-    const [isOpen, setIsOpen] = useState(false);
-  
-    useEffect(() => {
-      Axios.get("https://dispatch-buddy-api.herokuapp.com/api/v1/rider/requests")
-        .then((res) => {
-            const pendingOrders = res.data.orders.filter(function(item){
-              return item.orderStatus == "Pending";
-            })
-          setOrders(pendingOrders[0]);
-        })
-        .catch((err) => console.log(err));
-    }, [isOpen]);
-  
-    const acceptRequest = async (id) => {
-      const response = await Axios.patch(
-        `https://dispatch-buddy-api.herokuapp.com/api/v1/rider/accept-request`,
-        {
-          id: id,
-        }
-      );
-      console.log(response);
-      setIsOpen(true);
-    };
+  const [orders, setOrders] = useState([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [distanceTime, setDistanceTime] = useState([]);
+  const navigate = useNavigate();
 
-    console.log(orders._id)
+  useEffect(() => {
+    Axios.get("https://dispatch-buddy-api.herokuapp.com/api/v1/rider/requests")
+      .then((res) => {
+        const pendingOrders = res.data.orders.filter(function (item) {
+          return item.orderStatus === "Pending";
+        });
+        console.log(orders)
+        setOrders(pendingOrders[0]);
+        console.log(pendingOrders[0]);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+
+
+  localStorage.setItem("pickupLocation", orders.pickupLocation);
+  localStorage.setItem("dropOffLocation", orders.dropOffLocation);
+
+  const pickupLocation = localStorage.getItem("pickupLocation");
+  const dropOffLocation = localStorage.getItem("dropOffLocation");
+
+  const handleDistance = async () => {
+    const response = await Axios.post(
+      `https://dispatch-buddy-api.herokuapp.com/api/v1/distance/diff/`,
+      {
+        pickupLocation: pickupLocation,
+        dropOffLocation: dropOffLocation,
+      }
+    );
+    setDistanceTime(response.data);
+  };
+
+  useEffect(() => {
+    handleDistance();
+  }, []);
+
+  const user = JSON.parse(localStorage.getItem("user"));
+  const acceptRequest = async (id) => {
+    const response = await Axios.patch(
+      `https://dispatch-buddy-api.herokuapp.com/api/v1/rider/accept-request`,
+      {
+        id: id,
+        riderId: user.user.userId,
+      }
+    );
+    setIsOpen(true);
+    navigate(`/endtrip/${orders._id}`)
+  };
+
+
 
   return (
     <>
-      {/* <IncomingRequestModal /> */}
-      {/* <RequestAcceptedModal /> */}
-      
       <AuthNavbar />
       <div className="acceptone-container">
         <div className="accept-one-left">
@@ -84,11 +112,16 @@ const AcceptOneRequest = () => {
             </div>
 
             <div className="btn-container">
-              <button className="accept-request" onClick={() => acceptRequest(orders._id)}>Accept Request</button>
+              <button
+                className="accept-request"
+                onClick={() => acceptRequest(orders._id)}
+              >
+                Accept Request
+              </button>
               <RequestAcceptedModal
-                  open={isOpen}
-                  onClose={() => setIsOpen(false)}
-                />
+                open={isOpen}
+                onClose={() => setIsOpen(false)}
+              />
               <br />
               <button className="decline-request">Decline Request</button>
             </div>
@@ -96,7 +129,11 @@ const AcceptOneRequest = () => {
         </div>
 
         <div className="accept-one-right">
-          
+          <IncomingRequestModal
+            distance={distanceTime.distance}
+            time={distanceTime.estimatedTime}
+            pickupLoc={orders.pickupLocation}
+          />
         </div>
       </div>
     </>

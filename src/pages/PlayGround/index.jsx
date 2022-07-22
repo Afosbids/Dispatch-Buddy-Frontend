@@ -1,11 +1,10 @@
 import React from 'react'
-import RequestAcceptedModal from '../../components/RequestAccepedModal'
+import IncomingRequestModal from '../../components/IncomingRequestModal'
 
 const PlayGround = () => {
   return (
     <div>
-        <RequestAcceptedModal />
-
+        <IncomingRequestModal />
     </div>
   )
 }
