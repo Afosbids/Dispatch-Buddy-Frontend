@@ -15,11 +15,11 @@ const RiderRequest = () => {
   const [phoneNum, setPhoneNum] = useState("");
   const [offer, setOffer] = useState("");
 
-  const navigate = useNavigate()
- 
+  const navigate = useNavigate();
+
   const user = JSON.parse(localStorage.getItem("user"));
   if (!user) {
-      navigate("/user-signin");
+    navigate("/user-signin");
   }
 
   const riderRequest = () => {
@@ -49,6 +49,9 @@ const RiderRequest = () => {
   const onSubmitHandler = (e) => {
     e.preventDefault();
     riderRequest();
+    if (!pickUp || !dropOff || !phoneNum || !offer) {
+      closeModal();
+    }
   };
   return (
     <>
