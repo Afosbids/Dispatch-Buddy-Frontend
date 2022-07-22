@@ -7,7 +7,6 @@ import {Link} from "react-router-dom";
 
 const AuthNavbar = () => {
   const currentLoggedInUser = JSON.parse(localStorage.getItem("user"));
-  console.log(currentLoggedInUser.user.name);
   return (
     <div className="auth-navbar">
       <div className="auth-nav-left">

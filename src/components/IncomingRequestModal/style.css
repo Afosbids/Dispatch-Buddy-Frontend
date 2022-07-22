@@ -3,7 +3,10 @@
     height: 209px;
     background: #FFFFFF;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin-left: 30px;
+    margin-left: 200px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 5%;
 }
 
 .modal-title{

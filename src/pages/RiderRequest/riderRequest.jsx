@@ -7,7 +7,7 @@ import "./riderRequest.css";
 import { Modal } from "../../components/Modal";
 import OrderAcceptedModal from "../../components/OrderAcceptedModal";
 
-const url = `http://localhost:3000/api/v1/order/request`;
+const url = `https://dispatch-buddy-api.herokuapp.com/api/v1/order/request/`;
 const RiderRequest = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [pickUp, setPickUp] = useState("");
