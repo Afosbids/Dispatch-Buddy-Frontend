@@ -5,13 +5,11 @@ import BiddingCard from "../../components/BiddingCard";
 import { useEffect, useState } from "react";
 import Axios from "axios";
 import RequestAcceptedModal from "../../components/RequestAccepedModal";
-import { useNavigate } from "react-router-dom";
 
 
 const BiddingRequest = () => {
   const [biddingRequest, setBiddingRequest] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     Axios.get("https://dispatch-buddy-api.herokuapp.com/api/v1/rider/requests")
@@ -34,13 +32,13 @@ const BiddingRequest = () => {
     );
     console.log(response);
     setIsOpen(true);
-    navigate(`/endtrip/${id}`)
   };
 
   const arr = Array.isArray(biddingRequest.orders)
     ? biddingRequest.orders.map((item, index) => {
         return (
           <div
+            key={index}
             className={
               item.orderStatus === "Accepted"
                 ? "bidding-accepted"
@@ -82,7 +80,8 @@ const BiddingRequest = () => {
                 </button>
                 <RequestAcceptedModal
                   open={isOpen}
-                  onClose={() => setIsOpen(false)}
+                  onClose={setIsOpen}
+                  orderId={item._id}
                 />
                 <br />
                 <button className="decline-req">Decline Request</button>

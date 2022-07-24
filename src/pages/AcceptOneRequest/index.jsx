@@ -6,14 +6,11 @@ import { useEffect, useState } from "react";
 import Axios from "axios";
 import RequestAcceptedModal from "../../components/RequestAccepedModal";
 import IncomingRequestModal from "../../components/IncomingRequestModal";
-import { useNavigate } from "react-router-dom";
-import OrderCompletedModal from "../../components/OrderCompletedModal";
 
 const AcceptOneRequest = () => {
   const [orders, setOrders] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [distanceTime, setDistanceTime] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     Axios.get("https://dispatch-buddy-api.herokuapp.com/api/v1/rider/requests")
@@ -21,9 +18,7 @@ const AcceptOneRequest = () => {
         const pendingOrders = res.data.orders.filter(function (item) {
           return item.orderStatus === "Pending";
         });
-        console.log(orders)
         setOrders(pendingOrders[0]);
-        console.log(pendingOrders[0]);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -61,7 +56,6 @@ const AcceptOneRequest = () => {
       }
     );
     setIsOpen(true);
-    navigate(`/endtrip/${orders._id}`)
   };
 
 
@@ -85,12 +79,12 @@ const AcceptOneRequest = () => {
 
             <div className="package-details">
               <h3>Package details</h3>
-              <p>New Hp core i7 Laptop (fully packed)</p>
+              <p>{orders.package}</p>
             </div>
 
             <div className="drop-off-contact">
               <h3>Drop off Contact</h3>
-              <p>Tomiwa Olatunde</p>
+              <p>{orders.dropOffContactName}</p>
               <p>{orders.dropOffPhoneNumber}</p>
             </div>
 
@@ -120,7 +114,8 @@ const AcceptOneRequest = () => {
               </button>
               <RequestAcceptedModal
                 open={isOpen}
-                onClose={() => setIsOpen(false)}
+                onClose={setIsOpen}
+                orderId={orders._id}
               />
               <br />
               <button className="decline-request">Decline Request</button>
