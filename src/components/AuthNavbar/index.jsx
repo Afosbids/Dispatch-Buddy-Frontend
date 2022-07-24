@@ -27,7 +27,7 @@ const AuthNavbar = () => {
         <ul>
           <Link to="/oneincomingrequest">Home</Link>
           <Link to="/allincomingrequest"><li>Bidding</li></Link>
-          <Link to="/rider-history"><li style={width=70}>Ride History</li></Link>
+          <Link to="/rider-history"><li style={{width:70}}>Ride History</li></Link>
           <Link to="/rider-earnings"><li>Earnings</li></Link>
           <li>Availability</li>
           <li onClick={handleLogout}>Logout</li>
