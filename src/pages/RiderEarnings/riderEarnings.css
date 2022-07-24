@@ -25,12 +25,11 @@
     background: white;
     position: relative;
     z-index: 2;
-    height: 800px;
     width: 600px;
     border: 1px solid rgba(0, 0, 0, 0.16);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     align-items: center;
-    margin-left: 500px;
+    margin-left: 450px;
     margin-top: -150px;
     padding: 40px;
 }

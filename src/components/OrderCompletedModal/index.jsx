@@ -2,7 +2,6 @@ import React from 'react'
 import './style.css'
 import { ReactComponent as Successful } from "./images/SuccessfullyDone.svg";
 import Axios from 'axios';
-import { useEffect, useState } from 'react';
 
 
 const MODAL_STYLES = {
@@ -15,8 +14,6 @@ const MODAL_STYLES = {
 };
 
 
-
- 
 
 
 const OrderCompletedModal = ({ open, onClose, orderId }) => {

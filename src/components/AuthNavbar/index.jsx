@@ -25,21 +25,16 @@ const AuthNavbar = () => {
 
       <div className="navbar-links">
         <ul>
-          <Link to="/allincomingrequest">
-            <li>Bidding</li>
-          </Link>
-          <Link to="/rider-history">
-            <li style={{ width: 70 }}>Ride History</li>
-          </Link>
-          <Link to="/rider-earnings">
-            <li>Earnings</li>
-          </Link>
+          <Link to="/oneincomingrequest">Home</Link>
+          <Link to="/allincomingrequest"><li>Bidding</li></Link>
+          <Link to="/rider-history"><li style={width=70}>Ride History</li></Link>
+          <Link to="/rider-earnings"><li>Earnings</li></Link>
           <li>Availability</li>
           <li onClick={handleLogout}>Logout</li>
           <li>
-            <label class="switch">
-              <input type="checkbox" />
-              <span class="slider round"></span>
+            <label className="switch">
+                <input type="checkbox"/>
+                <span className="slider round"></span>
             </label>
           </li>
         </ul>

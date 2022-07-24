@@ -2,6 +2,8 @@ import React from "react";
 import "./style.css";
 import { ReactComponent as Successful } from "./images/SuccessfullyDone.svg";
 import ReactDom from "react-dom";
+import { useNavigate } from "react-router-dom";
+
 
 const OVERLAY_STYLES = {
   position: "fixed",
@@ -23,7 +25,9 @@ const MODAL_STYLES = {
   zIndex: 1000,
 };
 
-const RequestAcceptedModal = ({ open, onClose }) => {
+const RequestAcceptedModal = ({ open, onClose, orderId }) => {
+  const navigate = useNavigate();
+
   if (!open) return null;
   return ReactDom.createPortal(
     <div>
@@ -37,7 +41,11 @@ const RequestAcceptedModal = ({ open, onClose }) => {
             You’ve accepted to pick up <strong>Collins Nwachukwu</strong>{" "}
             request.
           </p>
-          <button className="btn" onClick={onClose}>
+          <button className="btn" onClick={() => {
+            onClose(false)
+            navigate(`/endtrip/${orderId}`)
+
+            }}>
             Done
           </button>
         </div>
