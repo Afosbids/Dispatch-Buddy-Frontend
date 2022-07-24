@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import AuthNavbar2 from "../../components/AuthNavbar2/authNavbar2";
 import arrow from "./images/arrow.svg";
 import Axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./riderRequest.css";
 import { Modal } from "../../components/Modal";
 import OrderAcceptedModal from "../../components/OrderAcceptedModal";
@@ -13,6 +13,8 @@ const RiderRequest = () => {
   const [pickUp, setPickUp] = useState("");
   const [dropOff, setDropOff] = useState("");
   const [phoneNum, setPhoneNum] = useState("");
+  const [packageDetails, setPackageDetails] = useState("");
+  const [contactName, setContanctName] = useState("");
   const [offer, setOffer] = useState("");
 
   const navigate = useNavigate();
@@ -28,6 +30,8 @@ const RiderRequest = () => {
       pickupLocation: pickUp,
       dropOffLocation: dropOff,
       dropOffPhoneNumber: phoneNum,
+      dropOffContactName: contactName,
+      package: packageDetails,
       amount: offer,
     }).then((response) => {
       console.log(response.data);
@@ -59,10 +63,12 @@ const RiderRequest = () => {
       <div className="body-container">
         <div className="wrapped-header">
           <div className="Rider-header">
-            <div className="left-arrow">
-              <img src={arrow} alt="" />
-              <p>Back</p>
-            </div>
+            <Link to="/customerdashboard">
+              <div className="left-arrow">
+                <img src={arrow} alt="" />
+                <p>Back</p>
+              </div>
+            </Link>
             <div className="center-header">
               <h3>Request a Rider</h3>
             </div>
@@ -80,6 +86,28 @@ const RiderRequest = () => {
                 placeholder="Enter Pick Up location"
                 value={pickUp}
                 onChange={(e) => setPickUp(e.target.value)}
+              />
+              <br />
+              <br />
+              <label>Package Details</label>
+              <br />
+              <input
+                className="request-input"
+                type="text"
+                placeholder="Enter Package details"
+                value={packageDetails}
+                onChange={(e) => setPackageDetails(e.target.value)}
+              />
+              <br />
+              <br />
+              <label>Drop off Contact Name</label>
+              <br />
+              <input
+                className="request-input"
+                type="text"
+                placeholder="Enter Package details"
+                value={contactName}
+                onChange={(e) => setContanctName(e.target.value)}
               />
               <br />
               <br />
