@@ -12,6 +12,7 @@ const AcceptOneRequest = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [distanceTime, setDistanceTime] = useState([]);
 
+
   useEffect(() => {
     Axios.get("https://dispatch-buddy-api.herokuapp.com/api/v1/rider/requests")
       .then((res) => {
@@ -130,6 +131,7 @@ const AcceptOneRequest = () => {
             pickupLoc={orders.pickupLocation}
           />
         </div>
+
       </div>
     </>
   );
