@@ -1,0 +1,140 @@
+:root {
+    --color-accent: #E02B45;
+    --color-white: #ffffff;
+
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    z-index: 12;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    background: var(--color-white);
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* left */
+.left {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    
+}
+.left img {
+    margin-right: 0.5rem;
+    
+}
+.navbar .Left p {
+    color: var(--color-accent);
+}
+
+/* center */
+.center {
+    display: flex;
+    margin-left: 8rem;
+    justify-content: center;
+   
+}
+
+
+
+/* right */
+.right {
+ flex: 1;
+}
+.nav__list {
+    padding-left:0;
+    width: 100%;
+
+}
+.nav__item {
+    cursor: pointer;
+    transition: color .3s;
+    list-style: none;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgb(237, 230, 230);
+
+}
+.nav__item:hover {
+    color: var(--color-accent);
+}
+.collapsible__content {
+ display: none;
+}
+.collapsible--expanded .collapsible__content {
+    display: block;
+}
+.login {
+    display: none;
+}
+
+
+/* desktop design  */
+@media screen and (min-width: 1024px) {
+    .Left {
+        display: flex;
+        font-size: 1.4rem;
+        width: 20%;
+        margin-left: 7rem;
+    }
+    .Left > p {
+        margin-left: 10px;
+    }
+    .Left > img {
+        width: 50px;
+        height: 50px;
+    }
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+        align-items: center;
+        padding: 1rem 1rem;
+        background: var(--color-white);
+        width: 100%;
+    }
+    .nav__list {
+        margin-left: 2rem;
+        margin-top: 20px;
+        height: 50px;
+    }
+    .nav__item > p {
+        width: 100px;
+    }
+    .nav__list >
+      ul {
+          width: 19rem;
+        display: flex;
+        text-align: center;
+        /* margin-left: 50px; */
+    }
+    .nav__item {
+        border-bottom: none;
+        margin-left: 1rem;
+        font-size: 17px;
+        width: 100%;
+        
+    }
+     a:visited {
+        color: #012A4A;
+    }
+    .collapsible__content {
+        display: block;
+       }
+    .toggler {
+        display: none;
+    }
+    .login {
+        margin-left: 16rem;
+        display: block;
+        font-size: 17px;
+    }
+  
+    .login-nav {
+        display: none;
+    }
+}

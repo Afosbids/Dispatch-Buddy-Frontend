@@ -1,0 +1,21 @@
+.order-com-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 427px;
+  height: 313px;
+  font-weight: bold;
+  background-color: #ffffff;
+  border-radius: 24px;
+}
+
+.order-com-container .btn {
+  height: 40px;
+  border: none;
+  background: #e02b451a;
+  width: 343px;
+  color: #e02b45;
+  font-weight: 700;
+  margin-top: -10px;
+}

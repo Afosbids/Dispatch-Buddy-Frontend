@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .whole-body {
+    background: #F8F8F8;
+    margin-top: 10px;
+} */
+
+.history-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* z-index: -1; */
+    background: #FFFFFF;
+    width: 70%;
+    height: 150px;
+    margin: 100px 30px 0px 200px;
+}
+
+.history-container > h1 {
+    margin-left: 30px;
+    color: #21334F;
+    margin-top: 60px;
+}
+
+.input-right {
+    position: relative;
+    padding:0;
+    margin-right: 40px;
+    margin-top: 60px;
+}
+
+.filter-img {
+    position: absolute;
+    left: 80px;
+    top: 12px;
+    width: 18px;
+}
+
+.filter-input {
+    background: rgba(0, 0, 0, 0.04);
+    margin-right: 80px;
+    width:130px;
+    margin:0;
+    padding-left:30px;
+    border: none;
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0px 80px 0px 200px;
+    padding-top: 10px;
+    width: 70%;
+    background: #FFFFFF;
+    /* border: 1px solid red; */
+}
+
+.description > h3 {
+    align-items: center;
+    margin: 20px 80px 0px 50px;
+    color: #21334F;
+}
+
+.description > .desc-contact {
+    margin-left: 5px;
+}
+
+.description > .desc-date {
+    margin-left: -10px;
+    margin-right: 95px;
+}
+
+.description > .desc-status {
+    margin-right: 70px;
+}
+
+.container2 {
+    background: #FFFFFF;
+    width: 70%;
+    margin: 0px 30px 0px 200px;
+    text-align: center;
+}
+
+hr.first-line {
+    width: 70%;
+    margin-left: 200px;
+    /* color: #E2E2E2; */
+    border-top: 1px solid #E2E2E2;
+}
+
+.row1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 15%;
+    margin: 0px 60px 20px 60px;
+    padding-top: 40px;
+}
+
+.row2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 15%;
+    margin: 20px 60px 0px 60px;
+    padding-top: 20px;
+}
+
+.row3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 15%;
+    margin: 20px 60px 0px 60px;
+    padding-top: 20px;
+}
+
+.row4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 15%;
+    margin: 20px 60px 0px 60px;
+    padding-top: 20px;
+}
+
+.row5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 15%;
+    margin: 20px 60px 0px 60px;
+    padding-top: 20px;
+}
+
+.location-parag {
+    text-align: center;
+    margin: 40px 0px 40px 0px;
+}
+
+/* .contact {
+    margin-left: 30px;
+} */
+
+.date-time {
+    margin-left: 40px;
+    align-items: center;
+}
+
+/* p {
+    text-align: center;
+    margin: 20px 60px 0px 50px;
+    color: #21334F;
+    font-size: 16px;
+} */
+
+
+.row1 > .status-pending {
+    color: #F8B02B;
+    margin-left: -20px;
+}
+
+.status-delivered {
+    color: #34A853;
+    margin-left: -20px;
+}
+
+.row1 > .contact {
+    margin-left: 40px;
+}
+
+.row2 > .contact {
+    margin-left: 60px;
+}
+
+.row3 > .contact {
+    margin-left: 40px;
+}
+
+.row4 > .contact {
+    margin-left: 40px;
+}
+
+.row5 > .contact {
+    margin-left: 60px;
+}
+
+.row1 > .date-time {
+    margin-left: 40px;
+}
+
+.row2 > .date-time {
+    margin-left: 60px;
+}
+
+.row3 > .date-time {
+    margin-left: 40px;
+}
+
+.row4 > .date-time {
+    margin-left: 40px;
+}
+
+.row5 > .date-time {
+    margin-left: 60px;
+}
+
+hr.demacated-line {
+    width: 90%;
+    margin-left:50px;
+    border-top: 1px solid #E2E2E2;
+}
+
+
+.filter-input::placeholder {
+    color: #21334F;
+    font-weight: 400;
+    font-size: 16px;
+} 
+

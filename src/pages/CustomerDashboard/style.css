@@ -1,0 +1,193 @@
+.cus-dash-body {
+  background: #f8f8f8;
+  height: 700px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.overview-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.customer-dashboard-overview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 210px;
+  padding-top: 20px;
+}
+
+.customer-dashboard-overview p {
+  color: #21334f;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.customer-dashboard-container {
+  display: grid;
+  gap: 20px;
+  height: 85%;
+  width: 80%;
+  margin-left: 210px;
+  padding-right: 150px;
+  padding-top: 15px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 170px;
+
+  grid-template-areas:
+    "A A A A   A A B B   B B B B"
+    "C C C C   C C B B   B B B B"
+    "C C C C   C C D D   D D D D"
+    "C C C C   C C D D   D D D D";
+}
+
+.cus-dash-box {
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+.total-orders {
+  grid-area: A;
+}
+
+.messages {
+  grid-area: B;
+}
+
+.my-orders {
+  grid-area: C;
+}
+
+.contactus {
+  grid-area: D;
+}
+
+.cus-dash-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px 5px 20px;
+  border-bottom: 1px solid #e5e5e5;
+  color: #21334f;
+}
+
+.cus-dash-box-header h3 {
+  padding-top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.cus-dash-box-header p {
+  color: #e02b45;
+  font-weight: 600;
+  padding-right: 10px;
+}
+
+.cus-dash-box-header button {
+  background: #e02b451a;
+  border: none;
+  color: #e02b45;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+
+.total-orders-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #21334f;
+}
+
+.total-orders-body p {
+  margin-top: -10px;
+}
+
+.total-orders-body-right {
+  background: #0000000a;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.messages-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.messages-body p {
+  opacity: 0.5;
+  padding-bottom: 40px;
+}
+
+.my-orders-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.my-orders-body-sec-p {
+  margin-top: -10px;
+}
+
+.order-status-complete {
+  background: #34a8531a;
+  color: #34a853;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.order-status-pending {
+  background: #fcc1341a;
+  color: #f8b02b;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.contactus-body {
+  padding-left: 20px;
+  color: #21334f;
+}
+
+.contactus-body h2 {
+  padding-top: 20px;
+  font-size: 18px;
+}
+.blur-paragraph {
+  margin-top: -5px;
+  opacity: 0.5;
+}
+
+.contactus-icon {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.contactus-icon p {
+  padding-left: 6px;
+}
+
+.endtrip {
+  display: flex;
+  justify-content: center;
+  padding-top: 30vh;
+  /* background: url(./images/GoogleMapTA.webp); */
+  background-size: cover;
+  height: 100vh;
+}

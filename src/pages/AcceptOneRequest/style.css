@@ -1,0 +1,93 @@
+.acceptone-container{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  height:695px;
+}
+
+.accept-one-left{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  width:446px;
+  background: #fff;
+  height:100%;
+}
+
+.request-details{
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+}
+
+.request-details h3{
+  color: #C4C4C4;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.request-details p {
+  color: #21334F;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+
+.request-details h4{
+  margin-bottom: -10px;
+  font-size: 18px;
+}
+
+.accept-request{
+  background: #E02B45;
+  color: #fff;
+  width: 100%;
+  border: none;
+  height: 40px;
+}
+
+.decline-request{
+  background: #0000000A;
+  color: #21334F;
+  width: 100%;
+  border: none;
+  height: 40px;
+  margin-top: 10px;
+
+}
+
+.sub-payment{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-payment{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.accept-one-right{
+  /* height: 100%; */
+  width: 100%;
+  background: url('./images/GoogleMapTA.webp') no-repeat;
+  /* background-size: cover; */
+  /* overflow: hidden; */
+}
+
+
+.reqaccept-modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

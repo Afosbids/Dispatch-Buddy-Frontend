@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.payment-body-container {
+    background: #E5E5E5;
+    width: 100%;
+}
+
+
+.payment-wrapped-header {
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    height: 500px;
+    margin-left: 400px;
+}
+
+.payment-option-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 100px;
+    padding: 37px 250px 0px 5px;
+}
+
+.payment-option-arrow {
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+    margin-left: 40px;
+}
+
+
+.payment-option-arrow > img {
+    width: 20px;
+}
+
+
+.payment-option-arrow > p {
+    margin: 12px 0px 0px 15px;
+    
+}
+
+
+.payment-center-header > h3 {
+    text-align: center;
+    margin-left: 50px;
+}
+
+hr.payment-option-line {
+    width: 80%;
+    margin-left: 50px;
+    border-top: 1px solid #E2E2E2;
+}
+
+.payment-option-desc {
+    margin-top: 40px;
+}
+
+.payment-option-desc p {
+    word-spacing: 2px;
+    color: #21334F;
+}
+
+.payment-option-desc p span {
+    color: #C4C4C4;
+}
+
+.payment-option-btn1 {
+    width: 400px;
+    height: 50px;
+    margin-top: 20px;
+    border: none;
+    background: #E02B45;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.payment-option-btn2 {
+    width: 400px;
+    height: 50px;
+    margin-top: 10px;
+    border: 1px solid #C4C4C4;
+    background: #F5F5F5;
+    cursor: pointer;
+}

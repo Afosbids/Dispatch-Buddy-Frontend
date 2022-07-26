@@ -1,0 +1,27 @@
+.input-field {
+    padding: 23px 30px;
+    margin: 10px 0px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px thick lightgrey;
+    border-radius: 5px;
+    border: 2px solid grey;
+}
+
+.SignUpForm {
+    width: 25rem;
+}
+.email-icon {
+    background: url(../../pages/userSignup/images/Icon.png) no-repeat;
+}
+.password-icon {
+    background: url(../../pages/userSignup/images/Vector.png) no-repeat;
+}
+
+.upload-icon{
+    background: url(../../pages/userSignup/images/Vector2.png) no-repeat;
+}
+
+.email-icon, .password-icon, .upload-icon {
+    background-position: 5px;
+}
